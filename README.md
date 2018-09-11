@@ -1,2 +1,5 @@
-# curso-github
-Curso de Formación "GitHub en la Educación"
+# Gestión de la tarea docente con GitHub
+
+Disponible en [https://pedroprieto.github.io/curso-github/]()
+
+## Sesiones

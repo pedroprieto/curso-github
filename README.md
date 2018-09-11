@@ -41,7 +41,7 @@ Disponible en [https://pedroprieto.github.io/curso-github/](https://pedroprieto.
 5. Integración continua: testeo
     - Introducción a Travis CI
     - Desarrollo guiado por tests
-    - Aplicaciones: corrección automática de prácticas
+    - Aplicaciones: corrección automática de prácticas, autoevaluación por parte del alumnado,...
     - Configuración del repositorio
     - Depuración de problemas
 6. Integración continua: despliegue automático
@@ -50,6 +50,7 @@ Disponible en [https://pedroprieto.github.io/curso-github/](https://pedroprieto.
     - Configuración del repositorio
     - Prueba y depuración de problemas
 7. Metodologías para trabajar con los alumnos
+    - Ventajas con respecto a los sistemas tradicionales de recolección de tareas del alumnado
     - GitHub Education: ventajas para instituciones educativas
     - GitHub Classroom
     - Metodologías de trabajo para prácticas inviduales

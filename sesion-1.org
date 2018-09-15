@@ -1,6 +1,6 @@
 * Manejo básico de Git
 ** Instalación
-[[https://git-scm.com/download][https://git-scm.com/download]]
+- [[https://git-scm.com/download][https://git-scm.com/download]]
 
 ** Configuración
 #+begin_src bash
@@ -33,14 +33,26 @@ git init
 git status
 #+end_src
 
+** Ignorar archivos
+- Archivo ~.gitignore~
+
+** Visualizar cambios
+#+begin_src bash
+git diff
+git diff <archivo>
+#+end_src
+
 ** Añadir archivos al área de preparación (stage)
 #+begin_src bash
 git add <archivo> # Añadir archivos individuales
 git add .         # Añadir todos los archivos nuevos o modificados
 #+end_src
 
-** Ignorar archivos
-- Archivo ~.gitignore~
+** Visualizar cambios de los archivos en el área de preparación
+#+begin_src bash
+git diff --staged
+git diff --staged <archivo>
+#+end_src
 
 ** Confirmar cambios (commit)
 #+begin_src bash
@@ -51,14 +63,6 @@ git commit -m "MENSAJE"
 #+begin_src bash
 git log
 git log --graph
-#+end_src
-
-** Modificar último commit
-#+begin_src bash
-# Primero se añaden cambios al área de preparación
-git add .
-# En segundo lugar se ejecuta el comando "commit" con el parámetro "--amend"
-git commit --amend -m "MENSAJE"
 #+end_src
 
 ** Quitar archivo del área de preparación

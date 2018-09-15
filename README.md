@@ -4,7 +4,7 @@ Disponible en [https://pedroprieto.github.io/curso-github/](https://pedroprieto.
 
 ## Sesiones
 0. Presentación
-1. Manejo básico de Git [Apuntes sesión 1](sesion-1.org)
+1. Manejo básico de Git - [Apuntes](sesion-1.org)
     - Breve introducción a Git
     - Entornos: consola y escritorio
     - Instalación

@@ -1,0 +1,10 @@
+* Manejo básico de Git
+** Creación de repositorios
+#+begin_src bash
+git init
+#+end_src
+
+** Ciclo de vida
+[[https://git-scm.com/book/en/v2/images/lifecycle.png]]
+
+

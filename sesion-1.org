@@ -83,6 +83,11 @@
  git log --graph
  #+end_src
 
+*** Ver cambios realizados en anteriores commits
+ #+begin_src bash
+ git show <commit>
+ #+end_src
+
 *** Quitar archivo del área de preparación
  #+begin_src bash
  git reset HEAD <archivo>
@@ -92,4 +97,9 @@
  #+begin_src bash
  # ¡PELIGRO! Todos los cambios que se hayan hecho al archivo desde el último commit se eliminarán
  git checkout -- <archivo>
+ #+end_src
+
+*** Etiquetado
+ #+begin_src bash
+ git tag
  #+end_src

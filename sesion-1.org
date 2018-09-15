@@ -1,77 +1,95 @@
 * Manejo básico de Git
-** Instalación
-- [[https://git-scm.com/download][https://git-scm.com/download]]
+** Videotutorial
+- Enlace
 
-** Configuración
-#+begin_src bash
-# Opciones obligatorias (nombre y correo)
-git config --global user.name "Nombre y apellido"
-git config --global user.email CORREO@ELECTRONICO
+** Índice
+    - Breve introducción a Git
+    - Entornos: consola y escritorio
+    - Instalación
+    - Configuración
+    - Creación de repositorios
+    - Cómo guardar cambios
+    - Historial de cambios
+    - Cómo deshacer cambios
+    - Etiquetado
 
-# Editor de preferencia. Como ejemplos se incluyen el Notepad y el Notepad ++ en Windows
-# Ejecutar sólo una de los tres comandos siguientes
-git config --global core.editor notepad # Notepad de Windows
-git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" # Notepad ++
-git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" # Notepad ++ 32 bit
+** Referencias
+- [[https://git-scm.com/book/es/v2/][Libro de Git]]
 
-# Almacenamiento de credenciales para no pedir usuario y contraseña de GitHub cada vez que se suban cambios al servidor
-# Ejecutar sólo uno de los dos comandos siguientes en función del sistema
-git config --global credential.helper cache   # Para Linux
-git config --global credential.helper wincred # Para Windows
-#+end_src
+** Contenidos
+*** Instalación
+ - [[https://git-scm.com/download][https://git-scm.com/download]]
 
-** Creación de repositorios
-#+begin_src bash
-git init
-#+end_src
+*** Configuración
+ #+begin_src bash
+ # Opciones obligatorias (nombre y correo)
+ git config --global user.name "Nombre y apellido"
+ git config --global user.email CORREO@ELECTRONICO
 
-** Ciclo de vida
-[[https://git-scm.com/book/en/v2/images/lifecycle.png]]
+ # Editor de preferencia. Como ejemplos se incluyen el Notepad y el Notepad ++ en Windows
+ # Ejecutar sólo una de los tres comandos siguientes
+ git config --global core.editor notepad # Notepad de Windows
+ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" # Notepad ++
+ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" # Notepad ++ 32 bit
 
-** Revisando el estado
-#+begin_src bash
-git status
-#+end_src
+ # Almacenamiento de credenciales para no pedir usuario y contraseña de GitHub cada vez que se suban cambios al servidor
+ # Ejecutar sólo uno de los dos comandos siguientes en función del sistema
+ git config --global credential.helper cache   # Para Linux
+ git config --global credential.helper wincred # Para Windows
+ #+end_src
 
-** Ignorar archivos
-- Archivo ~.gitignore~
+*** Creación de repositorios
+ #+begin_src bash
+ git init
+ #+end_src
 
-** Visualizar cambios
-#+begin_src bash
-git diff
-git diff <archivo>
-#+end_src
+*** Ciclo de vida
+ [[https://git-scm.com/book/en/v2/images/lifecycle.png]]
 
-** Añadir archivos al área de preparación (stage)
-#+begin_src bash
-git add <archivo> # Añadir archivos individuales
-git add .         # Añadir todos los archivos nuevos o modificados
-#+end_src
+*** Revisando el estado
+ #+begin_src bash
+ git status
+ #+end_src
 
-** Visualizar cambios de los archivos en el área de preparación
-#+begin_src bash
-git diff --staged
-git diff --staged <archivo>
-#+end_src
+*** Ignorar archivos
+ - Archivo ~.gitignore~
 
-** Confirmar cambios (commit)
-#+begin_src bash
-git commit -m "MENSAJE"
-#+end_src
+*** Visualizar cambios
+ #+begin_src bash
+ git diff
+ git diff <archivo>
+ #+end_src
 
-** Historial de cambios
-#+begin_src bash
-git log
-git log --graph
-#+end_src
+*** Añadir archivos al área de preparación (stage)
+ #+begin_src bash
+ git add <archivo> # Añadir archivos individuales
+ git add .         # Añadir todos los archivos nuevos o modificados
+ #+end_src
 
-** Quitar archivo del área de preparación
-#+begin_src bash
-git reset HEAD <archivo>
-#+end_src
+*** Visualizar cambios de los archivos en el área de preparación
+ #+begin_src bash
+ git diff --staged
+ git diff --staged <archivo>
+ #+end_src
 
-** Eliminar las modificaciones con respecto al último commit
-#+begin_src bash
-# ¡PELIGRO! Todos los cambios que se hayan hecho al archivo desde el último commit se eliminarán
-git checkout -- <archivo>
-#+end_src
+*** Confirmar cambios (commit)
+ #+begin_src bash
+ git commit -m "MENSAJE"
+ #+end_src
+
+*** Historial de cambios
+ #+begin_src bash
+ git log
+ git log --graph
+ #+end_src
+
+*** Quitar archivo del área de preparación
+ #+begin_src bash
+ git reset HEAD <archivo>
+ #+end_src
+
+*** Eliminar las modificaciones con respecto al último commit
+ #+begin_src bash
+ # ¡PELIGRO! Todos los cambios que se hayan hecho al archivo desde el último commit se eliminarán
+ git checkout -- <archivo>
+ #+end_src

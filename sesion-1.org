@@ -131,7 +131,8 @@
    19) Crea un archivo ~.gitignore~ para que los ficheros con extensión ~.bak~ y el contenido de la carpeta ~output/~ no se incluyan en el repositorio.
    20) Haz una nueva captura de pantalla del comando ~git status~. Ahora no deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos, sino que en su lugar debe aparecer únicamente el archivo ~.gitignore~.
    21) Haz un último /commit/ para incluir el archivo ~.gitignore~ en el repositorio.
-   22) Por último, comprime la carpeta ~S1R1~ y envíala junto con las capturas de pantalla según el procedimiento que se indica en el apartado siguiente.
+   22) Haz una captura de pantalla que muestre el histórico de cambios del repositorio.
+4. Para terminar, comprime la carpeta ~S1R1~ y envíala junto con las capturas de pantalla según el procedimiento que se indica en el apartado siguiente.
 
 *** Entrega de la tarea
 Crea un fichero ~.zip~ con los resultados que se piden en cada una de las tareas y nómbralo según el patrón ~APELLIDOS_NOMBRE_sesion1.zip~. La entrega del fichero se realizará a través de la plataforma Moodle del Cefire.

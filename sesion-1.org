@@ -1,6 +1,7 @@
 * Manejo básico de Git
-** Videotutorial
-- Enlace
+** Videotutoriales
+- [[https://www.youtube.com/watch?v=DuewUoPnAmg&index=2&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7][Sesión 1.1]]
+- [[https://www.youtube.com/watch?v=uwqvuJ5lrIs&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7&index=3][Sesión 1.2]]
 
 ** Índice
     - Breve introducción a Git
@@ -53,6 +54,7 @@
 
 *** Ignorar archivos
  - Archivo ~.gitignore~
+ - Plantillas de archivos [[https://github.com/github/gitignore][.gitignore]].
 
 *** Visualizar cambios
  #+begin_src bash

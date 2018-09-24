@@ -45,6 +45,7 @@
 - Primero nos posicionamos en la rama sobre la que se va a realizar la fusión
 - Para realizar la fusión ejecutar:
 
+
  #+begin_src bash
  git merge <nombre_rama_a_fusionar>
  #+end_src

@@ -1,0 +1,85 @@
+* Manejo básico de Git (II)
+** COMMENT Videotutoriales
+- [[https://www.youtube.com/watch?v=DuewUoPnAmg&index=2&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7][Sesión 2.1]]
+- [[https://www.youtube.com/watch?v=uwqvuJ5lrIs&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7&index=3][Sesión 2.2]]
+
+** Índice
+    - Ramas
+    - Fusiones de ramas
+    - Conflictos
+    - Remotos
+    - Flujos de trabajo con ramas
+
+** Referencias
+- [[https://git-scm.com/book/es/v2/][Libro de Git]]
+
+** Contenidos
+*** Definición de ramas
+- Una rama es un puntero que apunta a un determinado commit.
+- Un repositorio debe tener una rama como mínimo.
+- El nombre de la rama que se crea por defecto es ~master~. Este nombre no es especial ni tiene una función o significado especial.
+- Existe un puntero especial llamado ~HEAD~ que apunta a la rama en la que estamos en ese momento.
+- Al cambiar de rama se modifica el contenido del directorio de trabajo: éste se muestra tal como estaba en la rama a la que hemos saltado.
+- La creación y el cambio de ramas se realizan de forma instantánea: no tienen apenas coste.
+- El trabajo con ramas es muy interesante por los siguientes motivos:
+  - Se pueden hacer pruebas sin modificar el código en producción.
+  - Se puede separar el trabajo en tareas o subproyectos que no afecten unos a otros.
+  - Cada miembro del equipo puede trabajar sin ser interferido por los demás.
+
+*** Crear ramas
+ #+begin_src bash
+ git branch <nombre_rama>
+ #+end_src
+
+*** Ver ramas disponibles
+ #+begin_src bash
+ git branch
+ #+end_src
+
+*** Cambiar de rama
+ #+begin_src bash
+ git checkout <nombre_rama>
+ #+end_src
+
+*** Fusionar una rama
+- Primero nos posicionamos en la rama sobre la que se va a realizar la fusión
+- Para realizar la fusión ejecutar:
+ #+begin_src bash
+ git merge <nombre_rama_a_fusionar>
+ #+end_src
+ 
+*** Eliminar una rama
+ #+begin_src bash
+ git branch -d <nombre_rama>
+ #+end_src
+
+** COMMENT Tareas
+1. Instala Git en tu sistema operativo. Adjunta una captura de pantalla en la que aparezca el resultado de la ejecución del comando ~git --version~.
+2. Realiza la configuración de Git según lo indicado en el tema (nombre, correo electrónico, editor de preferencia y almacenamiento de credenciales). Adjunta una captura de pantalla con el resultado de la ejecución de los comandos de configuración.
+3. Crea una carpeta denominada ~S1R1~. Realiza las siguientes acciones en ella:
+   1) Crea un repositorio Git.
+   2) Crea un fichero denominado ~libros.txt~. Añade tres títulos de libros cada uno en una línea distinta.
+   3) Haz un primer /commit/.
+   4) Añade dos libros al archivo ~libros.txt~.
+   5) Haz un segundo /commit/.
+   6) Crea un fichero denominado ~peliculas.txt~. Añade tres títulos de películas a dicho archivo.
+   7) Haz una captura de pantalla que muestre los cambios en el directorio de trabajo.
+   8) Crea un fichero denominado ~comidas.txt~. Añade tres nombres de comidas a dicho archivo.
+   9) Haz un tercer /commit/ que incluya los archivos ~peliculas.txt~ y ~comidas.txt~.
+   10) Elimina el archivo ~comidas.txt~ desde el navegador de archivos.
+   11) Añade dos películas más al archivo ~peliculas.txt~.
+   12) Haz una captura de pantalla que muestre los cambios en el directorio de trabajo.
+   13) Añade los cambios al área de preparación.
+   14) Haz una captura de pantalla del comando ~git status~. Debe indicar que se ha borrado el archivo ~comidas.txt~ y que se ha modificado el archivo ~peliculas.txt~.
+   15) Haz un cuarto /commit/.
+   16) Crea un archivo denominado ~datos.bak~. Añade tres títulos de libros a dicho archivo.
+   17) Crea una subcarpeta denominada ~output~. Crea un archivo denominado ~salida.txt~ en su interior. Escribe tu nombre y apellidos en dicho archivo.
+   18) Haz una captura de pantalla del comando ~git status~. Deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos.
+   19) Crea un archivo ~.gitignore~ para que los ficheros con extensión ~.bak~ y el contenido de la carpeta ~output/~ no se incluyan en el repositorio.
+   20) Haz una nueva captura de pantalla del comando ~git status~. Ahora no deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos, sino que en su lugar debe aparecer únicamente el archivo ~.gitignore~.
+   21) Haz un último /commit/ para incluir el archivo ~.gitignore~ en el repositorio.
+   22) Haz una captura de pantalla que muestre el histórico de cambios del repositorio.
+4. Para terminar, comprime la carpeta ~S1R1~ y envíala junto con las capturas de pantalla según el procedimiento que se indica en el apartado siguiente.
+
+*** Entrega de la tarea
+Crea un fichero ~.zip~ con los resultados que se piden en cada una de las tareas y nómbralo según el patrón ~APELLIDOS_NOMBRE_sesion1.zip~. La entrega del fichero se realizará a través de la plataforma Moodle del Cefire.

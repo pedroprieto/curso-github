@@ -93,6 +93,11 @@
   git push [NOMBRE_REMOTO] [NOMBRE_RAMA]
   #+end_src
 
+**** Enviar los cambios de una rama al remoto y crear una rama remota asociada
+  #+begin_src bash
+  git push -u NOMBRE_REMOTO NOMBRE_RAMA
+  #+end_src
+
 ** Tareas
 1) Crea una carpeta denominada ~S2R1~. Realiza las siguientes acciones en ella:
    1. Crea un repositorio Git.

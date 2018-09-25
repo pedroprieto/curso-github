@@ -94,9 +94,7 @@
   #+end_src
 
 ** Tareas
-1. Instala Git en tu sistema operativo. Adjunta una captura de pantalla en la que aparezca el resultado de la ejecución del comando ~git --version~.
-2. Realiza la configuración de Git según lo indicado en el tema (nombre, correo electrónico, editor de preferencia y almacenamiento de credenciales). Adjunta una captura de pantalla con el resultado de la ejecución de los comandos de configuración.
-3. Crea una carpeta denominada ~S2R1~. Realiza las siguientes acciones en ella:
+1) Crea una carpeta denominada ~S2R1~. Realiza las siguientes acciones en ella:
    1. Crea un repositorio Git.
    2. Crea un fichero denominado ~actores.txt~. Añade tres nombres de actores cada uno en una línea distinta.
    3. Haz un primer /commit/.
@@ -113,25 +111,25 @@
    14. Resuelve el conflicto incorporando los dos nombres de actrices.
    15. Haz una captura de pantalla del resultado del comando ~git log --graph --all~. Observa que se ha creado un nuevo /commit/ que integra los dos caminos anteriores.
    16. Comprime la carpeta ~S2R1~ y envíala junto con las capturas de pantalla según el procedimiento indicado en el apartado siguiente.
-4. Crea una carpeta denominada ~S2R2-remoto~. Inicializa un repositorio Git en su interior mediante el comando ~git init --bare~. Esta carpeta se utilizará como repositorio remoto.
-5. Clona el repositorio ~S2R2-remoto~ en una carpeta denominada ~S2R2~. Adjunta captura de pantalla del resultado del comando de clonado. A continuación realiza las siguientes acciones en el repositorio ~S2R2~:
+2) Crea una carpeta denominada ~S2R2-remoto~. Inicializa un repositorio Git en su interior mediante el comando ~git init --bare~. Esta carpeta se utilizará como repositorio remoto.
+3) Clona el repositorio ~S2R2-remoto~ en una carpeta denominada ~S2R2~. Adjunta captura de pantalla del resultado del comando de clonado. A continuación realiza las siguientes acciones en el repositorio ~S2R2~:
    1. Crea un archivo denominado ~directores.txt~. Añade el nombre de tres directores de cine.
    2. Haz un /commit/.
    3. Realiza un /push/ al repositorio remoto. Adjunta captura de pantalla del resultado.
    4. Crea una rama denominada /version1/.
    5. En la rama /version1/ añade el nombre de dos directores de cine más al archivo ~directores.txt~.
    6. Realiza un /push/ de la rama al repositorio remoto de manera que quede asociada a la rama remota del mismo nombre. Adjunta captura de pantalla del resultado.
-6. Clona el repositorio ~S2R2-remoto~ en una segunda carpeta denominada ~S2R3~. Realiza las siguientes acciones sobre ella:
+4) Clona el repositorio ~S2R2-remoto~ en una segunda carpeta denominada ~S2R3~. Realiza las siguientes acciones sobre ella:
    1. Muestra en la consola el contenido del fichero ~directores.txt~ y el resultado del comando ~git status~.
    2. Cambia a la rama /version1/. Muestra el resultado del comando.
    3. Muestra el contenido del fichero ~directores.txt~ por la pantalla. Comprueba que se muestran los 5 nombres de directores esperados. Adjunta captura de pantalla.
    4. Incorpora los cambios de la rama /version1/ a la rama /master/.
    5. Sube la rama /master/ actualizada al servidor. Adjunta captura de pantalla del resultado del comando.
-7. Vuelve de nuevo a la carpeta ~S2R2~ y realiza las siguientes acciones:
+5) Vuelve de nuevo a la carpeta ~S2R2~ y realiza las siguientes acciones:
    1. Obtén los cambios que hay en el repositorio remoto. Adjunta captura de pantalla del resultado del comando utilizado.
    2. Actualiza la rama /master/ local con el contenido de la rama /master/ del repositorio remoto. Adjunta captura de pantalla del resultado del comando utilizado.
    3. Comprueba que deben aparecer los 5 nombres de directores esperados.
-8. Por último, selecciona las carpetas ~S2R2-remoto~, ~S2R2~ y ~S3R3~ y adjúntalas según el procedimiento indicado en el apartado siguiente.
+6) Por último, selecciona las carpetas ~S2R2-remoto~, ~S2R2~ y ~S3R3~ y adjúntalas según el procedimiento indicado en el apartado siguiente.
 
 *** Entrega de la tarea
 Crea un fichero ~.zip~ con los resultados que se piden en cada una de las tareas y nómbralo según el patrón ~APELLIDOS_NOMBRE_sesion2.zip~. La entrega del fichero se realizará a través de la plataforma Moodle del Cefire.

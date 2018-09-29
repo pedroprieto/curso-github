@@ -116,7 +116,7 @@
    4) Añade dos libros al archivo ~libros.txt~.
    5) Haz un segundo /commit/.
    6) Crea un fichero denominado ~peliculas.txt~. Añade tres títulos de películas a dicho archivo.
-   7) Haz una captura de pantalla que muestre los cambios en el directorio de trabajo.
+   7) Haz una captura de pantalla del comando ~git status~.
    8) Crea un fichero denominado ~comidas.txt~. Añade tres nombres de comidas a dicho archivo.
    9) Haz un tercer /commit/ que incluya los archivos ~peliculas.txt~ y ~comidas.txt~.
    10) Elimina el archivo ~comidas.txt~ desde el navegador de archivos.

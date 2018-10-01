@@ -14,6 +14,8 @@
 
 ** Referencias
 - [[https://git-scm.com/book/es/v2/][Libro de Git]]
+- [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet/][Hoja de referencia de Git]]
+- [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet.pdf][Hoja de referencia de Git (PDF)]]
 
 ** Contenidos
 *** Ramas

@@ -24,7 +24,7 @@
 - [[https://education.github.com/discount_requests/new][Solicitud de descuentos para uso educativo (repositorios privados gratuitos)]]
 
 ** Contenidos
-- Presentación
+- [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-3-presentacion.html][Presentación]]
 ** Tareas
 *** 1 - Creación de cuenta en GitHub
  1) Crea una cuenta en GitHub

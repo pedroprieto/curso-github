@@ -1,0 +1,57 @@
+#+Title: Introducción a GitHub
+#+Author: Pedro Prieto
+#+Email: pedpral@gmail.com
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: black
+#+REVEAL_HLEVEL: 1
+#+OPTIONS: toc:nil num:nil
+
+* Posibilidades
+#+ATTR_REVEAL: :frag (roll-in) 
+- Código base para prácticas
+- Recoger entregas de prácticas
+- Publicar documentación: portfolios, CVs, etc.
+- Publicar apuntes
+- Servidor web estático gratuito
+- Diseño Guiado por Test
+- Despliegue automático en servidores Cloud
+- Gestionar tareas de proyectos individuales / en grupo
+
+* Alternativas
+- [[https://about.gitlab.com/][GitLab]]
+- [[https://bitbucket.org/][BitBucket]]
+- [[https://stackshare.io/stackups/bitbucket-vs-github-vs-gitlab][Comparativa GitHub - BitBucket - GitLab]]
+
+* Creación de cuenta
+- https://github.com/
+
+* Visión general
+
+* Configuración de la cuenta
+* Repositorios
+** Creación
+** Clonado
+** Publicar cambios
+** Edición en la propia plataforma
+** Ajustes del repositorio
+** Funciones de red social
+- Comentarios
+- Seguidores
+- Estrellas
+** Issues
+#+ATTR_REVEAL: :frag (roll-in) 
+- Issues
+- Labels
+- Milestones
+** Proyectos
+** Wikis
+* Uso individual
+#+ATTR_REVEAL: :frag (roll-in) 
+- Metodología
+- Colaboradores
+* Colaboración
+- Forks
+- Pull Requests
+* Organizaciones
+- Miembros
+- Permisos

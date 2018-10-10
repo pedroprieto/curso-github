@@ -46,7 +46,7 @@
     7) Realiza una ~pull request~ indicando en el mensaje que has completado la tarea.
 
 *** 3 - Trabajo con organizaciones
- 1) Crea una organización en tu cuenta con el nombre ~organizacion-sesion-3~.
+ 1) Crea una organización en tu cuenta con el nombre ~organizacion-sesion-3-tu-nombre-y-apellidos~.
  2) Crea un repositorio dentro de la organización denominado ~sesion3-repo-organizacion~. Dicho repositorio debe contener:
     - Un archivo ~README~ con tu nombre y apellidos.
     - Un archivo ~.gitignore~ para el lenguaje ~Java~.

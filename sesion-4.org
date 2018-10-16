@@ -175,23 +175,26 @@ url: "https://NOMBRE_USUARIO.github.io"
 **** Repositorio de ejemplo
 A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/plantilla-jekyll][repositorio de ejemplo]] con un proyecto de Jekyll básico para el diseño de un sitio web. Está pensado para utilizar con los alumnos en el desarrollo de un sitio formado por 5 páginas estáticas. Utiliza una única plantilla para todas las páginas dividida en 4 secciones. No incluye ningún tema ya que está pensado para realizar el diseño del interfaz con HTML y CSS. Si se quiere utilizar como referencia hay que recordar que hay que cambiar las variables *baseurl* y *url* en el archivo ~_config.yml~ y adaptarla al repositorio creado.
 ** Tareas
-1. Instala Jekyll en tu equipo y haz una captura de pantalla del resultado de ejecutar el comando ~jekyll -version~.
-2. Haz un /fork/ del repositorio disponible en [[https://github.com/curso-github-cefire/plantilla-jekyll]].
-3. Modifica el fichero ~_config.yml~ para que contenga los parámetros ~baseurl~ y ~url~ que correspondan a tu repositorio.
-4. Ejecuta el servidor de test en tu equipo y comprueba que puedes acceder al sitio y navegar por él. Haz una captura de pantalla de una de las páginas cargadas a través del servidor local.
-5. Sube los cambios a GitHub.
-6. Configura tu copia del repositorio para activar el servicio de GitHub Pages en la rama ~master~.
-7. Comprueba que puedes acceder vía web a tu sitio publicado.
-8. Crea una nueva página denominada ~blog~. Comprueba que aparece en el menú de navegación del sitio.
-9. Crea una nueva plantilla llamada ~plantillablog~ basada en la que se proporciona que muestre una lista de los posts del sitio. El listado debe incluir:
-   - Un enlace al post cuyo texto sea el título del post.
-   - La fecha de publicación.
-   - Un extracto del contenido del texto del post.
-10. Crea 3 posts que utilicen la plantilla por defecto. Para generar el texto de los posts puedes utilizar un generador del estilo [[https://es.lipsum.com/][lorem ipsum]].
-11. Configura la página ~blog~ de manera que utilice la plantilla ~plantillablog~. Comprueba que aparece la lista de posts y que se puede acceder a ellos a través de los enlaces.
-12. Incluye las capturas de pantalla de los apartados 1 y 4 en el repositorio en una carpeta denominada ~images~.
-13. Modifica la página ~galeria.html~ para que incluya dos elementos ~<img>~ que muestren las dos capturas de pantalla.
-14. Realiza una ~pull request~ indicando en el mensaje que has completado la tarea junto con un enlace a la URL de de tu sitio web publicado.
+1. Crea un sitio GitHub Pages de organización en la organización que creaste en la sesión 3. Incluye un fichero ~index.html~ con tu nombre y tus apellidos. Comprueba que puedes acceder vía web al sitio publicado.
+2. Instala Jekyll en tu equipo y haz una captura de pantalla del resultado de ejecutar el comando ~jekyll -version~.
+3. Haz un /fork/ del repositorio disponible en [[https://github.com/curso-github-cefire/plantilla-jekyll]].
+4. Modifica el fichero ~_config.yml~ para que contenga los parámetros ~baseurl~ y ~url~ que correspondan a tu repositorio.
+5. Ejecuta el servidor de test en tu equipo y comprueba que puedes acceder al sitio y navegar por él. Haz una captura de pantalla de una de las páginas cargadas a través del servidor local.
+6. Sube los cambios a GitHub.
+7. Configura tu copia del repositorio para activar el servicio de GitHub Pages en la rama ~master~.
+8. Comprueba que puedes acceder vía web a tu sitio publicado.
+9. Crea una nueva página denominada ~blog~. Comprueba que aparece en el menú de navegación del sitio.
+10. Crea una nueva plantilla llamada ~plantillablog~ basada en la que se proporciona que muestre una lista de los posts del sitio. El listado debe incluir:
+    - Un enlace al post cuyo texto sea el título del post.
+    - La fecha de publicación.
+    - Un extracto del contenido del texto del post.
+11. Crea 3 posts que utilicen la plantilla por defecto. Para generar el texto de los posts puedes utilizar un generador del estilo [[https://es.lipsum.com/][lorem ipsum]].
+12. Configura la página ~blog~ de manera que utilice la plantilla ~plantillablog~. Comprueba que aparece la lista de posts y que se puede acceder a ellos a través de los enlaces.
+13. Incluye las capturas de pantalla de los apartados 2 y 5 en el repositorio en una carpeta denominada ~images~.
+14. Modifica la página ~galeria.html~ para que incluya dos elementos ~<img>~ que muestren las dos capturas de pantalla.
+15. Realiza una ~pull request~ indicando en el mensaje que has completado la tarea junto con:
+    - Un enlace a tu sitio web publicado.
+    - Un enlace al sitio de organización publicado que creaste en el apartado 1.
 
 *** Entrega de la tarea
  No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.

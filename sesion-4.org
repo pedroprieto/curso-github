@@ -160,7 +160,7 @@ url: "https://NOMBRE_USUARIO.github.io"
 - [[https://pages.github.com/themes/][Temas soportados por GitHub]]
 - Instalar un nuevo tema en el equipo local para poder previsualizar el sitio en el servidor de test local:
   1. Modificar el archivo ~Gemfile~ del proyecto
-  2. Añadir: gem "NOMBRE_DEL_TEMA"
+  2. Añadir: ~gem "NOMBRE_DEL_TEMA"~
   3. Ejecutar el comando: ~bundle install~
 
 **** Variables

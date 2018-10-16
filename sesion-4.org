@@ -1,0 +1,197 @@
+* GitHub Pages
+** Videotutoriales
+- [[https://youtu.be/sBkKKjcT2wI][Sesión 4.1]]
+- [[https://youtu.be/wrVch8y9G0o][Sesión 4.2]]
+- [[https://youtu.be/IXdNbCrPjDE][Sesión 4.3]]
+
+** Índice
+- Introducción y características del servicio
+- Páginas de usuario / organización
+- Páginas de repositorio
+- Markdown GitHub
+- Gestor estático de contenidos: Jekyll
+** Referencias
+- [[https://help.github.com/articles/what-is-github-pages/][Características de GitHub Pages]]
+- [[https://pages.github.com/][Referencia de GitHub Pages]]
+- [[https://help.github.com/articles/basic-writing-and-formatting-syntax/][Sintaxis MarkDown de GitHub]] 
+- [[https://jekyllrb.com/][Jekyll]]
+- [[https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/][Referencia de GitHub Pages y Jekyll]] 
+- [[https://jekyllrb.com/docs/installation/][Guía de instalación del entorno Ruby + Jekyll en distintos Sistemas Operativos]]
+- [[https://jekyllrb.com/docs/troubleshooting/#installation-problems][Guía de inicio rápido]]
+- [[https://jekyllrb.com/docs/troubleshooting/][Resolución de problemas con Jekyll]]
+
+** Contenidos
+*** Características de GitHub Pages
+- Servicio de alojamiento web estático (sin lógica de servidor ni base de datos).
+- Hasta 1 GB de alojamiento ([[https://help.github.com/articles/what-is-github-pages/#usage-limits][ver límites de uso]]).
+- Dos posibilidades:
+  - Asociado a cuenta de usuario.
+  - Asociado a un repositorio.
+- Tecnologías que se pueden utilizar: HTML, CSS y JavaScript. También se puede publicar cualquier otro tipo de archivos para su descarga vía web (PDF, DOC, ZIP,...)
+- Posibilidad de utilizar [[https://jekyllrb.com/][Jekyll]], un gestor de contenidos estático de funcionalidades parecidas a WordPress.
+
+*** Páginas de usuario / organización
+Sólo se puede crear un sitio por cada cuenta de usuario u organización. Normalmente se utiliza como sitio principal relacionado con la cuenta correspondiente:
+- Página personal
+- Curriculum Vitae
+- Página informativa
+- Página de portfolio
+- Página principal con la información de una asignatura
+- ...
+
+Procedimiento:
+1. Crear un repositorio con el nombre ~MINOMBREDEUSUARIO.github.io~ dentro de la cuenta de usuario u organización correspondiente.
+2. Los archivos que se creen estarán disponibles en la dirección: https://MINOMBREDEUSUARIO.github.io.
+ 
+*** Páginas de repositorio
+Se puede crear un sitio asociado a cualquier repositorio. Algunos ejemplos de uso:
+- Documentación relacionada con el código del repositorio
+- Página informativa del proyecto
+- Prácticas de desarrollo de aplicaciones web
+- Trabajos o presentaciones de alumnos
+- ...
+
+Procedimiento:
+1. Crear un repositorio (~nombrerepositorio~) dentro de la cuenta de usuario u organización correspondiente (~MINOMBREDEUSUARIO~).
+2. Habilitar el servicio de GitHub Pages en el repositorio mediante una de las siguientes *tres opciones*:
+   1. En los ajustes del repositorio (/Settings/), en la sección /GitHub Pages/, seleccionar la opción ~master branch~. Todo lo que se almacen en la rama ~master~ se publicará.
+   2. En los ajustes del repositorio (/Settings/), en la sección /GitHub Pages/, seleccionar la opción ~master branch /docs folder~. Sólo se publicará lo que se almacene dentro de la la carpeta ~docs~ de la rama ~master~.
+   3. Crear una rama denominada ~gh-pages~. El servicio de publicación de GitHub Pages se activará automáticamente y sólo se publicará el contenido de dicha rama.
+3. Los archivos que se creen estarán disponibles en la dirección: https://MINOMBREDEUSUARIO.github.io/nombrerepositorio.
+
+*** Ajustes de GitHub Pages
+- Pestaña ~Settings~ / Sección ~GitHub Pages~
+- Aquí se muestran los mensajes de error de publicación
+
+*** Jekyll
+**** Características
+- Gestor estático de contenidos
+- No necesita lógica de servidor ni bases de datos
+- Independencia de la estructura del sitio (plantillas) del contenido
+- El contenido se puede generar mediante MarkDown en lugar de HTML
+- Integrado en GitHub Pages (no necesita ser compilado)
+- Permite dividir los archivos de un sitio web en distintos trozos en los que trabajar de manera independiente (se disminuyen las posibilidades de que dos personas tengan que trabajar en el mismo archivo, disminuyendo así también las posibilidades de que haya conflictos de código)
+- Resulta muy sencillo agregar contenido nuevo (posts, páginas) al sitio con independencia de la estructura HTML
+**** Instalación
+- [[https://jekyllrb.com/docs/installation/][Guía de instalación del entorno Ruby + Jekyll en distintos Sistemas Operativos]]
+- [[https://jekyllrb.com/docs/troubleshooting/#installation-problems][Guía de inicio rápido]]
+- [[https://jekyllrb.com/docs/troubleshooting/][Resolución de problemas con Jekyll]]
+
+**** Creación del sitio
+#+begin_src bash
+jekyll new <nombre-sitio>
+#+end_src
+
+**** Ejecución del servidor de test
+#+begin_src bash
+# Dentro de la carpeta del sitio
+bundle exec jekyll serve
+# El sitio estará disponible en http://localhost:4000/BASEURL
+# BASEURL viene configurada en el archivo _config.yml
+#+end_src
+
+**** Agregar contenido
+***** Front matter
+- Debe aparecer en todos los archivos que vayan a ser procesados por Jekyll (posts, páginas,...)
+- Formato [[https://es.wikipedia.org/wiki/YAML][YAML]]
+- Debe aparecer al principio del archivo antes que cualquier otro contenido
+- Separado por 3 guiones:
+ #+begin_src
+---
+layout: post
+title: Título del post
+---
+ #+end_src
+
+***** Creación de posts
+ - Añadir un archivo en la carpeta ~_posts~ con el siguiente formato (en función de si se desea utilizar MarkDown o HTML)
+ #+begin_src
+ AÑO-MES-DIA-TITULO.md
+ AÑO-MES-DIA-TITULO.html
+ #+end_src
+ - Añadir /front matter/ y contenido. Por ejemplo:
+ #+begin_src markdown
+---
+layout: post
+title:  "Mi título"
+---
+
+# Post 1
+
+**Hola**, éste es mi primer post de Jekyll.
+
+ #+end_src
+
+***** Creación de páginas
+- Añadir un archivo en la carpeta raíz del repositorio o dentro de un subdirectorio (fuera de la carpeta ~_posts~)
+- Utilizar HTML o MarkDown
+- Añadir /front matter/ y contenido.
+**** La carpeta _site
+- Contiene el sitio estático resultado del procesado de Jekyll
+- Su contenido puede alojarse en cualquier servidor web estático
+- Está excluida en el fichero ~.gitignore~ por ser un resultado de compilación, no código fuente.
+**** El fichero de configuración
+- Archivo ~_config.yml~
+- Configuración general del sitio: título, datos, correo electrónico,...
+- Variable ~baseurl~: almacena la ruta base donde se publicará el sitio. En caso de utilizar un sitio de repositorio con GitHub Pages se debe configurar de la siguiente manera:
+#+begin_src yaml
+baseurl: "/NOMBRE_REPOSITORIO"
+#+end_src
+- Si se va a utilizar un sitio de usuario / organización en GitHub Pages se debe dejar sin configurar
+- Variable ~url~: almacena la URL del servidor web. Normalmente la configuraremos para que apunte al servicio de GitHub Pages asociado a nuestra cuenta:
+#+begin_src yaml
+url: "https://NOMBRE_USUARIO.github.io" 
+#+end_src
+- [[https://jekyllrb.com/docs/configuration/][Documentación]]
+- Si se modifica el fichero de configuración hay que reiniciar el servidor de test para que tengan efecto los cambios
+**** Creación de repositorios y subida a GitHub Pages
+1. Crear un nuevo sitio con Jekyll: ~jekyll new NOMBREPROYECTO~
+2. Configurar archivo ~_config.yml~
+3. Inicializar un repositorio nuevo en la carpeta del sitio de Jekyll creado (~git init~)
+4. Agregar los cambios al repositorio local
+5. Crear repositorio remoto vacío en GitHub
+6. Agregar remoto en el repositorio local
+7. Subir cambios con ~git push -u origin master~
+8. Activar el servicio de GitHub Pages en los ajustes del repositorio en GitHub
+**** Temas
+- Se configura en el fichero ~_config.yml~
+- Tema por defecto: [[https://github.com/jekyll/minima][minima]]
+- [[https://jekyllrb.com/docs/themes/][Documentación sobre Temas]]
+- [[https://pages.github.com/themes/][Temas soportados por GitHub]]
+- Instalar un nuevo tema en el equipo local para poder previsualizar el sitio en el servidor de test local:
+  1. Modificar el archivo ~Gemfile~ del proyecto
+  2. Añadir: gem "NOMBRE_DEL_TEMA"
+  3. Ejecutar el comando: ~bundle install~
+
+**** Variables
+- [[https://jekyllrb.com/docs/variables/][Documentación sobre variables]]
+
+**** Includes
+- [[https://jekyllrb.com/docs/includes/][Documentación sobre includes]]
+
+**** Layouts
+- [[https://jekyllrb.com/docs/layouts/][Documentación sobre layouts]]
+
+**** Repositorio de ejemplo
+A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/plantilla-jekyll][repositorio de ejemplo]] con un proyecto de Jekyll básico para el diseño de un sitio web. Está pensado para utilizar con los alumnos en el desarrollo de un sitio formado por 5 páginas estáticas. Utiliza una única plantilla para todas las páginas dividida en 4 secciones. No incluye ningún tema ya que está pensado para realizar el diseño del interfaz con HTML y CSS. Si se quiere utilizar como referencia hay que recordar que hay que cambiar las variables *baseurl* y *url* en el archivo ~_config.yml~ y adaptarla al repositorio creado.
+** Tareas
+1. Instala Jekyll en tu equipo y haz una captura de pantalla del resultado de ejecutar el comando ~jekyll -version~.
+2. Haz un /fork/ del repositorio disponible en [[https://github.com/curso-github-cefire/plantilla-jekyll]].
+3. Modifica el fichero ~_config.yml~ para que contenga los parámetros ~baseurl~ y ~url~ que correspondan a tu repositorio.
+4. Ejecuta el servidor de test en tu equipo y comprueba que puedes acceder al sitio y navegar por él. Haz una captura de pantalla de una de las páginas cargadas a través del servidor local.
+5. Sube los cambios a GitHub.
+6. Configura tu copia del repositorio para activar el servicio de GitHub Pages en la rama ~master~.
+7. Comprueba que puedes acceder vía web a tu sitio publicado.
+8. Crea una nueva página denominada ~blog~. Comprueba que aparece en el menú de navegación del sitio.
+9. Crea una nueva plantilla llamada ~plantillablog~ basada en la que se proporciona que muestre una lista de los posts del sitio. El listado debe incluir:
+   - Un enlace al post cuyo texto sea el título del post.
+   - La fecha de publicación.
+   - Un extracto del contenido del texto del post.
+10. Crea 3 posts que utilicen la plantilla por defecto. Para generar el texto de los posts puedes utilizar un generador del estilo [[https://es.lipsum.com/][lorem ipsum]].
+11. Configura la página ~blog~ de manera que utilice la plantilla ~plantillablog~. Comprueba que aparece la lista de posts y que se puede acceder a ellos a través de los enlaces.
+12. Incluye las capturas de pantalla de los apartados 1 y 4 en el repositorio en una carpeta denominada ~images~.
+13. Modifica la página ~galeria.html~ para que incluya dos elementos ~<img>~ que muestren las dos capturas de pantalla.
+14. Realiza una ~pull request~ indicando en el mensaje que has completado la tarea junto con un enlace a la URL de de tu sitio web publicado.
+
+*** Entrega de la tarea
+ No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.

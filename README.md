@@ -6,8 +6,8 @@ Curso de formación para profesores de la familia profesional de Informática y 
 1. [Manejo básico de Git](sesion-1.org)
 2. [Manejo básico de Git (II)](sesion-2.org)
 3. [Introducción a GitHub](sesion-3.org)
-4. GitHub Pages
-5. Integración continua: testeo
+4. [GitHub Pages](sesion-4.org)
+5. [Integración continua: testeo](sesion-5.org)
 6. Integración continua: despliegue automático
 7. Metodologías para trabajar con los alumnos
 

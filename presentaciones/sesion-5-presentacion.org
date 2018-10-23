@@ -1,0 +1,58 @@
+#+Title: Integración continua I
+#+Author: Pedro Prieto
+#+Email: pedpral@gmail.com
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: black
+#+REVEAL_HLEVEL: 1
+#+OPTIONS: toc:nil num:nil
+
+
+* Integración continua (Continuous Integration)
+#+ATTR_REVEAL: :frag (roll-in) 
+- Metodología para hacer integraciones automáticas de manera frecuente
+- Tras cada integración se ejecutan una serie de pruebas unitarias
+- Permite generar actualizaciones de manera más rápida
+- Permite detectar fallos lo antes posible
+- Las pruebas se ejecutan de manera automática tras cada envío de código a la rama principal de desarrollo
+
+* Desarrollo Guiado por Pruebas
+#+ATTR_REVEAL: :frag (roll-in) 
+- Metodología de desarrollo que consiste en escribir los tests (pruebas unitarias) antes que el código
+- Una vez creada la prueba, se implementa el código necesario para superarla
+- Por último, se refactoriza el código escrito para eliminar duplicidades y hacerlo más limpio y eficiente
+- Suele utilizarse con Integración Continua
+
+* Entrega continua (Continuous Delivery / Deployment)
+#+ATTR_REVEAL: :frag (roll-in) 
+- Metodología para realizar despliegues o lanzamientos de aplicaciones de manera frecuente
+- Va un paso más allá de la integración continua
+- Si el proceso de testeo de la integración continua es satisfactorio se procede a realizar el despliegue o lanzamiento de software
+- Si el proceso de despliegue es manual, se habla de /Continuous Delivery/
+- Si el proceso de despliegue es automático, se habla de /Continuous Deployment/
+
+* Aplicaciones en las clases
+#+ATTR_REVEAL: :frag (roll-in) 
+- Introducción a metodologías de desarrollo guiado por tests tal como se hace en la industria
+- Introducción a metodologías de integración continua tal como se hace en la industria
+- Corrección automática de prácticas
+- Autoevaluación por parte del alumnado
+- Garantía de que el código a integrar es válido
+- Envío de notificaciones al resto de miembros de un equipo
+
+* Integración continua con GitHub y Travis CI
+#+ATTR_REVEAL: :frag (roll-in) 
+ 1. Activación del repositorio 
+ 2. Creación del fichero de configuración ~.travis.yml~
+ 3. Creación o modificación de tests
+ 4. Publicación de cambios
+    - Commits
+    - Pull Requests 
+#+REVEAL: split 
+#+ATTR_REVEAL: :frag (roll-in) 
+ 5. [@5] Ejecución de tests
+    1. Creación de MV
+    2. Clonación del repositorio
+    3. Instalación de dependencias
+    4. Ejecución de tests
+    5. Acciones adicionales (despliegue, publicación,...)
+ 6. Notificación de resultados

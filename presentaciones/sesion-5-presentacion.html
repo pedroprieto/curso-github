@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Integración continua I</title>
+<meta name="author" content="(Pedro Prieto)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/black.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Integración continua I</h1><h2 class="author">Pedro Prieto</h2>
+</section>
+
+
+<section>
+<section id="slide-orgec44083">
+<h2 id="orgec44083">Integración continua (Continuous Integration)</h2>
+<ul>
+<li class="fragment roll-in">Metodología para hacer integraciones automáticas de manera frecuente</li>
+<li class="fragment roll-in">Tras cada integración se ejecutan una serie de pruebas unitarias</li>
+<li class="fragment roll-in">Permite generar actualizaciones de manera más rápida</li>
+<li class="fragment roll-in">Permite detectar fallos lo antes posible</li>
+<li class="fragment roll-in">Las pruebas se ejecutan de manera automática tras cada envío de código a la rama principal de desarrollo</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org841d6cb">
+<h2 id="org841d6cb">Desarrollo Guiado por Pruebas</h2>
+<ul>
+<li class="fragment roll-in">Metodología de desarrollo que consiste en escribir los tests (pruebas unitarias) antes que el código</li>
+<li class="fragment roll-in">Una vez creada la prueba, se implementa el código necesario para superarla</li>
+<li class="fragment roll-in">Por último, se refactoriza el código escrito para eliminar duplicidades y hacerlo más limpio y eficiente</li>
+<li class="fragment roll-in">Suele utilizarse con Integración Continua</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org5ba3f0d">
+<h2 id="org5ba3f0d">Entrega continua (Continuous Delivery / Deployment)</h2>
+<ul>
+<li class="fragment roll-in">Metodología para realizar despliegues o lanzamientos de aplicaciones de manera frecuente</li>
+<li class="fragment roll-in">Va un paso más allá de la integración continua</li>
+<li class="fragment roll-in">Si el proceso de testeo de la integración continua es satisfactorio se procede a realizar el despliegue o lanzamiento de software</li>
+<li class="fragment roll-in">Si el proceso de despliegue es manual, se habla de <i>Continuous Delivery</i></li>
+<li class="fragment roll-in">Si el proceso de despliegue es automático, se habla de <i>Continuous Deployment</i></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org15e1f8b">
+<h2 id="org15e1f8b">Aplicaciones en las clases</h2>
+<ul>
+<li class="fragment roll-in">Introducción a metodologías de desarrollo guiado por tests tal como se hace en la industria</li>
+<li class="fragment roll-in">Introducción a metodologías de integración continua tal como se hace en la industria</li>
+<li class="fragment roll-in">Corrección automática de prácticas</li>
+<li class="fragment roll-in">Autoevaluación por parte del alumnado</li>
+<li class="fragment roll-in">Garantía de que el código a integrar es válido</li>
+<li class="fragment roll-in">Envío de notificaciones al resto de miembros de un equipo</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org38342f2">
+<h2 id="org38342f2">Integración continua con GitHub y Travis CI</h2>
+<ol>
+<li class="fragment roll-in">Activación del repositorio</li>
+<li class="fragment roll-in">Creación del fichero de configuración <code>.travis.yml</code></li>
+<li class="fragment roll-in">Creación o modificación de tests</li>
+<li class="fragment roll-in">Publicación de cambios
+<ul>
+<li>Commits</li>
+<li>Pull Requests</li>
+
+</ul></li>
+
+</ol>
+</section>
+<section >
+<ol>
+<li class="fragment roll-in" value="5">Ejecución de tests
+<ol>
+<li>Creación de MV</li>
+<li>Clonación del repositorio</li>
+<li>Instalación de dependencias</li>
+<li>Ejecución de tests</li>
+<li>Acciones adicionales (despliegue, publicación,&#x2026;)</li>
+
+</ol></li>
+<li class="fragment roll-in">Notificación de resultados</li>
+
+</ol>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

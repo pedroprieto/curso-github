@@ -1,0 +1,113 @@
+* Integración continua: Testeo
+** Videotutoriales y presentación
+- [[file:presentaciones/sesion-5-presentacion.html][Presentación]]
+- [[https://youtu.be/ZF7rt9d-ODE][Sesión 5.1]]
+- [[https://youtu.be/hg1rBL1TWOI][Sesión 5.2]]
+
+** Índice
+- Fundamentos de la Integración Continua
+- Desarrollo guiado por tests
+- Introducción a Travis CI
+- Aplicaciones en las clases
+  - Corrección automática de prácticas
+  - Autoevaluación por parte del alumnado
+- Configuración de los repositorios
+- Visualización de los resultados
+
+** Referencias
+- [[https://es.wikipedia.org/wiki/Integraci%25C3%25B3n_continua][Definición de Integración continua]]
+- [[https://aws.amazon.com/es/devops/continuous-integration/][Conceptos de Integración Continua (AWS)]] 
+- [[https://docs.travis-ci.com/user/for-beginners][Conceptos básicos de Integración Continua (Travis)]]
+- [[https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas][Desarrollo Guiado por Pruebas - definición]] 
+- [[https://docs.travis-ci.com/user/tutorial/][Primeros pasos con Travis]]
+- [[https://docs.travis-ci.com/user/for-beginners][Documentación de Travis]]
+- [[https://docs.travis-ci.com/user/languages/][Lista de lenguajes de programación soportados por Travis]] 
+
+** Contenidos
+*** Definiciones
+**** Integración continua (Continuous Integration)
+- Metodología para hacer integraciones automáticas de manera frecuente
+- Tras cada integración se ejecutan una serie de pruebas unitarias
+- Permite generar actualizaciones de manera más rápida
+- Permite detectar fallos lo antes posible
+- Las pruebas se ejecutan de manera automática tras cada envío de código a la rama principal de desarrollo
+
+**** Desarrollo Guiado por Pruebas
+- Metodología de desarrollo que consiste en escribir los tests (pruebas unitarias) antes que el código
+- Una vez creada la prueba, se implementa el código necesario para superarla
+- Por último, se refactoriza el código escrito para eliminar duplicidades y hacerlo más limpio y eficiente
+- Suele utilizarse con Integración Continua
+
+**** Entrega continua (Continuous Delivery / Deployment)
+- Metodología para realizar despliegues o lanzamientos de aplicaciones de manera frecuente
+- Va un paso más allá de la integración continua
+- Si el proceso de testeo de la integración continua es satisfactorio se procede a realizar el despliegue o lanzamiento de software
+- Si el proceso de despliegue es manual, se habla de /Continuous Delivery/
+- Si el proceso de despliegue es automático, se habla de /Continuous Deployment/
+
+*** Aplicaciones en las clases
+- Introducción a metodologías de desarrollo guiado por tests tal como se hace en la industria
+- Introducción a metodologías de integración continua tal como se hace en la industria
+- Corrección automática de prácticas
+- Autoevaluación por parte del alumnado
+- Garantía de que el código a integrar es válido
+- Envío de notificaciones al resto de miembros de un equipo
+
+*** Integración continua con GitHub y Travis CI
+**** Flujo de trabajo general
+1. *Activación* del repositorio para que utilice el servicio Travis CI. Sólo es neceario hacerlo la primera vez.
+2. *Creación del fichero de configuración* de Travis CI, ~.travis.yml~. Sólo es necesario hacerlo la primera vez.
+3. *Creación o modificación de tests* según el lenguaje de programación utilizado.
+4. *Publicación de cambios*. Todos los cambios que lleguen a la *rama principal* del repositorio vía ~commit~ o vía ~pull request~ activan la ejecución de un trabajo de integración continua.
+5. *Ejecución de tests*. El servicio Travis CI detecta los nuevos cambios en el repositorio y lanza un trabajo de integración continua. Este trabajo comprende las siguientes etapas:
+   1. En los servidores de Travis CI se crea una máquina virtual con un sistema operativo Ubuntu (o Mac OS X si se está desarrollando para ese sistema operativo).
+   2. Se clona el repositorio en dicha máquina.
+   3. Se instalan las dependencias del proyecto: lenguajes de programación, librerías, etc.
+   4. Se ejecutan los tests que se hayan indicado en el proyecto.
+   5. Si se pasan los tests, se ejecutan una serie de acciones adicionales (como pueden ser envío de notificaciones, despliegue en servidores, creación de archivos ejecutables,...).
+6. *Notificación de resultados*. Se notifica el resultado de la ejecución de los tests en el repositorio de GitHub (normalmente aparece un mensaje indicando que las pruebas se han pasado). Esto es especialmente útil al trabajar con /Pull Requests/, ya que podemos esperar a que Travis nos informe sobre el resultado de los tests antes de fusionar los cambios en la rama principal del repositorio.
+     
+**** Creación de cuenta de Travis CI e integración con GitHub
+- Acceder a [[https://travis-ci.org/]]
+- Crear una cuenta a través de la opción *Sign in with GitHub*
+[[file:imagenes/signup-travis.png]]
+- Una vez redirigidos a la página de GitHub, autorizar el acceso
+
+**** Opcional: autorización de organizaciones
+- Acceder al menú ~Settings~ de GitHub
+- Acceder a la opción ~Applications~
+[[file:imagenes/addorganization-travis.png]]
+- Seleccionar la aplicación Travis
+- En el apartado /Organization access/, activar las organizaciones que se deseen
+[[file:imagenes/addorganization-travis-2.png]]
+ 
+**** Activación del repositorio que va a hacer uso de Travis CI
+- Acceder a [[https://travis-ci.org/]]
+- Acceder a la opción ~Settings~
+- Seleccionar la cuenta sobre la que se desee trabajar (usuario u organización)
+- Activar los repositorios que vayan a trabajar con Travis
+[[file:imagenes/addrepo-travis.png]]
+
+**** El fichero de configuración de Travis CI
+- Para que Travis se ejecute debe existir un fichero ~.travis.yml~ en el repositorio
+- Formato [[https://es.wikipedia.org/wiki/YAML][YAML]]
+- Configuración mínima: [[https://docs.travis-ci.com/user/tutorial/#selecting-a-different-programming-language][elegir un lenguaje de programación]]
+- [[https://docs.travis-ci.com/user/languages/][Lista completa de lenguajes de programación soportados por Travis]]
+- [[https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle][Ciclo de vida de un trabajo en Travis CI]]
+
+**** Visualización del resultado de la ejecución
+- Acceder a [[https://travis-ci.org/]]
+- Seleccionar el trabajo de la lista de la izquierda
+[[file:imagenes/visualizar-travis.png]]
+
+**** Repositorio de ejemplo
+A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/sesion5-1-travis][repositorio de ejemplo]] con un proyecto PHP configurado para trabajar con Travis.
+
+** Tareas
+Utilizando como base el repositorio de ejemplo propuesto, crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion5-travis~. Dicho repositorio debe contener una función que compruebe si un número dado es par y un test que realice pruebas con varios números para comprobar que la función está correctamente diseñada. Puedes utilizar cualquier lenguaje de programación soportado por Travis. Deberás activar Travis en el repositorio y configurar adecuadamente el fichero ~.travis.yml~ para el lenguaje de programación utilizado.
+
+*** Opcional
+ Crea un repositorio con varios ejercicios de programación del módulo que estés impartiendo y añade tests unitarios para verificar su funcionamiento. Configura adecuadamente el repositorio para que funcione con Travis.
+
+** Entrega de la tarea
+Una vez terminada la tarea envíame una notificación a mi usuario de GitHub a través de la organización creada en la sesión 3. No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.

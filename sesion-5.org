@@ -1,6 +1,6 @@
 * Integración continua: Testeo
 ** Videotutoriales y presentación
-- [[file:presentaciones/sesion-5-presentacion.html][Presentación]]
+- [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-5-presentacion.html][Presentación]]
 - [[https://youtu.be/ZF7rt9d-ODE][Sesión 5.1]]
 - [[https://youtu.be/hg1rBL1TWOI][Sesión 5.2]]
 

@@ -106,7 +106,7 @@ A continuación se incluye un enlace a un [[https://github.com/curso-github-cefi
 ** Tareas
 Utilizando como base el repositorio de ejemplo propuesto, crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion5-travis~. Dicho repositorio debe contener una función que compruebe si un número dado es par y un test que realice pruebas con varios números para comprobar que la función está correctamente diseñada. Puedes utilizar cualquier lenguaje de programación soportado por Travis. Deberás activar Travis en el repositorio y configurar adecuadamente el fichero ~.travis.yml~ para el lenguaje de programación utilizado.
 
-Cuando hayas terminado, incluye un icono de estado de Travis-CI en el archivo ~README~ de tu repositorio. Para ello hay que copiar un código que proporciona Travis. Tienes información sobre cómo incluirlo [[https://docs.travis-ci.com/user/status-images/][aquí]].
+Cuando hayas terminado, incluye un *icono de estado* de Travis-CI en el archivo ~README~ de tu repositorio. Para ello hay que copiar un código que proporciona Travis. Tienes información sobre cómo incluirlo [[https://docs.travis-ci.com/user/status-images/][aquí]].
 
 *** Opcional
  Crea un repositorio con varios ejercicios de programación del módulo que estés impartiendo y añade tests unitarios para verificar su funcionamiento. Configura adecuadamente el repositorio para que funcione con Travis.

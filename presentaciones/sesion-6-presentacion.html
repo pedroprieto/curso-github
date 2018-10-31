@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Integración continua II</title>
+<meta name="author" content="(Pedro Prieto)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/black.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Integración continua II</h1><h2 class="author">Pedro Prieto</h2>
+</section>
+
+
+<section>
+<section id="slide-org3a8289c">
+<h2 id="org3a8289c">Entrega continua (Continuous Delivery / Deployment)</h2>
+<ul>
+<li class="fragment roll-in">Va un paso más allá de la integración continua.</li>
+<li class="fragment roll-in">Permite realizar el despliegue o lanzamiento de la aplicación de manera automática en un servidor de producción cada vez que se realice un <code>commit</code> o una <code>Pull Request</code> en la <b>rama principal</b> del repositorio en GitHub.</li>
+<li class="fragment roll-in">El despliegue sólo se realizará si la <b>fase de test</b> se completa <b>satisfactoriamente</b>.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org53c4cda">
+<h2 id="org53c4cda">Aplicaciones en las clases</h2>
+<ul>
+<li class="fragment roll-in">Introducción a metodologías de implementación continua tal como se hace en la industria</li>
+<li class="fragment roll-in">Despliegue de aplicaciones web en servidores reales (Heroku, AWS, Azure, OpenShift,&#x2026;) accesibles desde Internet (no sólo en el equipo local)</li>
+<li class="fragment roll-in">Lanzamiento de versiones de programas ejecutables o resultado de la compilación del código fuente y publicación en la plataforma correspondiente (LaunchPad, NPM, GitHub Releases, AWS S3,&#x2026;)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1e6eb3b">
+<h2 id="org1e6eb3b">Despliegue automático con GitHub y Travis CI</h2>
+<ol>
+<li class="fragment roll-in">Configuración del repositorio para que utilice Travis</li>
+<li class="fragment roll-in">Creación del fichero de configuración <code>.travis.yml</code></li>
+<li class="fragment roll-in">Creación de la aplicación en el servidor cloud (Heroku)</li>
+<li class="fragment roll-in">Configuración de servicios adicionales en el servidor</li>
+<li class="fragment roll-in">Obtención del token de acceso al servidor cloud</li>
+<li class="fragment roll-in">Cifrado del token de acceso al servidor cloud</li>
+<li class="fragment roll-in">Modificación del fichero <code>.travis.yml</code> para incorporar los parámetros de despliegue</li>
+<li class="fragment roll-in">Comprobación y visualización del resultado de la ejecución</li>
+
+</ol>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

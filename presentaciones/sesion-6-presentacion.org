@@ -1,0 +1,31 @@
+#+Title: Integración continua II
+#+Author: Pedro Prieto
+#+Email: pedpral@gmail.com
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: black
+#+REVEAL_HLEVEL: 1
+#+OPTIONS: toc:nil num:nil
+
+
+* Entrega continua (Continuous Delivery / Deployment)
+#+ATTR_REVEAL: :frag (roll-in) 
+- Va un paso más allá de la integración continua.
+- Permite realizar el despliegue o lanzamiento de la aplicación de manera automática en un servidor de producción cada vez que se realice un ~commit~ o una ~Pull Request~ en la *rama principal* del repositorio en GitHub.
+- El despliegue sólo se realizará si la *fase de test* se completa *satisfactoriamente*.
+
+* Aplicaciones en las clases
+#+ATTR_REVEAL: :frag (roll-in) 
+- Introducción a metodologías de implementación continua tal como se hace en la industria
+- Despliegue de aplicaciones web en servidores reales (Heroku, AWS, Azure, OpenShift,...) accesibles desde Internet (no sólo en el equipo local)
+- Lanzamiento de versiones de programas ejecutables o resultado de la compilación del código fuente y publicación en la plataforma correspondiente (LaunchPad, NPM, GitHub Releases, AWS S3,...)
+
+* Despliegue automático con GitHub y Travis CI
+#+ATTR_REVEAL: :frag (roll-in) 
+ 1. Configuración del repositorio para que utilice Travis
+ 2. Creación del fichero de configuración ~.travis.yml~
+ 3. Creación de la aplicación en el servidor cloud (Heroku)
+ 4. Configuración de servicios adicionales en el servidor
+ 5. Obtención del token de acceso al servidor cloud
+ 6. Cifrado del token de acceso al servidor cloud
+ 7. Modificación del fichero ~.travis.yml~ para incorporar los parámetros de despliegue
+ 8. Comprobación y visualización del resultado de la ejecución

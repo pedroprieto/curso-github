@@ -8,7 +8,7 @@ Curso de formación para profesores de la familia profesional de Informática y 
 3. [Introducción a GitHub](sesion-3.org)
 4. [GitHub Pages](sesion-4.org)
 5. [Integración continua: testeo](sesion-5.org)
-6. Integración continua: despliegue automático
+6. [Integración continua: despliegue automático](sesion-6.org)
 7. Metodologías para trabajar con los alumnos
 
 ## Recursos

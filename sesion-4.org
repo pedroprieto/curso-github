@@ -83,6 +83,15 @@ jekyll new <nombre-sitio>
 #+end_src
 
 **** Ejecución del servidor de test
+Si en lugar de crear un nuevo sitio lo que hacemos es clonar un repositorio que tenga un sitio Jekyll previamente creado habrá que ejecutar el siguiente comando:
+
+#+begin_src bash
+# Dentro de la carpeta del repositorio clonado
+bundle install
+#+end_src
+
+A continuación se lanza el servidor de test:
+
 #+begin_src bash
 # Dentro de la carpeta del sitio
 bundle exec jekyll serve
@@ -178,21 +187,22 @@ A continuación se incluye un enlace a un [[https://github.com/curso-github-cefi
 1. Crea un sitio GitHub Pages de organización en la organización que creaste en la sesión 3. Incluye un fichero ~index.html~ con tu nombre y tus apellidos. Comprueba que puedes acceder vía web al sitio publicado.
 2. Instala Jekyll en tu equipo y haz una captura de pantalla del resultado de ejecutar el comando ~jekyll -version~.
 3. Haz un /fork/ del repositorio disponible en [[https://github.com/curso-github-cefire/plantilla-jekyll]].
-4. Modifica el fichero ~_config.yml~ para que contenga los parámetros ~baseurl~ y ~url~ que correspondan a tu repositorio.
-5. Ejecuta el servidor de test en tu equipo y comprueba que puedes acceder al sitio y navegar por él. Haz una captura de pantalla de una de las páginas cargadas a través del servidor local.
-6. Sube los cambios a GitHub.
-7. Configura tu copia del repositorio para activar el servicio de GitHub Pages en la rama ~master~.
-8. Comprueba que puedes acceder vía web a tu sitio publicado.
-9. Crea una nueva página denominada ~blog~. Comprueba que aparece en el menú de navegación del sitio.
-10. Crea una nueva plantilla llamada ~plantillablog~ basada en la que se proporciona que muestre una lista de los posts del sitio. El listado debe incluir:
+4. Clona tu repositorio y a continuación ejecuta en su interior el comando ~bundle install~ para instalar las dependencias.
+5. Modifica el fichero ~_config.yml~ para que contenga los parámetros ~baseurl~ y ~url~ que correspondan a tu repositorio.
+6. Ejecuta el servidor de test en tu equipo y comprueba que puedes acceder al sitio y navegar por él. Haz una captura de pantalla de una de las páginas cargadas a través del servidor local.
+7. Sube los cambios a GitHub.
+8. Configura tu copia del repositorio para activar el servicio de GitHub Pages en la rama ~master~.
+9. Comprueba que puedes acceder vía web a tu sitio publicado.
+10. Crea una nueva página denominada ~blog~. Comprueba que aparece en el menú de navegación del sitio.
+11. Crea una nueva plantilla llamada ~plantillablog~ basada en la que se proporciona que muestre una lista de los posts del sitio. El listado debe incluir:
     - Un enlace al post cuyo texto sea el título del post.
     - La fecha de publicación.
     - Un extracto del contenido del texto del post.
-11. Crea 3 posts que utilicen la plantilla por defecto. Para generar el texto de los posts puedes utilizar un generador del estilo [[https://es.lipsum.com/][lorem ipsum]].
-12. Configura la página ~blog~ de manera que utilice la plantilla ~plantillablog~. Comprueba que aparece la lista de posts y que se puede acceder a ellos a través de los enlaces.
-13. Incluye las capturas de pantalla de los apartados 2 y 5 en el repositorio en una carpeta denominada ~images~.
-14. Modifica la página ~galeria.html~ para que incluya dos elementos ~<img>~ que muestren las dos capturas de pantalla.
-15. Realiza una ~pull request~ indicando en el mensaje que has completado la tarea junto con:
+12. Crea 3 posts que utilicen la plantilla por defecto. Para generar el texto de los posts puedes utilizar un generador del estilo [[https://es.lipsum.com/][lorem ipsum]].
+13. Configura la página ~blog~ de manera que utilice la plantilla ~plantillablog~. Comprueba que aparece la lista de posts y que se puede acceder a ellos a través de los enlaces.
+14. Incluye las capturas de pantalla de los apartados 2 y 5 en el repositorio en una carpeta denominada ~images~.
+15. Modifica la página ~galeria.html~ para que incluya dos elementos ~<img>~ que muestren las dos capturas de pantalla.
+16. Realiza una ~pull request~ indicando en el mensaje que has completado la tarea junto con:
     - Un enlace a tu sitio web publicado.
     - Un enlace al sitio de organización publicado que creaste en el apartado 1.
 

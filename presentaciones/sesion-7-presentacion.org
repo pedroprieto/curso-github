@@ -1,0 +1,184 @@
+#+Title: Metodologías para el trabajo con alumnos
+#+Author: Pedro Prieto
+#+Email: pedpral@gmail.com
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: black
+#+REVEAL_HLEVEL: 1
+#+OPTIONS: toc:nil num:nil
+
+* Ventajas de GitHub
+#+ATTR_REVEAL: :frag (roll-in) 
+- Los alumnos entran en contacto con metodologías de trabajo usadas en la industria
+- Puesta en marcha sencilla
+- Distribución de código base sobre el que trabajar
+- Retroalimentación sobre el código
+- Mayor comodidad a la hora de distribuir y recoger tareas
+- Posibilidad de integrar metodologías de Desarrollo Guiado por Pruebas en las prácticas
+- Servidor web integrado (GitHub Pages)
+- Posibilidad de realizar despliegues automáticos de aplicaciones para su exposición y prueba
+
+* El programa GitHub Education
+#+ATTR_REVEAL: :frag (roll-in) 
+- [[https://education.github.com/][GitHub Education]]
+- Recursos para estudiantes:
+  - Herramientas: [[https://education.github.com/pack][Student Developer Pack]]
+  - Certificación: [[https://education.github.com/students/experts][GitHub Campus Experts]]
+- Recursos para profesores:
+  - Gestión de clases: [[https://classroom.github.com/][GitHub Classroom]]
+  - Comunidad: [[https://education.github.community/][GitHub Education Community]] 
+  - Certificación: [[https://education.github.com/teachers/advisors][GitHub Campus Advisors]]
+  - [[https://education.github.community/t/shopping-bags-get-a-github-swag-bag-for-your-classroom/33][Bolsa de regalos]] (pegatinas, guías impresas, pósters,...)
+
+* GitHub Classroom
+#+ATTR_REVEAL: :frag (roll-in) 
+- Herramienta de gestión de trabajos
+- Integrada con GitHub
+- Automatiza la creación de repositorios privados para tareas individuales o de grupo
+- Repositorio existente como base para la tarea
+- Listado de alumnos (roster)
+- Seguimiento
+- Descarga de todos los trabajos mediante un click
+
+** Clases
+#+ATTR_REVEAL: :frag (roll-in) 
+- Se puede crear una clase (/classroom/) para cada clase que impartamos
+- Cada clase va asociada a una *organización* de GitHub
+- Se tiene que autorizar el acceso de cada clase a la organización de GitHub correspondiente
+- En cada clase se pueden crear *tareas* (/assignments/)
+- En cada clase se puede crear una *lista de alumnos* (/roster/) indicando una lista de identificadores
+- Si se ha creado la lista de alumnos, el alumno tendrá que elegirse de la lista al aceptar la tarea
+- El listado de alumnos permite asociar nombres de usuario de GitHub a datos conocidos (nombre, apellidos,...)
+
+** Tareas
+#+ATTR_REVEAL: :frag (roll-in) 
+- Privadas o públicas
+- Individuales o de grupo
+- Enlace de invitación
+- Identificación del alumno al aceptar la tarea
+- Repositorio para cada alumno (individual)
+- Repositorio para cada grupo (grupo)
+
+* Metodologías de trabajo para prácticas individuales
+** 1. Forks y Pull Requests
+#+ATTR_REVEAL: :frag (roll-in) 
+1. Creación del repositorio con el código base de la tarea
+2. Archivo ~README~ con enunciado o descripción de la tarea
+3. Cada alumno realiza un /fork/ del repositorio
+4. El alumno trabaja en su copia del repositorio
+5. Cuando quiera solicitar ayuda o revisión del profesor, el alumno genera una /pull request/
+6. El profesor proporciona retroalimentación mediante comentarios en la /pull request/ o en un determinado /commit/ individual
+7. Cuando el alumno finaliza la tarea, genera una /pull request/
+
+*** Ventajas
+#+ATTR_REVEAL: :frag (roll-in) 
+ - Sencillez
+ - Flujo de trabajo parecido al funcionamiento normal de GitHub
+
+*** Desventajas
+#+ATTR_REVEAL: :frag (roll-in) 
+ - Los repositorios de las tareas de los alumnos son públicos
+ - Es difícil determinar el nombre del alumno a partir del usuario de GitHub
+ - Cada alumno es dueño de su repositorio
+ - En caso de tener integración con Travis, cada alumno deberá activarla en su repositorio
+
+** 2. GitHub Classroom
+#+ATTR_REVEAL: :frag (roll-in) 
+ 1. Creación del repositorio con el código base de la tarea
+ 2. Archivo ~README~ con enunciado o descripción de la tarea
+ 3. En /GitHub Classroom/, se crea una tarea individual
+ 4. Se proporciona a los alumnos el enlace con la invitación
+ 5. Inicialmente, el alumno crea una *rama nueva* sobre la que va a trabajar
+ 6. /Pull request/ a la *rama principal* del repositorio con cita al profesor para entrega / retroalimentación
+ 7. El profesor proporciona retroalimentación mediante comentarios en la /pull request/ o en un determinado /commit/ individual
+
+*** Ventajas
+#+ATTR_REVEAL: :frag (roll-in) 
+  - Sencillez
+  - Los alumnos no tienen acceso a los repositorios del resto de alumnos
+  - Existe un listado de alumnos para identificar cada tarea
+  - Los repositorios de cada alumno se crean en la cuenta de organización del profesor
+  - En caso de tener integración con Travis, el profesor puede activarla él mismo en cada repositorio
+
+*** Desventajas
+#+ATTR_REVEAL: :frag (roll-in) 
+- Dado que no hay /forks/, no es posible hacer /pull requests/ al repositorio principal. Por ello se sugiere el funcionamiento con ramas de trabajo
+
+* Metodologías de trabajo para prácticas en grupo
+** 1. Organizaciones, equipos y repositorios compartidos
+#+ATTR_REVEAL: :frag (roll-in) 
+ 1. Creación de equipos dentro de la organización
+ 2. Invitación de los alumnos para que formen parte de cada equipo
+ 3. Creación de un repositorio para cada equipo con el código base de la tarea
+ 4. Archivo ~README~ con enunciado o descripción de la tarea
+ 5. Opcionalmente, configuración de los repositorios para su uso con Travis
+ 6. Asignación de los repositorios a los equipos correspondientes (recomendable permisos de *escritura*, /write/)
+#+REVEAL: split 
+#+ATTR_REVEAL: :frag (roll-in) 
+ 7. [@7]Cada miembro del equipo crea una *rama personal* para su trabajo
+ 8. Las integraciones se realizan mediante /pull requests/ a la rama principal del repositorio del equipo
+ 9. En las /pull request/ se puede citar al profesor para su intervención
+ 10. El profesor proporciona retroalimentación mediante comentarios en la /pull request/ o en un determinado /commit/ individual
+
+*** Ventajas
+ - Flujo de trabajo parecido al funcionamiento normal de GitHub
+
+*** Desventajas
+#+ATTR_REVEAL: :frag (roll-in) 
+ - La puesta en marcha implica varios pasos
+ - Es difícil determinar el nombre del alumno a partir del usuario de GitHub
+ - Es necesario crear un repositorio por cada equipo y subir el código común en todos
+
+** 2. GitHub Classroom
+#+ATTR_REVEAL: :frag (roll-in) 
+ 1. Creación del repositorio con el código base de la tarea
+ 2. Archivo ~README~ con enunciado o descripción de la tarea
+ 3. En /GitHub Classroom/, se crea una tarea de grupo
+ 4. Se elige el repositorio con el código base sobre el que se basará la tarea
+ 5. Se proporciona a los alumnos el enlace con la invitación
+ 6. Cada alumno accede al enlace de invitación y crea un equipo nuevo o elige uno existente
+#+REVEAL: split 
+#+ATTR_REVEAL: :frag (roll-in) 
+ 7. [@7]Se crea automáticamente un repositorio para cada equipo en la organización
+ 8. Opcionalmente, configuración de los repositorios creados para su uso con Travis
+ 9. Cada miembro del equipo crea una *rama personal* para su trabajo
+ 10. Las integraciones se realizan mediante /pull requests/ a la rama principal del repositorio del equipo
+ 11. En las /pull request/ se puede citar al profesor para su intervención
+ 12. El profesor proporciona retroalimentación mediante comentarios en la /pull request/ o en un determinado /commit/ individual
+
+*** Ventajas
+ - Sencillez
+ - Existe un listado de alumnos para identificar cada tarea
+
+*** Desventajas
+ - En caso de querer hacer los equipos el profesor, es necesario supervisar el proceso de asignación para que cada alumno se apunte al equipo que debe
+
+
+* Flujo de trabajo con Git para tareas en grupo
+- [[../imagenes/git_workflow.png][Flujo de trabajo con Git para equipos]]
+
+* Utilización con Scrum
+** Estrategias
+ - Organizaciones de GitHub
+   - Gestión de equipos
+   - Gestión de repositorios compartidos
+ - Utilización de ramas
+   - Ramas personales
+   - Rama principal de integración
+** Backlog / issues
+- Creación de una /milestone/ para hacer referencia a los objetivos del sprint
+- Cada /issue/ puede hacer referencia a una historia o una tarea
+- Las historias que vayan a realizarse en el sprint (/sprint backlog/) se asignan a la /milestone/
+- Pueden utilizarse las etiquetas para indicar la dificultad o duración (tallas de camiseta)
+- Para indicar que una persona está trabajando en una tarea se asigna a dicha tarea
+- Se pueden utilizar los proyectos como /scrum board/
+** Scrum Board / Proyectos
+[[file:../imagenes/projects.png]]
+** Estimación de tareas / etiquetas
+[[file:../imagenes/tareas_estimacion.png]]
+** Daily Scrum
+- Cada día se realiza la reunión (entre 5 y 15 minutos)
+- Cada persona indica qué tareas ha realizado y cierra los /issues/ que tenga pendientes.
+- Cada persona indica qué trabajo va a realizar hoy y se asigna los /issues/ correspondientes
+- Se evalúan los impedimentos que haya
+** Para mayor integración: ZenHub
+  [[https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/ZenHub_Board.png/640px-ZenHub_Board.png]]

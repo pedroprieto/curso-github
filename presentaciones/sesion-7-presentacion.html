@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Metodologías para el trabajo con alumnos</title>
+<meta name="author" content="(Pedro Prieto)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/black.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Metodologías para el trabajo con alumnos</h1><h2 class="author">Pedro Prieto</h2>
+</section>
+
+<section>
+<section id="slide-orgcd4d502">
+<h2 id="orgcd4d502">Ventajas de GitHub</h2>
+<ul>
+<li class="fragment roll-in">Los alumnos entran en contacto con metodologías de trabajo usadas en la industria</li>
+<li class="fragment roll-in">Puesta en marcha sencilla</li>
+<li class="fragment roll-in">Distribución de código base sobre el que trabajar</li>
+<li class="fragment roll-in">Retroalimentación sobre el código</li>
+<li class="fragment roll-in">Mayor comodidad a la hora de distribuir y recoger tareas</li>
+<li class="fragment roll-in">Posibilidad de integrar metodologías de Desarrollo Guiado por Pruebas en las prácticas</li>
+<li class="fragment roll-in">Servidor web integrado (GitHub Pages)</li>
+<li class="fragment roll-in">Posibilidad de realizar despliegues automáticos de aplicaciones para su exposición y prueba</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org5d5ee1f">
+<h2 id="org5d5ee1f">El programa GitHub Education</h2>
+<ul>
+<li class="fragment roll-in"><a href="https://education.github.com/">GitHub Education</a></li>
+<li class="fragment roll-in">Recursos para estudiantes:
+<ul>
+<li>Herramientas: <a href="https://education.github.com/pack">Student Developer Pack</a></li>
+<li>Certificación: <a href="https://education.github.com/students/experts">GitHub Campus Experts</a></li>
+
+</ul></li>
+<li class="fragment roll-in">Recursos para profesores:
+<ul>
+<li>Gestión de clases: <a href="https://classroom.github.com/">GitHub Classroom</a></li>
+<li>Comunidad: <a href="https://education.github.community/">GitHub Education Community</a></li>
+<li>Certificación: <a href="https://education.github.com/teachers/advisors">GitHub Campus Advisors</a></li>
+<li><a href="https://education.github.community/t/shopping-bags-get-a-github-swag-bag-for-your-classroom/33">Bolsa de regalos</a> (pegatinas, guías impresas, pósters,&#x2026;)</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org49f155d">
+<h2 id="org49f155d">GitHub Classroom</h2>
+<ul>
+<li class="fragment roll-in">Herramienta de gestión de trabajos</li>
+<li class="fragment roll-in">Integrada con GitHub</li>
+<li class="fragment roll-in">Automatiza la creación de repositorios privados para tareas individuales o de grupo</li>
+<li class="fragment roll-in">Repositorio existente como base para la tarea</li>
+<li class="fragment roll-in">Listado de alumnos (roster)</li>
+<li class="fragment roll-in">Seguimiento</li>
+<li class="fragment roll-in">Descarga de todos los trabajos mediante un click</li>
+
+</ul>
+
+</section>
+<section id="slide-org36c5c8e">
+<h3 id="org36c5c8e">Clases</h3>
+<ul>
+<li class="fragment roll-in">Se puede crear una clase (<i>classroom</i>) para cada clase que impartamos</li>
+<li class="fragment roll-in">Cada clase va asociada a una <b>organización</b> de GitHub</li>
+<li class="fragment roll-in">Se tiene que autorizar el acceso de cada clase a la organización de GitHub correspondiente</li>
+<li class="fragment roll-in">En cada clase se pueden crear <b>tareas</b> (<i>assignments</i>)</li>
+<li class="fragment roll-in">En cada clase se puede crear una <b>lista de alumnos</b> (<i>roster</i>) indicando una lista de identificadores</li>
+<li class="fragment roll-in">Si se ha creado la lista de alumnos, el alumno tendrá que elegirse de la lista al aceptar la tarea</li>
+<li class="fragment roll-in">El listado de alumnos permite asociar nombres de usuario de GitHub a datos conocidos (nombre, apellidos,&#x2026;)</li>
+
+</ul>
+
+</section>
+<section id="slide-org4235c92">
+<h3 id="org4235c92">Tareas</h3>
+<ul>
+<li class="fragment roll-in">Privadas o públicas</li>
+<li class="fragment roll-in">Individuales o de grupo</li>
+<li class="fragment roll-in">Enlace de invitación</li>
+<li class="fragment roll-in">Identificación del alumno al aceptar la tarea</li>
+<li class="fragment roll-in">Repositorio para cada alumno (individual)</li>
+<li class="fragment roll-in">Repositorio para cada grupo (grupo)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgde9f57e">
+<h2 id="orgde9f57e">Metodologías de trabajo para prácticas individuales</h2>
+<div class="outline-text-2" id="text-orgde9f57e">
+</div>
+</section>
+<section id="slide-org43c53a7">
+<h3 id="org43c53a7">1. Forks y Pull Requests</h3>
+<ol>
+<li class="fragment roll-in">Creación del repositorio con el código base de la tarea</li>
+<li class="fragment roll-in">Archivo <code>README</code> con enunciado o descripción de la tarea</li>
+<li class="fragment roll-in">Cada alumno realiza un <i>fork</i> del repositorio</li>
+<li class="fragment roll-in">El alumno trabaja en su copia del repositorio</li>
+<li class="fragment roll-in">Cuando quiera solicitar ayuda o revisión del profesor, el alumno genera una <i>pull request</i></li>
+<li class="fragment roll-in">El profesor proporciona retroalimentación mediante comentarios en la <i>pull request</i> o en un determinado <i>commit</i> individual</li>
+<li class="fragment roll-in">Cuando el alumno finaliza la tarea, genera una <i>pull request</i></li>
+
+</ol>
+
+</section>
+<section id="slide-orgbfb6a0d">
+<h4 id="orgbfb6a0d">Ventajas</h4>
+<ul>
+<li class="fragment roll-in">Sencillez</li>
+<li class="fragment roll-in">Flujo de trabajo parecido al funcionamiento normal de GitHub</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb2095db">
+<h4 id="orgb2095db">Desventajas</h4>
+<ul>
+<li class="fragment roll-in">Los repositorios de las tareas de los alumnos son públicos</li>
+<li class="fragment roll-in">Es difícil determinar el nombre del alumno a partir del usuario de GitHub</li>
+<li class="fragment roll-in">Cada alumno es dueño de su repositorio</li>
+<li class="fragment roll-in">En caso de tener integración con Travis, cada alumno deberá activarla en su repositorio</li>
+
+</ul>
+
+</section>
+<section id="slide-org99f9206">
+<h3 id="org99f9206">2. GitHub Classroom</h3>
+<ol>
+<li class="fragment roll-in">Creación del repositorio con el código base de la tarea</li>
+<li class="fragment roll-in">Archivo <code>README</code> con enunciado o descripción de la tarea</li>
+<li class="fragment roll-in">En <i>GitHub Classroom</i>, se crea una tarea individual</li>
+<li class="fragment roll-in">Se proporciona a los alumnos el enlace con la invitación</li>
+<li class="fragment roll-in">Inicialmente, el alumno crea una <b>rama nueva</b> sobre la que va a trabajar</li>
+<li class="fragment roll-in"><i>Pull request</i> a la <b>rama principal</b> del repositorio con cita al profesor para entrega / retroalimentación</li>
+<li class="fragment roll-in">El profesor proporciona retroalimentación mediante comentarios en la <i>pull request</i> o en un determinado <i>commit</i> individual</li>
+
+</ol>
+
+</section>
+<section id="slide-org64e9444">
+<h4 id="org64e9444">Ventajas</h4>
+<ul>
+<li class="fragment roll-in">Sencillez</li>
+<li class="fragment roll-in">Los alumnos no tienen acceso a los repositorios del resto de alumnos</li>
+<li class="fragment roll-in">Existe un listado de alumnos para identificar cada tarea</li>
+<li class="fragment roll-in">Los repositorios de cada alumno se crean en la cuenta de organización del profesor</li>
+<li class="fragment roll-in">En caso de tener integración con Travis, el profesor puede activarla él mismo en cada repositorio</li>
+
+</ul>
+
+</section>
+<section id="slide-org3723d10">
+<h4 id="org3723d10">Desventajas</h4>
+<ul>
+<li class="fragment roll-in">Dado que no hay <i>forks</i>, no es posible hacer <i>pull requests</i> al repositorio principal. Por ello se sugiere el funcionamiento con ramas de trabajo</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga9afbc3">
+<h2 id="orga9afbc3">Metodologías de trabajo para prácticas en grupo</h2>
+<div class="outline-text-2" id="text-orga9afbc3">
+</div>
+</section>
+<section id="slide-orgbe1fcc2">
+<h3 id="orgbe1fcc2">1. Organizaciones, equipos y repositorios compartidos</h3>
+<ol>
+<li class="fragment roll-in">Creación de equipos dentro de la organización</li>
+<li class="fragment roll-in">Invitación de los alumnos para que formen parte de cada equipo</li>
+<li class="fragment roll-in">Creación de un repositorio para cada equipo con el código base de la tarea</li>
+<li class="fragment roll-in">Archivo <code>README</code> con enunciado o descripción de la tarea</li>
+<li class="fragment roll-in">Opcionalmente, configuración de los repositorios para su uso con Travis</li>
+<li class="fragment roll-in">Asignación de los repositorios a los equipos correspondientes (recomendable permisos de <b>escritura</b>, <i>write</i>)</li>
+
+</ol>
+</section>
+<section >
+<ol>
+<li class="fragment roll-in" value="7">Cada miembro del equipo crea una <b>rama personal</b> para su trabajo</li>
+<li class="fragment roll-in">Las integraciones se realizan mediante <i>pull requests</i> a la rama principal del repositorio del equipo</li>
+<li class="fragment roll-in">En las <i>pull request</i> se puede citar al profesor para su intervención</li>
+<li class="fragment roll-in">El profesor proporciona retroalimentación mediante comentarios en la <i>pull request</i> o en un determinado <i>commit</i> individual</li>
+
+</ol>
+
+</section>
+<section id="slide-orgde158ec">
+<h4 id="orgde158ec">Ventajas</h4>
+<ul>
+<li>Flujo de trabajo parecido al funcionamiento normal de GitHub</li>
+
+</ul>
+
+</section>
+<section id="slide-org5ab50c8">
+<h4 id="org5ab50c8">Desventajas</h4>
+<ul>
+<li class="fragment roll-in">La puesta en marcha implica varios pasos</li>
+<li class="fragment roll-in">Es difícil determinar el nombre del alumno a partir del usuario de GitHub</li>
+<li class="fragment roll-in">Es necesario crear un repositorio por cada equipo y subir el código común en todos</li>
+
+</ul>
+
+</section>
+<section id="slide-orge25e9a9">
+<h3 id="orge25e9a9">2. GitHub Classroom</h3>
+<ol>
+<li class="fragment roll-in">Creación del repositorio con el código base de la tarea</li>
+<li class="fragment roll-in">Archivo <code>README</code> con enunciado o descripción de la tarea</li>
+<li class="fragment roll-in">En <i>GitHub Classroom</i>, se crea una tarea de grupo</li>
+<li class="fragment roll-in">Se elige el repositorio con el código base sobre el que se basará la tarea</li>
+<li class="fragment roll-in">Se proporciona a los alumnos el enlace con la invitación</li>
+<li class="fragment roll-in">Cada alumno accede al enlace de invitación y crea un equipo nuevo o elige uno existente</li>
+
+</ol>
+</section>
+<section >
+<ol>
+<li class="fragment roll-in" value="7">Se crea automáticamente un repositorio para cada equipo en la organización</li>
+<li class="fragment roll-in">Opcionalmente, configuración de los repositorios creados para su uso con Travis</li>
+<li class="fragment roll-in">Cada miembro del equipo crea una <b>rama personal</b> para su trabajo</li>
+<li class="fragment roll-in">Las integraciones se realizan mediante <i>pull requests</i> a la rama principal del repositorio del equipo</li>
+<li class="fragment roll-in">En las <i>pull request</i> se puede citar al profesor para su intervención</li>
+<li class="fragment roll-in">El profesor proporciona retroalimentación mediante comentarios en la <i>pull request</i> o en un determinado <i>commit</i> individual</li>
+
+</ol>
+
+</section>
+<section id="slide-org217eb79">
+<h4 id="org217eb79">Ventajas</h4>
+<ul>
+<li>Sencillez</li>
+<li>Existe un listado de alumnos para identificar cada tarea</li>
+
+</ul>
+
+</section>
+<section id="slide-org1e3673e">
+<h4 id="org1e3673e">Desventajas</h4>
+<ul>
+<li>En caso de querer hacer los equipos el profesor, es necesario supervisar el proceso de asignación para que cada alumno se apunte al equipo que debe</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org9253538">
+<h2 id="org9253538">Flujo de trabajo con Git para tareas en grupo</h2>
+<ul>
+<li><a href="../imagenes/git_workflow.png">Flujo de trabajo con Git para equipos</a></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1dc55a4">
+<h2 id="org1dc55a4">Utilización con Scrum</h2>
+<div class="outline-text-2" id="text-org1dc55a4">
+</div>
+</section>
+<section id="slide-org907930e">
+<h3 id="org907930e">Estrategias</h3>
+<ul>
+<li>Organizaciones de GitHub
+<ul>
+<li>Gestión de equipos</li>
+<li>Gestión de repositorios compartidos</li>
+
+</ul></li>
+<li>Utilización de ramas
+<ul>
+<li>Ramas personales</li>
+<li>Rama principal de integración</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org7614cc4">
+<h3 id="org7614cc4">Backlog / issues</h3>
+<ul>
+<li>Creación de una <i>milestone</i> para hacer referencia a los objetivos del sprint</li>
+<li>Cada <i>issue</i> puede hacer referencia a una historia o una tarea</li>
+<li>Las historias que vayan a realizarse en el sprint (<i>sprint backlog</i>) se asignan a la <i>milestone</i></li>
+<li>Pueden utilizarse las etiquetas para indicar la dificultad o duración (tallas de camiseta)</li>
+<li>Para indicar que una persona está trabajando en una tarea se asigna a dicha tarea</li>
+<li>Se pueden utilizar los proyectos como <i>scrum board</i></li>
+
+</ul>
+</section>
+<section id="slide-orgbadd062">
+<h3 id="orgbadd062">Scrum Board / Proyectos</h3>
+
+<div class="figure">
+<p><img src="../imagenes/projects.png" alt="projects.png" />
+</p>
+</div>
+</section>
+<section id="slide-org3614381">
+<h3 id="org3614381">Estimación de tareas / etiquetas</h3>
+
+<div class="figure">
+<p><img src="../imagenes/tareas_estimacion.png" alt="tareas_estimacion.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgc40d41e">
+<h3 id="orgc40d41e">Daily Scrum</h3>
+<ul>
+<li>Cada día se realiza la reunión (entre 5 y 15 minutos)</li>
+<li>Cada persona indica qué tareas ha realizado y cierra los <i>issues</i> que tenga pendientes.</li>
+<li>Cada persona indica qué trabajo va a realizar hoy y se asigna los <i>issues</i> correspondientes</li>
+<li>Se evalúan los impedimentos que haya</li>
+
+</ul>
+</section>
+<section id="slide-orgc4262c4">
+<h3 id="orgc4262c4">Para mayor integración: ZenHub</h3>
+
+<div class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/ZenHub_Board.png/640px-ZenHub_Board.png" alt="640px-ZenHub_Board.png" />
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+* Metodologías para el trabajo con alumnos
+** Videotutoriales y presentación
+- [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-7-presentacion.html][Presentación]]
+- [[https://youtu.be/Mz5Eypb3Lew][Sesión 7.1]]
+- [[https://youtu.be/naX3nSnAFHo][Sesión 7.2]]
+- [[https://youtu.be/7dpYStXPLCs][Sesión 7.3]]
+- [[https://youtu.be/Vw_ebcGK4oE][Sesión 7.4]]
+
+** Índice
+- Ventajas con respecto a los sistemas tradicionales de recolección de tareas del alumnado
+- GitHub Education: ventajas para instituciones educativas
+- GitHub Classroom: gestión de prácticas en clase
+- Metodologías de trabajo para prácticas individuales
+  - Forks y Pull Requests
+  - GitHub Classroom
+- Metodologías de trabajo para prácticas en grupo
+  - Repositorios compartidos: organizaciones y equipos
+  - GitHub Classroom
+- Flujos de trabajo con Git para tareas en grupo
+- Utilización con Scrum
+
+** Referencias
+- [[https://education.github.com/][GitHub Education]]
+- [[https://classroom.github.com/][GitHub Classroom]]
+- [[https://education.github.com/pack][Student Developer Pack]]
+- [[https://education.github.community/][GitHub Education Community]]
+- [[https://education.github.community/t/shopping-bags-get-a-github-swag-bag-for-your-classroom/33][Bolsa de regalos de GitHub]] 
+- Aplicación ~[[https://github.com/education/classroom-assistant][classroom assistant]]~
+- [[https://pedroprieto.github.io/curso_scrum/][Materiales del curso de Scrum]]
+- [[https://pedroprieto.github.io/presentacion_git_scrum/][GitHub y Scrum (Seminario Universidad Alicante)]]
+
+** Contenidos
+*** Ventajas de GitHub
+- Los alumnos entran en contacto con metodologías de trabajo usadas en la industria
+- Puesta en marcha sencilla
+- Distribución de código base sobre el que trabajar
+- Posibilidad de ofrecer una mejor retroalimentación a los alumnos sobre su trabajo
+- Mayor comodidad a la hora de distribuir y recoger tareas
+- Posibilidad de integrar metodologías de Desarrollo Guiado por Pruebas en las prácticas
+- Servidor web integrado en la propia infraestructura (GitHub Pages)
+- Posibilidad de realizar despliegues automáticos de aplicaciones para su exposición y prueba
+
+*** El programa GitHub Education
+- [[https://education.github.com/][GitHub Education]]
+- Recursos para estudiantes:
+  - Conjunto de herramientas gratuito: [[https://education.github.com/pack][Student Developer Pack]]
+  - Posibilidad de obtener una certificación: [[https://education.github.com/students/experts][GitHub Campus Experts]]
+- Recursos para profesores:
+  - Servicio de gestión de clases y prácticas: [[https://classroom.github.com/][GitHub Classroom]]
+  - Comunidad de profesores: [[https://education.github.community/][GitHub Education Community]] 
+  - Posibilidad de obtener una certificación: [[https://education.github.com/teachers/advisors][GitHub Campus Advisors]]
+  - [[https://education.github.community/t/shopping-bags-get-a-github-swag-bag-for-your-classroom/33][Bolsa de regalos]] (pegatinas, guías impresas, pósters,...)
+
+*** GitHub Classroom
+- Herramienta para gestionar la creación y distribución de tareas con los alumnos
+- Integrada con GitHub
+- Automatiza la creación de repositorios privados para tareas individuales o de grupo
+- Permite tomar un repositorio existente como base para la tarea
+- Crea un listado de alumnos y lo enlaza automáticamente con los usuarios de GitHub
+- Hace el seguimiento de los repositorios de cada tarea y muestra los enlaces a cada uno de ellos
+- Descarga con un solo click todas las tareas de los alumnos
+
+**** Clases
+- Se puede crear una clase (/classroom/) para cada clase que impartamos
+- Cada clase va asociada a una *organización* de GitHub
+- Se tiene que autorizar el acceso de cada clase a la organización de GitHub correspondiente
+- En cada clase se pueden crear *tareas* (/assignments/)
+- En cada clase se puede crear una *lista de alumnos* (/roster/) indicando una lista de identificadores
+- Si se ha creado la lista de alumnos, el alumno tendrá que elegirse de la lista al aceptar la tarea
+- El listado de alumnos permite asociar nombres de usuario de GitHub a datos que conozcamos de nuestros alumnos (nombre, apellidos,...)
+
+**** Tareas
+- Las tareas pueden ser *privadas* o *públicas*
+- En las tareas privadas los alumnos no pueden ver el código del resto de alumnos
+- Las tareas (/assignments/) pueden ser *individuales* o de *grupo*
+- En cada clase se mostrará un listado con las tareas creadas
+- Cada tarea tiene un *enlace de invitación*
+- El enlace de invitación se distribuye a los alumnos
+- Cada vez que un alumno acceda a la invitación podrá *aceptar la tarea*
+- En caso de haber definido lista de alumnos, el alumno podrá seleccionar sus datos para quedar identificado
+- Al aceptar una tarea se crea *un repositorio* para cada alumno en el caso de las tareas individuales
+- En el caso de tareas de grupo, se creará un repositorio *por grupo*
+- Dentro de cada tarea se puede acceder a la lista de los repositorios creados junto con los datos identificativos de cada alumno
+- Dentro de cada tarea se pueden *descargar todos los repositorios* mediante la aplicación ~[[https://github.com/education/classroom-assistant][classroom assistant]]~
+
+*** Metodologías de trabajo para prácticas individuales
+Existen dos posibilidades: utilizando exclusivamente GitHub mediante /forks/ y /pull requests/ o utilizando /GitHub Classroom/. En ambos casos es recomendable *crear una organización* para cada clase que impartamos. La organización puede darse de alta para solicitar el *descuento educativo* tal como vimos en la [[file:sesion-3.org][sesión 3]]. Dentro de la organización se crearán los repositorios para cada tarea.
+
+**** 1. Forks y Pull Requests
+1. Creación del repositorio con el código base de la tarea
+2. Archivo ~README~ con enunciado o descripción de la tarea
+3. Cada alumno realiza un /fork/ del repositorio
+4. El alumno trabaja en su copia del repositorio
+5. Cuando quiera solicitar ayuda o revisión del profesor, el alumno genera una /pull request/
+6. El profesor proporciona retroalimentación mediante comentarios en la /pull request/ o en un determinado /commit/ individual
+7. Opcionalmente se pueden utilizar los /issues/ y las citas de usuario para solicitar la intervención del profesor
+8. Los comentarios se pueden realizar a nivel de línea de código
+9. Cuando el alumno finaliza la tarea, genera una /pull request/
+10. El profesor revisa la /pull request/ y opcionalmente hace comentarios sobre la misma
+11. Al finalizar, el profesor cierra la /pull request/
+
+***** Ventajas
+- Sencillez
+- Flujo de trabajo parecido al funcionamiento normal de GitHub
+
+***** Desventajas
+- Los repositorios de las tareas de los alumnos son públicos
+- Es difícil determinar el nombre del alumno a partir del usuario de GitHub
+- Cada alumno es dueño de su repositorio
+- En caso de tener integración con Travis, cada alumno deberá activarla en su repositorio
+
+**** 2. GitHub Classroom
+1. Creación del repositorio con el código base de la tarea
+2. Archivo ~README~ con enunciado o descripción de la tarea
+3. En /GitHub Classroom/, se crea una tarea individual
+4. Se elige el repositorio con el código base sobre el que se basará la tarea
+5. Se elige si los repositorios serán públicos o privados
+6. Se asigna una fecha de entrega (opcional)
+7. Se proporciona a los alumnos el enlace con la invitación
+8. Cada alumno accede al enlace de invitación y se le crea un repositorio para él en la organización
+9. El alumno trabaja en su repositorio asignado
+10. Inicialmente, el alumno crea una *rama nueva* sobre la que va a trabajar
+11. Cuando quiera solicitar ayuda o revisión del profesor, el alumno genera una /pull request/ a la *rama principal* de su repositorio en la que *cita* al profesor para que reciba una notificación
+12. El profesor proporciona retroalimentación mediante comentarios en la /pull request/ o en un determinado /commit/ individual
+13. Opcionalmente se pueden utilizar los /issues/ y las citas de usuario para solicitar la intervención del profesor
+14. Los comentarios se pueden realizar a nivel de línea de código
+15. Cuando el alumno finaliza la tarea, genera una última /pull request/
+16. El profesor revisa la /pull request/ y opcionalmente hace comentarios sobre la misma
+
+***** Ventajas
+- Sencillez
+- Los alumnos no tienen acceso a los repositorios del resto de alumnos
+- Existe un listado de alumnos para identificar cada tarea
+- Los repositorios de cada alumno se crean en la cuenta de organización del profesor
+- En caso de tener integración con Travis, el profesor puede activarla él mismo en cada repositorio
+
+***** Desventajas
+- Dado que no hay /forks/, no es posible hacer /pull requests/ al repositorio principal. Por ello se sugiere el funcionamiento con ramas de trabajo
+
+*** Metodologías de trabajo para prácticas en grupo
+Existen dos posibilidades: utilizando exclusivamente GitHub mediante organizaciones y equipos o utilizando /GitHub Classroom/. En ambos casos *es necesario crear una organización* para cada clase que impartamos. La organización puede darse de alta para solicitar el *descuento educativo* tal como vimos en la [[file:sesion-3.org][sesión 3]]. Dentro de la organización se crearán los repositorios para cada tarea.
+
+**** 1. Organizaciones, equipos y repositorios compartidos
+1. Creación de equipos dentro de la organización
+2. Invitación de los alumnos para que formen parte de cada equipo
+3. Creación de un repositorio para cada equipo con el código base de la tarea
+4. Archivo ~README~ con enunciado o descripción de la tarea
+5. Opcionalmente, configuración de los repositorios para su uso con Travis
+6. Asignación de los repositorios a los equipos correspondientes (recomendable permisos de *escritura*, /write/)
+7. Cada equipo puede escribir en su repositorio asignado exclusivamente
+8. Cada miembro del equipo crea una *rama personal* para su trabajo
+9. Se sigue el flujo de trabajo definido para *prácticas en grupo* (ver apartado siguiente)
+10. Las integraciones se realizan mediante /pull requests/ a la rama principal del repositorio del equipo
+11. En las /pull request/ se puede citar al profesor para su intervención
+12. El profesor proporciona retroalimentación mediante comentarios en la /pull request/ o en un determinado /commit/ individual
+13. Opcionalmente se pueden utilizar los /issues/ y las citas de usuario para solicitar la intervención del profesor
+
+***** Ventajas
+- Flujo de trabajo parecido al funcionamiento normal de GitHub
+
+***** Desventajas
+- La puesta en marcha implica varios pasos
+- Es difícil determinar el nombre del alumno a partir del usuario de GitHub
+- Es necesario crear un repositorio por cada equipo y subir el código común en todos
+
+**** 2. GitHub Classroom
+1. Creación del repositorio con el código base de la tarea
+2. Archivo ~README~ con enunciado o descripción de la tarea
+3. En /GitHub Classroom/, se crea una tarea de grupo
+4. Se elige el repositorio con el código base sobre el que se basará la tarea
+5. Se elige si los repositorios serán públicos o privados
+6. Se asigna una fecha de entrega (opcional)
+7. Se indica el tamaño máximo de los equipos
+8. Se proporciona a los alumnos el enlace con la invitación
+9. Cada alumno accede al enlace de invitación y crea un equipo nuevo o elige uno existente
+10. Se crea automáticamente un repositorio para cada equipo en la organización
+5. Opcionalmente, configuración de los repositorios creados para su uso con Travis
+12. Cada equipo puede escribir en su repositorio asignado exclusivamente
+13. Cada miembro del equipo crea una *rama personal* para su trabajo
+14. Se sigue el flujo de trabajo definido para *prácticas en grupo* (ver apartado siguiente)
+15. Las integraciones se realizan mediante /pull requests/ a la rama principal del repositorio del equipo
+16. En las /pull request/ se puede citar al profesor para su intervención
+17. El profesor proporciona retroalimentación mediante comentarios en la /pull request/ o en un determinado /commit/ individual
+18. Opcionalmente se pueden utilizar los /issues/ y las citas de usuario para solicitar la intervención del profesor
+
+***** Ventajas
+- Sencillez
+- Existe un listado de alumnos para identificar cada tarea
+
+***** Desventajas
+- En caso de querer hacer los equipos el profesor, es necesario supervisar el proceso de asignación para que cada alumno se apunte al equipo que debe
+
+*** Flujo de trabajo con Git para tareas en grupo
+A continuación se muestra un ejemplo de flujo de trabajo de Git para grupos. Existen muchas otras posibilidades, pero considero que ésta es de las que menos problemas pueden presentar. 
+
+Este flujo de trabajo está basado en *repositorios compartidos* (/shared repositories/), donde todos los miembros del equipo de desarrollo tienen permisos para realizar cambios (pueden hacer /push/). 
+
+Para evitar la aparición de conflictos, cada usuario realizará sus cambios en una *rama* distinta. De esta manera los cambios que haga un usuario no afectarán al resto. Una vez *finalizado el trabajo*, el usuario *incorporará* los cambios realizados en su rama a la *rama principal* (/merge/).
+
+*IMPORTANTE*. En todos los comandos se considera que la rama de trabajo principal es /master/.
+
+#+begin_src plantuml :file ./imagenes/git_workflow.png
+@startuml
+
+start
+if (¿El repositorio está clonado?) then (no)
+  :Clonar repo;
+  note left
+    ""git clone NOMBRE_REPO""
+  end note
+else(sí)
+endif
+:Ver en qué rama
+estoy;
+note left
+  ""git status""
+end note
+if (¿Estoy en mi rama personal?) then (no)
+  if (¿Existe mi rama personal
+  en GitHub?) then (no)
+    :Crear rama;
+    note left
+      ""git branch MI_RAMA""
+    end note
+  else (sí)
+  endif
+  :Cambiar a
+  mi rama;
+  note left
+    ""git checkout MI_RAMA""
+  end note
+  :Push a GitHub
+  y enlazar rama;
+  note left
+    ""git push -u origin MI_RAMA""
+  end note
+else (sí)
+endif
+:Actualizar rama
+desde GitHub;
+note left
+  ""git pull""
+  ====
+  Sólo funciona si la rama
+  está enlazada. Para enlazarla:
+  ""git push -u origin MI_RAMA""
+end note
+
+repeat
+repeat
+
+if (¿Hay cambios para añadir?) then (sí)
+  :Añadir a stage;
+  note left
+    ""git add .""
+  end note
+  :Commit;
+  note left
+    ""git commit -m "Mensaje"""
+  end note
+else (no)
+endif
+if (¿Hay nuevos cambios en la
+rama principal en GitHub?) then (sí)
+  :Actualizar cambios;
+  note left
+    ""git fetch origin""
+  end note
+  :Fusionar cambios en mi rama;
+  note left
+    ""git merge origin/master""
+  end note
+  if (¿Mensaje de conflicto?) then (sí)
+    :Arreglar conflictos;
+    note left
+      Ver qué archivos 
+      están afectados (rojo).
+      Arreglar conflictos.
+    end note
+  else (no)
+  endif
+else (no)
+endif
+:Subir mi rama
+a GitHub;
+note left
+  ""git push origin MI_RAMA""
+  ====
+  Si has asociado la rama
+  puedes hacer simplemente:
+  ""git push""
+  ====
+  Para enlazar la rama:
+  ""git push -u origin MI_RAMA""
+end note
+
+repeat while (¿Funcionalidad terminada?) is (no)
+
+:Crear Pull Request
+en GitHub.com;
+:Revisar y hacer
+comentarios (opcional);
+:Aceptar y fusionar
+Pull Request;
+
+repeat while (¿He terminado?) is (no)
+
+stop
+
+@enduml
+#+END_SRC
+
+#+RESULTS:
+
+*** Utilización con Scrum
+A continuación se indican algunas estrategias que podéis utilizar para combinar [[https://es.wikipedia.org/wiki/Scrum_(desarrollo_de_software)][Scrum]] y GitHub en las prácticas de grupo con los alumnos. Si queréis profundizar un poco más sobre Scrum podéis acceder a [[https://pedroprieto.github.io/curso_scrum/][este enlace]] con los materiales que utilicé en un curso específico sobre este marco de trabajo.
+
+**** Estrategias
+  - Organizaciones de GitHub
+    - Gestión de equipos
+    - Gestión de repositorios compartidos
+  - Utilización de ramas
+    - Ramas personales
+    - Rama principal de integración
+**** Backlog / issues
+  - Creación de una /milestone/ para hacer referencia a los objetivos del sprint
+  - Cada /issue/ puede hacer referencia a una historia o una tarea
+  - Las historias que vayan a realizarse en el sprint (/sprint backlog/) se asignan a la /milestone/
+  - Pueden utilizarse las etiquetas para indicar la dificultad o duración (tallas de camiseta)
+  - Para indicar que una persona está trabajando en una tarea se asigna a dicha tarea
+  - Se pueden utilizar los proyectos como /scrum board/
+**** Scrum Board / Proyectos
+  [[file:imagenes/projects.png]]
+**** Estimación de tareas / etiquetas
+  [[file:imagenes/tareas_estimacion.png]]
+**** Daily Scrum
+  - Cada día se realiza la reunión (entre 5 y 15 minutos)
+  - Cada persona indica qué tareas ha realizado y cierra los /issues/ que tenga pendientes.
+  - Cada persona indica qué trabajo va a realizar hoy y se asigna los /issues/ correspondientes
+  - Se evalúan los impedimentos que haya
+**** Para mayor integración: ZenHub
+  [[https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/ZenHub_Board.png/640px-ZenHub_Board.png]]
+
+** Tareas
+*** 1. Creación de tareas individuales con GitHub Classroom
+ 1. Crea un repositorio denominado ~sesion7-tarea-individual~ en la organización creada en la sesión 3 que contenga:
+    - Un archivo ~README.md~ con el enunciado de una práctica (puedes utilizar alguna de tus clases o un enunciado inventado)
+    - Un archivo ~LICENSE~ con la licencia que desees
+ 2. Crea una cuenta en GitHub Classroom enlazándola con tu cuenta de GitHub.
+ 3. Crea una *clase* denominada ~curso-github-sesion-7~ en GitHub Classroom y asóciala a la organización creada en la sesión 3.
+ 4. Añade a la clase un listado de alumnos que contenga los campos *nombre* y *apellidos*. Añade los datos de *dos alumnos inventados* al listado.
+ 5. Crea una *tarea individual* en la clase ~curso-github-sesion-7~:
+    - Debe utilizar como base el repositorio ~sesion7-tarea-individual~
+    - Fecha de entrega: 30 de Noviembre de 2018
+ 6. Envíame la URL de la invitación a través de la mensajería de equipo de la organización.
+ 7. Una vez haya aceptado la invitación, haz las siguientes capturas de pantalla:
+    - Captura del repositorio creado para mi en la organización
+    - Captura de la vista de la tarea en GitHub Classroom donde aparezca el enlace a mi repositorio y mi usuario
+
+*** 2. Creación de tareas en grupo con GitHub Classroom
+ 1. Crea un repositorio denominado ~sesion7-tarea-grupo~ en la organización creada en la sesión 3 que contenga:
+    - Un archivo ~README.md~ con el enunciado de una práctica (puedes utilizar alguna de tus clases o un enunciado inventado)
+    - Un archivo ~LICENSE~ con la licencia que desees
+ 2. Crea una *tarea de grupo* en la clase ~curso-github-sesion-7~:
+    - Debe utilizar como base el repositorio ~sesion7-tarea-grupo~
+    - Fecha de entrega: 30 de Noviembre de 2018
+    - Número máximo de personas por grupo: 4
+ 3. Envíame la URL de la invitación a través de la mensajería de equipo de la organización.
+ 4. Una vez haya aceptado la invitación, haz las siguientes capturas de pantalla:
+    - Captura del repositorio creado para mi equipo en la organización
+    - Captura de la vista de la tarea en GitHub Classroom donde aparezca el enlace al repositorio de mi equipo
+
+** Entrega de la tarea
+Una vez terminadas las tareas envíame una notificación a mi usuario de GitHub a través del *equipo* de la organización creada en la sesión 3. Incluye las *4 capturas* de pantalla pedidas en la notificación.
+
+No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.

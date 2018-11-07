@@ -1,3 +1,4 @@
+#+OPTIONS: :exports results
 * Metodologías para el trabajo con alumnos
 ** Videotutoriales y presentación
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-7-presentacion.html][Presentación]]
@@ -309,7 +310,6 @@ stop
 
 @enduml
 #+END_SRC
-
 #+RESULTS:
 
 *** Utilización con Scrum

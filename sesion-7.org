@@ -25,7 +25,7 @@
 - [[https://education.github.com/pack][Student Developer Pack]]
 - [[https://education.github.community/][GitHub Education Community]]
 - [[https://education.github.community/t/shopping-bags-get-a-github-swag-bag-for-your-classroom/33][Bolsa de regalos de GitHub]] 
-- Aplicación ~[[https://github.com/education/classroom-assistant][classroom assistant]]~
+- Aplicación [[https://github.com/education/classroom-assistant][classroom assistant]]
 - [[https://pedroprieto.github.io/curso_scrum/][Materiales del curso de Scrum]]
 - [[https://pedroprieto.github.io/presentacion_git_scrum/][GitHub y Scrum (Seminario Universidad Alicante)]]
 

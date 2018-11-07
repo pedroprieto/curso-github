@@ -1,4 +1,3 @@
-#+OPTIONS: :exports results
 * Metodologías para el trabajo con alumnos
 ** Videotutoriales y presentación
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-7-presentacion.html][Presentación]]
@@ -200,7 +199,7 @@ Para evitar la aparición de conflictos, cada usuario realizará sus cambios en 
 
 *IMPORTANTE*. En todos los comandos se considera que la rama de trabajo principal es /master/.
 
-#+begin_src plantuml :file ./imagenes/git_workflow.png
+#+begin_src plantuml :file ./imagenes/git_workflow.png :exports results
 @startuml
 
 start

@@ -309,7 +309,9 @@ stop
 
 @enduml
 #+END_SRC
+
 #+RESULTS:
+[[file:./imagenes/git_workflow.png]]
 
 *** Utilización con Scrum
 A continuación se indican algunas estrategias que podéis utilizar para combinar [[https://es.wikipedia.org/wiki/Scrum_(desarrollo_de_software)][Scrum]] y GitHub en las prácticas de grupo con los alumnos. Si queréis profundizar un poco más sobre Scrum podéis acceder a [[https://pedroprieto.github.io/curso_scrum/][este enlace]] con los materiales que utilicé en un curso específico sobre este marco de trabajo.

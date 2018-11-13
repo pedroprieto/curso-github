@@ -21,7 +21,9 @@
 - [[https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas][Desarrollo Guiado por Pruebas - definición]] 
 - [[https://docs.travis-ci.com/user/tutorial/][Primeros pasos con Travis]]
 - [[https://docs.travis-ci.com/user/for-beginners][Documentación de Travis]]
-- [[https://docs.travis-ci.com/user/languages/][Lista de lenguajes de programación soportados por Travis]] 
+- [[https://docs.travis-ci.com/user/languages/][Lista de lenguajes de programación soportados por Travis]]
+- [[https://github.com/curso-github-cefire/sesion5-1-travis][Proyecto de ejemplo de Desarrollo Guiado por Test en PHP]]
+- [[https://github.com/curso-github-cefire/tdd-node-sample][Proyecto de ejemplo de Desarrollo Guiado por Test en NodeJS]]
 
 ** Contenidos
 *** Definiciones

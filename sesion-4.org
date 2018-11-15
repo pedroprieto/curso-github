@@ -193,13 +193,13 @@ A continuación se incluye un enlace a un [[https://github.com/curso-github-cefi
 7. Sube los cambios a GitHub.
 8. Configura tu copia del repositorio para activar el servicio de GitHub Pages en la rama ~master~.
 9. Comprueba que puedes acceder vía web a tu sitio publicado.
-10. Crea una nueva página denominada ~blog~. Comprueba que aparece en el menú de navegación del sitio.
-11. Crea una nueva plantilla llamada ~plantillablog~ basada en la que se proporciona que muestre una lista de los posts del sitio. El listado debe incluir:
+10. Crea una nueva *página* (en la carpeta principal del repositorio) denominada ~blog~. Comprueba que aparece en el menú de navegación del sitio.
+11. Crea una nueva *plantilla* (en la carpeta ~_layouts~) llamada ~plantillablog~ basada en la que se proporciona que muestre una lista de los posts del sitio. El listado debe incluir:
     - Un enlace al post cuyo texto sea el título del post.
     - La fecha de publicación.
     - Un extracto del contenido del texto del post.
-12. Crea 3 posts que utilicen la plantilla por defecto. Para generar el texto de los posts puedes utilizar un generador del estilo [[https://es.lipsum.com/][lorem ipsum]].
-13. Configura la página ~blog~ de manera que utilice la plantilla ~plantillablog~. Comprueba que aparece la lista de posts y que se puede acceder a ellos a través de los enlaces.
+12. Crea 3 *posts* (en la carpeta ~_posts~) que utilicen la plantilla por defecto. Para generar el texto de los posts puedes utilizar un generador del estilo [[https://es.lipsum.com/][lorem ipsum]].
+13. Configura la *página* ~blog~ de manera que utilice la plantilla ~plantillablog~. Comprueba que aparece la lista de posts y que se puede acceder a ellos a través de los enlaces.
 14. Incluye las capturas de pantalla de los apartados 2 y 5 en el repositorio en una carpeta denominada ~images~.
 15. Modifica la página ~galeria.html~ para que incluya dos elementos ~<img>~ que muestren las dos capturas de pantalla.
 16. Realiza una ~pull request~ indicando en el mensaje que has completado la tarea junto con:

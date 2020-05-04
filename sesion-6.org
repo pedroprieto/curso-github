@@ -97,6 +97,10 @@ A continuación se muestran los enlaces de la documentación para hacer el despl
      - [[https://docs.travis-ci.com/user/deployment/elasticbeanstalk/][Despliegue en AWS Elastic BeanStalk desde Travis]]
      - [[https://docs.travis-ci.com/user/deployment/azure-web-apps/][Despliegue en Azure Web Apps desde Travis]]
 
+Los servicios AWS y Azure son bastante más complejos que Heroku, por lo que quedan fuera del ámbito de este curso. En caso de estar interesado en el despliegue de aplicaciones en estos servicios se pueden consultar los siguientes recursos:
+- [[https://github.com/pedroprieto/api-bank-app][Ejemplo de despligue de aplicaciones .NET en AWS BeanStalk]]
+- [[https://github.com/pedroprieto/image-resizer][Ejemplo de despliegue de una aplicación NodeJS en AWS Lambda]]
+
 ** Tareas
 Crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion6-travis-heroku~. Dicho repositorio debe contener una aplicación web en un lenguaje de tu elección que utilice base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*. 
 

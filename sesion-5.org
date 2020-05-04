@@ -74,7 +74,7 @@
 - Crear una cuenta a través de la opción *Sign in with GitHub*
 [[file:imagenes/signup-travis.png]]
 - Una vez redirigidos a la página de GitHub, autorizar el acceso
-- La aplicación Travis deberá aparecer instalada en la sección ~Installed GitHub Apps~ dentro de los ~Settings~ del usuario.
+- La aplicación Travis deberá aparecer instalada en la sección ~Installed GitHub Apps~ dentro de la sección ~Applications~ en el menú ~Settings~ del usuario.
 [[file:imagenes/travis-configure.png]]
 - Si pulsamos en el botón ~Configure~ de la aplicación Travis podremos controlar *qué repositorios serán visibles para Travis* (por defecto, *todos*)
 [[file:imagenes/addrepo-travis.png]]

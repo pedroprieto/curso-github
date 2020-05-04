@@ -57,8 +57,8 @@
 
 *** Integración continua con GitHub y Travis CI
 **** Flujo de trabajo general
-1. *Activación* del repositorio para que utilice el servicio Travis CI. Sólo es neceario hacerlo la primera vez.
-2. *Creación del fichero de configuración* de Travis CI, ~.travis.yml~. Sólo es necesario hacerlo la primera vez.
+1. *Activación* de Travis como aplicación autorizada en la cuenta de GitHub. Solo es neceario hacerlo la primera vez.
+2. *Creación del fichero de configuración* de Travis CI, ~.travis.yml~. Solo es necesario hacerlo la primera vez.
 3. *Creación o modificación de tests* según el lenguaje de programación utilizado.
 4. *Publicación de cambios*. Todos los cambios que lleguen a la *rama principal* del repositorio vía ~commit~ o vía ~pull request~ activan la ejecución de un trabajo de integración continua.
 5. *Ejecución de tests*. El servicio Travis CI detecta los nuevos cambios en el repositorio y lanza un trabajo de integración continua. Este trabajo comprende las siguientes etapas:
@@ -70,25 +70,23 @@
 6. *Notificación de resultados*. Se notifica el resultado de la ejecución de los tests en el repositorio de GitHub (normalmente aparece un mensaje indicando que las pruebas se han pasado). Esto es especialmente útil al trabajar con /Pull Requests/, ya que podemos esperar a que Travis nos informe sobre el resultado de los tests antes de fusionar los cambios en la rama principal del repositorio.
      
 **** Creación de cuenta de Travis CI e integración con GitHub
-- Acceder a [[https://travis-ci.org/]]
+- Acceder a [[https://travis-ci.com]]
 - Crear una cuenta a través de la opción *Sign in with GitHub*
 [[file:imagenes/signup-travis.png]]
 - Una vez redirigidos a la página de GitHub, autorizar el acceso
+- La aplicación Travis deberá aparecer instalada en la sección ~Installed GitHub Apps~ dentro de los ~Settings~ del usuario.
+[[file:imagenes/travis-configure.png]]
+- Si pulsamos en el botón ~Configure~ de la aplicación Travis podremos controlar *qué repositorios serán visibles para Travis* (por defecto, *todos*)
+[[file:imagenes/addrepo-travis.png]]
 
 **** Opcional: autorización de organizaciones
-- Acceder al menú ~Settings~ de GitHub
-- Acceder a la opción ~Applications~
-[[file:imagenes/addorganization-travis.png]]
-- Seleccionar la aplicación Travis
+     La aplicación Travis se instala para la cuenta del usuario de GitHub. Si se desea que Travis tenga acceso a los repositorios de una organización bajo nuestro control habrá que realizar los siguientes pasos adicionales:
+- Acceder al menú ~Settings~ de nuestro usuario
+- Acceder a la opción ~Applications/Authorized OAuth Apps~
+[[file:imagenes/addorganization-travis-1.png]]
+- Seleccionar la aplicación Travis CI
 - En el apartado /Organization access/, activar las organizaciones que se deseen
 [[file:imagenes/addorganization-travis-2.png]]
- 
-**** Activación del repositorio que va a hacer uso de Travis CI
-- Acceder a [[https://travis-ci.org/]]
-- Acceder a la opción ~Settings~
-- Seleccionar la cuenta sobre la que se desee trabajar (usuario u organización)
-- Activar los repositorios que vayan a trabajar con Travis
-[[file:imagenes/addrepo-travis.png]]
 
 **** El fichero de configuración de Travis CI
 - Para que Travis se ejecute debe existir un fichero ~.travis.yml~ en el repositorio
@@ -98,7 +96,7 @@
 - [[https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle][Ciclo de vida de un trabajo en Travis CI]]
 
 **** Visualización del resultado de la ejecución
-- Acceder a [[https://travis-ci.org/]]
+- Acceder a [[https://travis-ci.com]]
 - Seleccionar el trabajo de la lista de la izquierda
 [[file:imagenes/visualizar-travis.png]]
 

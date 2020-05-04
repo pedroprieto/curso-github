@@ -103,6 +103,27 @@
 **** Repositorio de ejemplo
 A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/sesion5-1-travis][repositorio de ejemplo]] con un proyecto PHP configurado para trabajar con Travis.
 
+*** Integración continua con GitHub Actions
+    GitHub ha incorporado un nuevo servicio, ~GiHub Actions~, que permite crear una serie de flujos de trabajo para realizar tareas automatizadas conectadas con los repositorios de GitHub. Entre los usos de este servicio podemos destacar:
+- Integración continua (ejecución de tests)
+- Despliegue en servicios web
+- Envío de mensajes automatizados al subir código o superar tests (Slack, etc.)
+- Acceso a un [[https://github.com/marketplace][marketplace]] de acciones creadas por la comunidad
+
+En lo relativo a integración continua, podemos utilizar el servicio de ~GitHub Actions~ como alternativa a Travis-CI. En este enlace podemos consultar más información acerca de cómo realizar [[https://help.github.com/es/actions/building-and-testing-code-with-continuous-integration][integración continua con GitHub Actions]]. Su funcionamiento es muy parecido: hay que ~crear un fichero de configuración en el repositorio~ y a continuación ~crear una acción~ para conectarlo al servicio de integración continua.
+
+Este servicio, al estar integrado directamente en GitHub, nos permite crear los ficheros necesarios para realizar tests a partir del menú ~Actions~ del repositorio de GitHub.
+[[file:imagenes/github_actions_1.png]]
+
+Una vez dentro podemos hacer click en ~New workflow~ para crear una acción nueva:
+[[file:imagenes/github_actions_2.png]]
+
+A continuación tendremos la posibilidad de elegir una plantilla para crear el fichero de configuración del workflow. Podemos crearla a mano o elegir una existente:
+[[file:imagenes/github_actions_3.png]]
+
+Por último, tendremos acceso al fichero de configuración generado, que podremos aceptar o editar a nuestro gusto.
+[[file:imagenes/github_actions_4.png]]
+
 ** Tareas
 Utilizando como base el repositorio de ejemplo propuesto, crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion5-travis~. Dicho repositorio debe contener una función que compruebe si un número dado es par y un test que realice pruebas con varios números para comprobar que la función está correctamente diseñada. Puedes utilizar cualquier lenguaje de programación soportado por Travis. Deberás activar Travis en el repositorio y configurar adecuadamente el fichero ~.travis.yml~ para el lenguaje de programación utilizado.
 

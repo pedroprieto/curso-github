@@ -90,6 +90,13 @@
 **** Repositorio de ejemplo
 A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/travis-heroku-2][repositorio de ejemplo]] con un proyecto PHP configurado para realizar el despliegue de una aplicación completa con base de datos con Travis y Heroku.
 
+**** Alternativas a Heroku: AWS y Azure
+     En caso de utilizar otro proveedor para el despliegue habrá que configurar el fichero ~.travis.yml~ con los datos adecuados para dicho proveedor: usuario y contraseña (o token), nombre de la aplicación, etc.
+
+A continuación se muestran los enlaces de la documentación para hacer el despliegue en AWS y Azure:
+     - [[https://docs.travis-ci.com/user/deployment/elasticbeanstalk/][Despliegue en AWS Elastic BeanStalk desde Travis]]
+     - [[https://docs.travis-ci.com/user/deployment/azure-web-apps/][Despliegue en Azure Web Apps desde Travis]]
+
 ** Tareas
 Crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion6-travis-heroku~. Dicho repositorio debe contener una aplicación web en un lenguaje de tu elección que utilice base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*. 
 

@@ -100,8 +100,8 @@
 - Seleccionar el trabajo de la lista de la izquierda
 [[file:imagenes/visualizar-travis.png]]
 
-**** Repositorio de ejemplo
-A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/sesion5-1-travis][repositorio de ejemplo]] con un proyecto PHP configurado para trabajar con Travis.
+**** Repositorios de ejemplo
+A continuación se muestran enlaces a un [[https://github.com/curso-github-cefire/sesion5-1-travis][repositorio de ejemplo en PHP]] y un [[https://github.com/curso-github-cefire/tdd-node-sample][repositorio de ejemplo en NodeJS]] configurados para trabajar con Travis.
 
 *** Integración continua con GitHub Actions
     GitHub ha incorporado un nuevo servicio, ~GiHub Actions~, que permite crear una serie de flujos de trabajo para realizar tareas automatizadas conectadas con los repositorios de GitHub. Entre los usos de este servicio podemos destacar:

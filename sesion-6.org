@@ -58,7 +58,7 @@
    - En la sección /Authorizations/, pulsar en /Create authorization/
    - Dejar fecha de caducidad en blanco si se desea
    - Copiar el /Authorization token/
- - Añadir la siguiente configuración al archivo ~.travis.yml~:
+ - Añadir la siguiente configuración al archivo ~.travis.yml~ (sustituyendo ~NOMBRE-APP-HEROKU~ por el nombre de la aplicación creada en Heroku):
 #+BEGIN_SRC yaml
    deploy:
      provider: heroku
@@ -86,6 +86,7 @@ travis encrypt TOKEN_HEROKU --add deploy.api_key --pro
     api_key:
       secure: "TOKEN HEROKU CIFRADO"
  #+END_SRC
+ - Por último, subir los cambios a GitHub y comprobar que se despliega la aplicación correctamente.
  
 **** Visualización del resultado de la ejecución
 - Comprobar el resultado de la fase de despliegue en [[https://travis-ci.com]]

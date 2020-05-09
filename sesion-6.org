@@ -74,7 +74,7 @@
  #+BEGIN_SRC bash
 travis login --pro
  #+END_SRC
- - Cifrar el token de Heroku mediante la herramienta Travis. Para ello ejecutar el siguiente comando sustituyendo ~TOKEN_HEROKU~ por el token previamente copiado (si se está utilizando la versión travis-ci.org, quitar el flag ~--pro~.
+ - Cifrar el token de Heroku mediante la herramienta Travis. Para ello ejecutar el siguiente comando sustituyendo ~TOKEN_HEROKU~ por el token previamente copiado (si se está utilizando la versión travis-ci.org, quitar el flag ~--pro~).
 #+BEGIN_SRC bash
 travis encrypt TOKEN_HEROKU --add deploy.api_key --pro
 #+END_SRC
@@ -88,7 +88,7 @@ travis encrypt TOKEN_HEROKU --add deploy.api_key --pro
  #+END_SRC
  
 **** Visualización del resultado de la ejecución
-- Comprobar el resultado de la fase de despliegue en [[https://travis-ci.org/]]
+- Comprobar el resultado de la fase de despliegue en [[https://travis-ci.com]]
 
 **** Repositorio de ejemplo
 A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/travis-heroku-2][repositorio de ejemplo]] con un proyecto PHP configurado para realizar el despliegue de una aplicación completa con base de datos con Travis y Heroku.

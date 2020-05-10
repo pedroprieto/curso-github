@@ -3,6 +3,8 @@
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-6-presentacion.html][Presentación]]
 - [[https://youtu.be/f_uc4dujVCU][Sesión 6.1]]
 - [[https://youtu.be/an0MtIxMHM4][Sesión 6.2]]
+- [[https://youtu.be/gcWCoqO9PnQ][Sesión 6.3]]
+- [[https://youtu.be/AtAwxn_yMeE][Sesión 6.4]]
 ** Índice
 - Servidores Cloud
 - Implementación continua (despliegue automático)
@@ -106,7 +108,7 @@ Los servicios AWS y Azure son bastante más complejos que Heroku, por lo que que
 - [[https://github.com/pedroprieto/image-resizer][Ejemplo de despliegue de una aplicación NodeJS en AWS Lambda]]
 
 ** Tareas
-Crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion6-travis-heroku~. Dicho repositorio debe contener una aplicación web en un lenguaje de tu elección que utilice base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*. 
+Crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion6-travis-heroku~. Dicho repositorio debe contener una aplicación web en un lenguaje de tu elección que utilice base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*. Si lo deseas puedes utilizar AWS o Azure en lugar de Heroku.
 
 Puedes utilizar cualquier proyecto o práctica tanto personal como de clase que tuvieras preparada anteriormente. Si no tienes ninguna puedes utilizar como base el repositorio de ejemplo y añadir otro punto de entrada a la API (por ejemplo, series de televisión).
 

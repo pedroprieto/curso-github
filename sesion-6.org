@@ -3,8 +3,8 @@
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-6-presentacion.html][Presentación]]
 - [[https://youtu.be/f_uc4dujVCU][Sesión 6.1]]
 - [[https://youtu.be/an0MtIxMHM4][Sesión 6.2]]
-- [[https://youtu.be/gcWCoqO9PnQ][Sesión 6.3]]
-- [[https://youtu.be/AtAwxn_yMeE][Sesión 6.4]]
+- [[https://youtu.be/AtAwxn_yMeE][Sesión 6.3]]
+- [[https://youtu.be/gcWCoqO9PnQ][Sesión 6.4]]
 ** Índice
 - Servidores Cloud
 - Implementación continua (despliegue automático)

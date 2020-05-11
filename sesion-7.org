@@ -5,6 +5,7 @@
 - [[https://youtu.be/naX3nSnAFHo][Sesión 7.2]]
 - [[https://youtu.be/7dpYStXPLCs][Sesión 7.3]]
 - [[https://youtu.be/Vw_ebcGK4oE][Sesión 7.4]]
+- [[https://youtu.be/W9iF1dnIOqo][Sesión 7.5]]
 
 ** Índice
 - Ventajas con respecto a los sistemas tradicionales de recolección de tareas del alumnado
@@ -22,6 +23,7 @@
 ** Referencias
 - [[https://education.github.com/][GitHub Education]]
 - [[https://classroom.github.com/][GitHub Classroom]]
+- [[https://classroom.github.com/help/auto-grading][GitHub Classroom autograding]]
 - [[https://education.github.com/pack][Student Developer Pack]]
 - [[https://education.github.community/][GitHub Education Community]]
 - [[https://education.github.community/t/shopping-bags-get-a-github-swag-bag-for-your-classroom/33][Bolsa de regalos de GitHub]] 
@@ -59,6 +61,7 @@
 - Crea un listado de alumnos y lo enlaza automáticamente con los usuarios de GitHub
 - Hace el seguimiento de los repositorios de cada tarea y muestra los enlaces a cada uno de ellos
 - Descarga con un solo click todas las tareas de los alumnos
+- Testeo y calificación automática
 
 **** Clases
 - Se puede crear una clase (/classroom/) para cada clase que impartamos
@@ -82,6 +85,7 @@
 - En el caso de tareas de grupo, se creará un repositorio *por grupo*
 - Dentro de cada tarea se puede acceder a la lista de los repositorios creados junto con los datos identificativos de cada alumno
 - Dentro de cada tarea se pueden *descargar todos los repositorios* mediante la aplicación ~[[https://github.com/education/classroom-assistant][classroom assistant]]~
+- Para cada tarea se pueden crear un *conjunto de tests* y asignarles una *calificación numérica* mediante [[https://classroom.github.com/help/auto-grading][GitHub Actions]]. En caso de utilizar tareas privadas es conveniente pedir un [[https://education.github.com/][descuento educativo para la organización]] que estemos utilizando en GitHub Classroom, ya que el servicio de GitHub Actions es [[https://github.com/pricing][gratuito]] para repositorios públicos pero *limitado* para repositorios privados. Al tener un descuento educativo tendremos acceso a un mayor número de minutos de Actions.
 
 *** Metodologías de trabajo para prácticas individuales
 Existen dos posibilidades: utilizando exclusivamente GitHub mediante /forks/ y /pull requests/ o utilizando /GitHub Classroom/. En ambos casos es recomendable *crear una organización* para cada clase que impartamos. La organización puede darse de alta para solicitar el *descuento educativo* tal como vimos en la [[file:sesion-3.org][sesión 3]]. Dentro de la organización se crearán los repositorios para cada tarea.

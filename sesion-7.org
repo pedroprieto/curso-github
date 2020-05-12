@@ -356,7 +356,7 @@ A continuación se indican algunas estrategias que podéis utilizar para combina
  4. Añade a la clase un listado de alumnos que contenga los campos *nombre* y *apellidos*. Añade los datos de *dos alumnos inventados* al listado.
  5. Crea una *tarea individual* en la clase ~curso-github-sesion-7~:
     - Debe utilizar como base el repositorio ~sesion7-tarea-individual~
-    - Fecha de entrega: 30 de Noviembre de 2018
+    - Introducir una fecha de entrega
  6. Envíame la URL de la invitación a través de la mensajería de equipo de la organización.
  7. Una vez haya aceptado la invitación, haz las siguientes capturas de pantalla:
     - Captura del repositorio creado para mi en la organización
@@ -368,7 +368,7 @@ A continuación se indican algunas estrategias que podéis utilizar para combina
     - Un archivo ~LICENSE~ con la licencia que desees
  2. Crea una *tarea de grupo* en la clase ~curso-github-sesion-7~:
     - Debe utilizar como base el repositorio ~sesion7-tarea-grupo~
-    - Fecha de entrega: 30 de Noviembre de 2018
+    - Introducir una fecha de entrega
     - Número máximo de personas por grupo: 4
  3. Envíame la URL de la invitación a través de la mensajería de equipo de la organización.
  4. Una vez haya aceptado la invitación, haz las siguientes capturas de pantalla:

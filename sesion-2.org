@@ -14,8 +14,8 @@
 
 ** Referencias
 - [[https://git-scm.com/book/es/v2/][Libro de Git]]
-- [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet/][Hoja de referencia de Git]]
-- [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet.pdf][Hoja de referencia de Git (PDF)]]
+- [[https://training.github.com/][Hoja de referencia de Git]]
+- [[https://training.github.com/downloads/es_ES/github-git-cheat-sheet.pdf][Hoja de referencia de Git (PDF)]]
 - [[http://git-school.github.io/visualizing-git/][Herramienta "Visualizing Git"]] (muy interesante para comprender el funcionamiento interno de Git y el trabajo con ramas y remotos)
 
 ** Contenidos

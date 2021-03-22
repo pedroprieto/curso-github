@@ -1,4 +1,6 @@
 * Introducción a GitHub
+[[./imagenes/Logotipo_ME_FP_GV_FSE.png]]
+
 ** Videotutoriales
 - [[https://youtu.be/SJf4iTkMNPo][Sesión 3.1]]
 - [[https://youtu.be/GMH6hN8FKSU][Sesión 3.2]]

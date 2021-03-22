@@ -1,4 +1,6 @@
 * GitHub Pages
+[[./imagenes/Logotipo_ME_FP_GV_FSE.png]]
+
 ** Videotutoriales
 - [[https://youtu.be/sBkKKjcT2wI][Sesión 4.1]]
 - [[https://youtu.be/wrVch8y9G0o][Sesión 4.2]]

@@ -1,4 +1,6 @@
 * Integración continua: Testeo
+[[./imagenes/Logotipo_ME_FP_GV_FSE.png]]
+
 ** Videotutoriales y presentación
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-5-presentacion.html][Presentación]]
 - [[https://youtu.be/ZF7rt9d-ODE][Sesión 5.1]]

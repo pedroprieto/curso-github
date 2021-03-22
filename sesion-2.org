@@ -1,4 +1,6 @@
 * Manejo básico de Git (II)
+[[./imagenes/Logotipo_ME_FP_GV_FSE.png]]
+
 ** Videotutoriales
 - [[https://youtu.be/goMcUY9dZzM][Sesión 2.1]]
 - [[https://youtu.be/1vMheWF6VXo][Sesión 2.2]]

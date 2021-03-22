@@ -1,4 +1,6 @@
 * Metodologías para el trabajo con alumnos
+[[./imagenes/Logotipo_ME_FP_GV_FSE.png]]
+
 ** Videotutoriales y presentación
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-7-presentacion.html][Presentación]]
 - [[https://youtu.be/Mz5Eypb3Lew][Sesión 7.1]]

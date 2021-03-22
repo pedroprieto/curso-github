@@ -1,4 +1,6 @@
 * Integración continua: Despliegue automático
+[[./imagenes/Logotipo_ME_FP_GV_FSE.png]]
+
 ** Videotutoriales y presentación
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-6-presentacion.html][Presentación]]
 - [[https://youtu.be/f_uc4dujVCU][Sesión 6.1]]

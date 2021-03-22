@@ -4,14 +4,14 @@
 Curso de formación para profesores de la familia profesional de Informática y Comunicaciones.
 
 ** Sesiones
-0. [[https://www.youtube.com/watch?v=14H1Ultqxpw&index=1&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7][Presentación]]
+0. [@0][[https://www.youtube.com/watch?v=14H1Ultqxpw&index=1&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7][Presentación]]
 1. [[./sesion-1.org][Manejo básico de Git]]
 2. [[./sesion-2.org][Manejo básico de Git (II)]]
 3. [[./sesion-3.org][Introducción a GitHub]]
 4. [[./sesion-4.org][GitHub Pages]]
 5. [[./sesion-5.org][Integración continua: testeo]]
 6. [[./sesion-6.org][Integración continua: despliegue automático]]
-7. [[./sesion-7.org][[Metodologías para trabajar con los alumnos]]
+7. [[./sesion-7.org][Metodologías para trabajar con los alumnos]]
 
 ** Recursos
 - [[https://git-scm.com/book/es/v2][Libro de Git]]

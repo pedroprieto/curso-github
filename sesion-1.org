@@ -121,6 +121,9 @@
    - [[https://www.sublimetext.com/][Sublime Text]]
    - [[https://notepad-plus-plus.org/][Notepad ++]]
 
+   El bloc de notas de Windows utiliza una codificación de caracteres específica de Windows y además incluye la extensión ~.txt~ por defecto al final de los nombres de archivo. Por tanto, no es una buena elección para trabajar.
+
+   Las tareas a realizar son:
 
    1. Instala Git en tu sistema operativo. Adjunta una captura de pantalla en la que aparezca el resultado de la ejecución del comando ~git --version~.
    2. Realiza la *configuración de Git* según lo indicado en el tema (nombre, correo electrónico, editor de preferencia y almacenamiento de credenciales). Adjunta una captura de pantalla con el resultado de la ejecución de los comandos de configuración.

@@ -104,42 +104,59 @@
   #+end_src
 
 ** Tareas
+   Realiza las tareas que se indican a continuación. Incluye las *capturas de pantalla* que se pidan en un documento tipo *LibreOffice* o *Word*.
+
+   Cuando se pida realizar un /commit/ recuerda que previamente hay que añadir los archivos al área de preparación si no se ha indicado antes en las instrucciones. En esos casos, un /commit/ significa ejecutar los comandos ~git add~ y ~git commit~.
+
+   *¡IMPORTANTE!* No utilices el bloc de notas de Windows para editar los archivos de texto de las tareas. Utiliza en su lugar un editor específico. Algunas sugerencias son:
+   - [[https://code.visualstudio.com/][Visual Studio Code]]
+   - [[https://atom.io/][Atom]]
+   - [[http://brackets.io/][Brackets]]
+   - [[https://www.sublimetext.com/][Sublime Text]]
+   - [[https://notepad-plus-plus.org/][Notepad ++]]
+
+   El bloc de notas de Windows utiliza una codificación de caracteres específica de Windows y además incluye la extensión ~.txt~ por defecto al final de los nombres de archivo. Por tanto, no es una buena elección para trabajar.
+
+   Las tareas a realizar son:
 1) Crea una carpeta denominada ~S2R1~. Realiza las siguientes acciones en ella:
    1. Crea un repositorio Git.
    2. Crea un fichero denominado ~actores.txt~. Añade tres nombres de actores cada uno en una línea distinta.
    3. Haz un primer /commit/.
-   4. Crea una rama denominada /test/.
-   5. En la rama /test/ crea un fichero denominado ~actrices.txt~. Añade tres nombres de actrices y realiza un /commit/ en dicha rama.
-   6. Haz una captura de pantalla del resultado del comando ~git log --graph --all~.
-   7. Incorpora los cambios de la rama /test/ a la rama /master/. Haz una captura de pantalla de los comandos que has utilizado y de su resultado.
-   8. Posiciónate en la rama /master/.
-   9. Crea una segunda rama denominada /test2/.
-   10. En la rama /master/, añade una actriz al fichero ~actrices.txt~.
-   11. En la rama /test2/, añade una actriz al fichero ~actrices.txt~.
-   12. Haz una captura de pantalla del resultado del comando ~git log --graph --all~. Debe haber dos caminos distintos: uno para la rama /master/ y otro para la rama /test2/.
-   13. Incorpora los cambios de la rama /test2/ a la rama /master/. ¿Se produce un conflicto? De ser así realiza una captura del comando ~git status~.
-   14. Resuelve el conflicto incorporando los dos nombres de actrices.
-   15. Haz una captura de pantalla del resultado del comando ~git log --graph --all~. Observa que se ha creado un nuevo /commit/ que integra los dos caminos anteriores.
-   16. Comprime la carpeta ~S2R1~ y envíala junto con las capturas de pantalla según el procedimiento indicado en el apartado siguiente.
+   4. Crea una rama denominada ~test~.
+   5. Cambia a la rama ~test~
+   6. En la rama ~test~ crea un fichero denominado ~actrices.txt~. Añade tres nombres de actrices y realiza un /commit/ en dicha rama.
+   7. Haz una captura de pantalla del resultado del comando ~git log --graph --all~.
+   8. Cambia a la rama ~master~.
+   9. Incorpora los cambios de la rama ~test~ a la rama ~master~. Haz una captura de pantalla de los comandos que has utilizado y de su resultado.
+   10. Crea una segunda rama denominada ~test2~. La rama ~test2~ apunta al mismo /commit/ que la rama ~master~ en este momento.
+   11. En la rama ~master~, añade una actriz al fichero ~actrices.txt~ y haz un /commit/.
+   12. Cambia a la rama ~test2~
+   13. En la rama ~test2~, añade una actriz al fichero ~actrices.txt~ y haz otro /commit/.
+   14. Haz una captura de pantalla del resultado del comando ~git log --graph --all~. Debe haber dos caminos distintos: uno para la rama ~master~ y otro para la rama ~test2~.
+   15. Cambia a la rama ~master~
+   16. Incorpora los cambios de la rama ~test2~ a la rama ~master~. ¿Se produce un conflicto? De ser así realiza una captura del comando ~git status~.
+   17. Resuelve el conflicto incorporando los dos nombres de actrices.
+   18. Haz una captura de pantalla del resultado del comando ~git log --graph --all~. Observa que se ha creado un nuevo /commit/ que integra los dos caminos anteriores.
 2) Crea una carpeta denominada ~S2R2-remoto~. Inicializa un repositorio Git en su interior mediante el comando ~git init --bare~. Esta carpeta se utilizará como repositorio remoto.
 3) Clona el repositorio ~S2R2-remoto~ en una carpeta denominada ~S2R2~. Adjunta captura de pantalla del resultado del comando de clonado. A continuación realiza las siguientes acciones en el repositorio ~S2R2~:
    1. Crea un archivo denominado ~directores.txt~. Añade el nombre de tres directores de cine.
    2. Haz un /commit/.
    3. Realiza un /push/ al repositorio remoto. Adjunta captura de pantalla del resultado.
-   4. Crea una rama denominada /version1/.
-   5. En la rama /version1/ añade el nombre de dos directores de cine más al archivo ~directores.txt~.
-   6. Realiza un /push/ de la rama al repositorio remoto de manera que quede asociada a la rama remota del mismo nombre. Adjunta captura de pantalla del resultado.
+   4. Crea una rama denominada ~version1~.
+   5. Cambia a la rama ~version1~.
+   6. En la rama ~version1~ añade el nombre de dos directores de cine más al archivo ~directores.txt~ y haz un /commit/ de los cambios.
+   7. Realiza un /push/ de la rama al repositorio remoto de manera que *quede asociada a la rama remota del mismo nombre*. Adjunta captura de pantalla del resultado.
 4) Clona el repositorio ~S2R2-remoto~ en una segunda carpeta denominada ~S2R3~. Realiza las siguientes acciones sobre ella:
-   1. Muestra en la consola el contenido del fichero ~directores.txt~ y el resultado del comando ~git status~.
-   2. Cambia a la rama /version1/. Muestra el resultado del comando.
+   1. Muestra en la consola el contenido del fichero ~directores.txt~ y el resultado del comando ~git status~. Debe mostrar tres directores.
+   2. Cambia a la rama ~version1~. Muestra el resultado del comando. Comprueba que se crea una rama local ~version1~ con el contenido de la rama remota ~origin/version1~ y enlazada con ella. Al clonar el repositorio la rama no existía (solo se clona la rama principal, ~master~), pero al cambiar a una rama que existe en el remoto se produce su creación local y enlazado con su correspondiente remota.
    3. Muestra el contenido del fichero ~directores.txt~ por la pantalla. Comprueba que se muestran los 5 nombres de directores esperados. Adjunta captura de pantalla.
-   4. Incorpora los cambios de la rama /version1/ a la rama /master/.
-   5. Sube la rama /master/ actualizada al servidor. Adjunta captura de pantalla del resultado del comando.
+   4. Cambia a la rama ~master~.
+   5. Incorpora los cambios de la rama ~version1~ a la rama ~master~.
+   6. Sube la rama ~master~ actualizada al servidor. Adjunta captura de pantalla del resultado del comando.
 5) Vuelve de nuevo a la carpeta ~S2R2~ y realiza las siguientes acciones:
-   1. Obtén los cambios que hay en el repositorio remoto. Adjunta captura de pantalla del resultado del comando utilizado.
-   2. Actualiza la rama /master/ local con el contenido de la rama /master/ del repositorio remoto. Adjunta captura de pantalla del resultado del comando utilizado.
-   3. Comprueba que deben aparecer los 5 nombres de directores esperados.
-6) Por último, selecciona las carpetas ~S2R2-remoto~, ~S2R2~ y ~S3R3~ y adjúntalas según el procedimiento indicado en el apartado siguiente.
+   1. Obtén los cambios que hay en el repositorio remoto *sin fusionarlos en la rama local*. Adjunta captura de pantalla del resultado del comando utilizado.
+   2. Actualiza la rama ~master~ local con el contenido de la rama ~master~ del repositorio remoto. Adjunta captura de pantalla del resultado del comando utilizado.
+   3. Comprueba que aparecen los 5 nombres de directores esperados.
 
 *** Entrega de la tarea
-Crea un fichero ~.zip~ con los resultados que se piden en cada una de las tareas y nómbralo según el patrón ~APELLIDOS_NOMBRE_sesion2.zip~. La entrega del fichero se realizará a través de la plataforma Moodle del Cefire.
+    Guarda el fichero con las capturas en formato *PDF* y nómbralo según el patrón ~APELLIDOS_NOMBRE_sesion2.pdf~. La entrega del fichero se realizará a través de la plataforma Moodle del Cefire.

@@ -101,6 +101,8 @@ bundle exec jekyll serve
 # BASEURL viene configurada en el archivo _config.yml
 #+end_src
 
+*¡Muy importante!* Para que funcione correctamente, la carpeta que contiene el proyecto Jekyll debe estar en una ruta *sin espacios en blanco*.
+
 **** Agregar contenido
 ***** Front matter
 - Debe aparecer en todos los archivos que vayan a ser procesados por Jekyll (posts, páginas,...)

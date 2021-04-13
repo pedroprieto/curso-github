@@ -112,7 +112,7 @@ A continuación se muestran enlaces a un [[https://github.com/curso-github-cefir
 - Envío de mensajes automatizados al subir código o superar tests (Slack, etc.)
 - Acceso a un [[https://github.com/marketplace][marketplace]] de acciones creadas por la comunidad
 
-En lo relativo a integración continua, podemos utilizar el servicio de ~GitHub Actions~ como alternativa a Travis-CI. En este enlace podemos consultar más información acerca de cómo realizar [[https://help.github.com/es/actions/building-and-testing-code-with-continuous-integration][integración continua con GitHub Actions]]. Su funcionamiento es muy parecido: hay que *crear un fichero de configuración en el repositorio* y a continuación *crear una acción* para conectarlo al servicio de integración continua.
+En lo relativo a integración continua, podemos utilizar el servicio de ~GitHub Actions~ como alternativa a Travis-CI. En este enlace podemos consultar más información acerca de cómo realizar [[https://docs.github.com/es/actions/guides/about-continuous-integration][integración continua con GitHub Actions]]. Su funcionamiento es muy parecido: hay que *crear un fichero de configuración en el repositorio* y a continuación *crear una acción* para conectarlo al servicio de integración continua.
 
 Este servicio, al estar integrado directamente en GitHub, nos permite crear los ficheros necesarios para realizar tests a partir del menú ~Actions~ del repositorio de GitHub.
 [[file:imagenes/github_actions_1.png]]

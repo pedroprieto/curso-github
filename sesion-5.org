@@ -17,7 +17,7 @@
 - Visualización de los resultados
 
 ** Referencias
-- [[https://es.wikipedia.org/wiki/Integraci%25C3%25B3n_continua][Definición de Integración continua]]
+- [[https://es.wikipedia.org/wiki/Integración_continua][Definición de Integración continua]]
 - [[https://aws.amazon.com/es/devops/continuous-integration/][Conceptos de Integración Continua (AWS)]] 
 - [[https://docs.travis-ci.com/user/for-beginners][Conceptos básicos de Integración Continua (Travis)]]
 - [[https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas][Desarrollo Guiado por Pruebas - definición]] 

@@ -8,6 +8,7 @@
 - [[https://youtu.be/7dpYStXPLCs][Sesión 7.3]]
 - [[https://youtu.be/Vw_ebcGK4oE][Sesión 7.4]]
 - [[https://youtu.be/W9iF1dnIOqo][Sesión 7.5]]
+- [[./imagenes/onlineeditor.gif][Agregar un editor online a una tarea en GitHub Classroom]]
 
 ** Índice
 - Ventajas con respecto a los sistemas tradicionales de recolección de tareas del alumnado
@@ -88,6 +89,7 @@
 - Dentro de cada tarea se puede acceder a la lista de los repositorios creados junto con los datos identificativos de cada alumno
 - Dentro de cada tarea se pueden *descargar todos los repositorios* mediante la aplicación [[https://classroom.github.com/assistant][classroom assistant]].
 - Para cada tarea se pueden crear un *conjunto de tests* y asignarles una *calificación numérica* mediante [[https://docs.github.com/en/education/manage-coursework-with-github-classroom/use-autograding][GitHub Actions]]. En caso de utilizar tareas privadas es conveniente pedir un [[https://education.github.com/][descuento educativo para la organización]] que estemos utilizando en GitHub Classroom, ya que el servicio de GitHub Actions es [[https://github.com/pricing][gratuito]] para repositorios públicos pero *limitado* para repositorios privados. Al tener un descuento educativo tendremos acceso a un mayor número de minutos de Actions.
+- También se puede asignar un *editor online* para la tarea, como [[https://replit.com/][repl.it]] o [[https://www.microsoft.com/es-ES/makecode][Microsoft MakeCode]]. En este enlace se indica cómo [[./imagenes/onlineeditor.gif][configurar el editor online]].
 
 *** Metodologías de trabajo para prácticas individuales
 Existen dos posibilidades: utilizando exclusivamente GitHub mediante /forks/ y /pull requests/ o utilizando /GitHub Classroom/. En ambos casos es recomendable *crear una organización* para cada clase que impartamos. La organización puede darse de alta para solicitar el *descuento educativo* tal como vimos en la [[file:sesion-3.org][sesión 3]]. Dentro de la organización se crearán los repositorios para cada tarea.

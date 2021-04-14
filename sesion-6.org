@@ -74,9 +74,9 @@
  #+BEGIN_SRC bash
  gem install travis 
  #+END_SRC
- - Si se está utilizando el servicio travis-ci.com, iniciar sesión en la aplicación Travis mediante el usuario y contraseña de GitHub. Para ello ejecutar:
+ - Si se está utilizando el servicio travis-ci.com, iniciar sesión en la aplicación Travis mediante el usuario y el *token* de GitHub (debes haber creado el [[./sesion-3.org][token de acceso]] previamente). Para ello ejecutar:
  #+BEGIN_SRC bash
-travis login --pro
+travis login --pro -g TOKEN_DE_GITHUB
  #+END_SRC
  - Cifrar el token de Heroku mediante la herramienta Travis. Para ello ejecutar el siguiente comando sustituyendo ~TOKEN_HEROKU~ por el token previamente copiado (si se está utilizando la versión travis-ci.org, quitar el flag ~--pro~).
 #+BEGIN_SRC bash

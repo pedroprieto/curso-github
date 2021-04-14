@@ -28,7 +28,8 @@
 - [[https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token][Autenticación en GitHub mediante tokens]]
 
 ** Contenidos
-- [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-3-presentacion.html][Presentación]]
+*** Presentación
+ - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-3-presentacion.html][Presentación]]
 
 *** Autenticación mediante tokens
     GitHub ofrece la posibilidad de utilizar *tokens* en lugar de la contraseña de la cuenta para interactuar con su servicio a través de la *línea de comandos* o de la *API*. Los tokens ofrecen una alternativa a la contraseña de la cuenta y proporcionan las siguientes ventajas:

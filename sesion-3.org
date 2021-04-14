@@ -25,9 +25,18 @@
 - [[https://help.github.com/articles/permission-levels-for-a-user-account-repository/#collaborator-access-on-a-repository-owned-by-a-user-account][Permisos de los colaboradores en un repositorio]]
 - [[https://education.github.com/discount_requests/new][Solicitud de descuentos para uso educativo]]
 - [[https://help.github.com/articles/closing-issues-using-keywords/][Cerrar issues a través de mensajes en el commit]]
+- [[https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token][Autenticación en GitHub mediante tokens]]
 
 ** Contenidos
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-3-presentacion.html][Presentación]]
+
+*** Autenticación mediante tokens
+    GitHub ofrece la posibilidad de utilizar *tokens* en lugar de la contraseña de la cuenta para interactuar con su servicio a través de la *línea de comandos* o de la *API*. Los tokens ofrecen una alternativa a la contraseña de la cuenta y proporcionan las siguientes ventajas:
+    - Permiten *especificar permisos de acceso* en lugar de proporcionar acceso completo
+    - Pueden generarse tantos como se necesiten para proporcionar distintos perfiles de acceso
+
+    En este enlace tienes toda la [[https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token][información para crear un token]] en tu cuenta. Una vez creado, *solo se podrá visualizar una vez*, por lo que deberá copiarse para poder ser utilizado. Recuerda que el token puede utilizarse para *sustituir a la contraseña* en el acceso a GitHub desde *línea de comando*.
+
 ** Tareas
 *** 1 - Creación de cuenta en GitHub
  1) Crea una cuenta en GitHub

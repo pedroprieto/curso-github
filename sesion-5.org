@@ -27,6 +27,7 @@
 - [[https://github.com/curso-github-cefire/sesion5-1-travis][Proyecto de ejemplo de Desarrollo Guiado por Test en PHP]]
 - [[https://github.com/curso-github-cefire/tdd-node-sample][Proyecto de ejemplo de Desarrollo Guiado por Test en NodeJS con Travis]]
 - [[https://github.com/curso-github-cefire/tdd-node-sample-actions][Proyecto de ejemplo de Desarrollo Guiado por Test en NodeJS con GitHub Actions]]
+- [[https://github.com/curso-github-cefire/tdd-python-sample][Proyecto de ejemplo de Desarrollo Guiado por Test en Python con GitHub Actions]]
 
 ** Contenidos
 *** Definiciones
@@ -138,7 +139,7 @@ Al pulsar sobre el icono podemos ver el resultado del test:
 [[./imagenes/github_actions_7.png]]
 
 ** Tareas
-Utilizando como base uno de los repositorios de ejemplo propuestos (en [[https://github.com/curso-github-cefire/sesion5-1-travis][PHP]], [[https://github.com/curso-github-cefire/tdd-node-sample][Node con Travis]], [[https://github.com/curso-github-cefire/tdd-node-sample-actions][Node con GitHub Actions]]), crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion5-travis~. Dicho repositorio debe contener una función que compruebe si un número dado es par y un test que realice pruebas con varios números para comprobar que la función está correctamente diseñada. Puedes utilizar cualquier lenguaje de programación soportado por Travis. Deberás activar Travis en el repositorio y configurar adecuadamente el fichero ~.travis.yml~ para el lenguaje de programación utilizado.
+Utilizando como base uno de los repositorios de ejemplo propuestos (en [[https://github.com/curso-github-cefire/sesion5-1-travis][PHP]], [[https://github.com/curso-github-cefire/tdd-node-sample][Node con Travis]], [[https://github.com/curso-github-cefire/tdd-node-sample-actions][Node con GitHub Actions]] o [[https://github.com/curso-github-cefire/tdd-python-sample][Python con GitHub Actions]]), crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion5-travis~. Dicho repositorio debe contener una función que compruebe si un número dado es par y un test que realice pruebas con varios números para comprobar que la función está correctamente diseñada. Puedes utilizar cualquier lenguaje de programación soportado por Travis. Deberás activar Travis en el repositorio y configurar adecuadamente el fichero ~.travis.yml~ para el lenguaje de programación utilizado.
 
 Cuando hayas terminado, incluye un *icono de estado* de Travis-CI en el archivo ~README~ de tu repositorio. Para ello hay que copiar un código que proporciona Travis. Tienes información sobre cómo incluirlo [[https://docs.travis-ci.com/user/status-images/][aquí]]. Recuerda seleccionar la opción ~Markdown~ al generar el enlace.
 

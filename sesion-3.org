@@ -45,7 +45,7 @@
  3) Solicita un descuento para uso educativo (ver enlace en apartado de Referencias)
 
 *** 2 - Trabajo con repositorios, issues, forks y pull requests
- 1) Haz un /fork/ del repositorio localizado en la siguiente url: [[https://github.com/curso-github-cefire/sesion3-practica]]. A partir de este momento todas las tareas que se indican se deben realizar *en tu repositorio* (el que has clonado mediante el /fork/).
+ 1) Haz un /fork/ del repositorio localizado en la siguiente url: [[https://github.com/antroher/sesion3-practica]]. A partir de este momento todas las tareas que se indican se deben realizar *en tu repositorio* (el que has clonado mediante el /fork/).
     1) Realiza un primer commit para poner tu nombre y apellidos en el fichero ~README.md~
     2) Crea 3 issues con los siguientes títulos. Si no ves la pestaña de /issues/, actívala desde los ajustes (/settings/) del repositorio.
        - Añadir 3 libros

@@ -194,7 +194,7 @@ A continuación se incluye un enlace a un [[https://github.com/curso-github-cefi
 
 *** Sitio web con Jekyll
  1. Instala Jekyll en tu equipo y haz una captura de pantalla del resultado de ejecutar el comando ~jekyll -version~.
- 2. Haz un /fork/ del repositorio disponible en [[https://github.com/curso-github-cefire/plantilla-jekyll]]. Puedes crear el repositorio en tu cuenta o en la cuenta de organización que has creado.
+ 2. Haz un /fork/ del repositorio disponible en [[https://github.com/antroher/plantilla-jekyll]]. Puedes crear el repositorio en tu cuenta o en la cuenta de organización que has creado.
  3. Clona tu repositorio y a continuación ejecuta en su interior el comando ~bundle install~ para instalar las dependencias.
  4. Modifica el fichero ~_config.yml~ para que contenga los parámetros ~baseurl~ y ~url~ que correspondan a tu repositorio.
  5. Ejecuta el servidor de test en tu equipo y comprueba que puedes acceder al sitio y navegar por él. Haz una captura de pantalla de una de las páginas cargadas a través del servidor local.

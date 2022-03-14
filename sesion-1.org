@@ -122,7 +122,7 @@
    Las tareas a realizar son:
 
    1. Instala Git en tu sistema operativo. Adjunta una captura de pantalla en la que aparezca el resultado de la ejecución del comando ~git --version~.
-   2. Realiza la *configuración de Git* según lo indicado en el tema (nombre, correo electrónico, editor de preferencia y almacenamiento de credenciales). Adjunta una captura de pantalla con el resultado de la ejecución de los comandos de configuración.
+   2. Realiza la *configuración de Git* según lo indicado en el tema (nombre, correo electrónico y editor de preferencia). Adjunta una captura de pantalla con el resultado de la ejecución de los comandos de configuración.
    3. Crea una carpeta denominada ~S1R1~. Realiza las siguientes acciones en ella:
       1) Crea un repositorio Git.
       2) Crea un fichero denominado ~libros.txt~. Añade tres títulos de libros cada uno en una línea distinta.
@@ -141,7 +141,7 @@
       15) Haz un cuarto /commit/.
       16) Crea un archivo denominado ~datos.bak~. Añade tres títulos de libros a dicho archivo.
       17) Crea una subcarpeta denominada ~output~. Crea un archivo denominado ~salida.txt~ en su interior. Escribe tu nombre y apellidos en dicho archivo.
-      18) Haz una captura de pantalla del comando ~git status~. Deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos.
+      18) Haz una captura de pantalla del comando ~git status~. Deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos. *!IMPORTANTE! No añadas los archivos al área de preparación ni hagas ningún commit.*
       19) Crea un archivo ~.gitignore~ para que los ficheros con extensión ~.bak~ y el contenido de la carpeta ~output/~ no se incluyan en el repositorio.
       20) Haz una nueva captura de pantalla del comando ~git status~. Ahora no deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos, sino que en su lugar debe aparecer únicamente el archivo ~.gitignore~.
       21) Haz un último /commit/ para incluir el archivo ~.gitignore~ en el repositorio.

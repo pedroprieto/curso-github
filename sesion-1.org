@@ -139,9 +139,9 @@
       13) Añade los cambios al área de preparación.
       14) Haz una captura de pantalla del comando ~git status~. Debe indicar que se ha borrado el archivo ~comidas.txt~ y que se ha modificado el archivo ~peliculas.txt~.
       15) Haz un cuarto /commit/.
-      16) Crea un archivo denominado ~datos.bak~. Añade tres títulos de libros a dicho archivo.
-      17) Crea una subcarpeta denominada ~output~. Crea un archivo denominado ~salida.txt~ en su interior. Escribe tu nombre y apellidos en dicho archivo.
-      18) Haz una captura de pantalla del comando ~git status~. Deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos. *¡IMPORTANTE! No añadas los archivos al área de preparación ni hagas ningún commit.*
+      16) Crea un archivo denominado ~datos.bak~. Añade tres títulos de libros a dicho archivo. *¡IMPORTANTE! No añadas el archivo al área de preparación ni hagas ningún commit.*
+      17) Crea una subcarpeta denominada ~output~. Crea un archivo denominado ~salida.txt~ en su interior. Escribe tu nombre y apellidos en dicho archivo. *¡IMPORTANTE! No añadas los archivos al área de preparación ni hagas ningún commit.*
+      18) Haz una captura de pantalla del comando ~git status~. Deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos (color rojo).
       19) Crea un archivo ~.gitignore~ para que los ficheros con extensión ~.bak~ y el contenido de la carpeta ~output/~ no se incluyan en el repositorio.
       20) Haz una nueva captura de pantalla del comando ~git status~. Ahora no deben aparecer los archivos ~datos.bak~ y ~output/salida.txt~ como archivos nuevos, sino que en su lugar debe aparecer únicamente el archivo ~.gitignore~.
       21) Haz un último /commit/ para incluir el archivo ~.gitignore~ en el repositorio.

@@ -93,7 +93,7 @@ Una vez resuelto el conflicto en todos los archivos habrá que ejecutar los coma
 
   En el ejemplo siguiente, si se elimina la rama ~test1~ se perderán los commits ~5aebbf7~, ~897742a~ y ~6ba47e7~, ya que no habrá ninguna rama que haga referencia a ellos.
 
- [[/home/pericon/codigo/curso-github/imagenes/borrar_rama.png]] 
+ [[./imagenes/borrar_rama.png]] 
 
 *** Remotos
 **** Clonar un repositorio

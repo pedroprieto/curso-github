@@ -65,6 +65,7 @@ Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presen
   git merge <nombre_rama_a_fusionar>
   #+end_src
 
+  
   Si por ejemplo queremos integrar en la rama principal (~master~) los cambios presentes en la rama ~feature1~, cambiaremos a la rama principal (si no estamos ya en ella) mediante ~git checkout master~ y a continuación ejecutaremos ~git merge feature1~.
  
 **** Conflictos

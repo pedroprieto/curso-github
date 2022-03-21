@@ -130,6 +130,16 @@ Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presen
 
   Esta operación es una de las más habituales a la hora de sincronizar los cambios con el repositorio remoto. En la mayoría de los casos, las ramas local y remota *están asociadas*: es decir, git ha sido informado de que dicha rama local tiene que sincronizarse con la rama remota correspondiente. Lo más habitual es que ambas ramas (local y remota) tengan *el mismo nombre*. En ese caso bastará con ejecutar ~git pull~ sin parámetros: git asumirá que si estamos en la rama ~rama1~, por ejemplo, tiene que sincronizarse con la rama ~rama1~ remota.
 
+  Dicho todo esto, es posible *fusionar el contenido de una rama remota en otra rama distinta* a la asociada. Las ramas remotas pueden ser referenciadas como ~<nombre_remoto>/<nombre_rama_remota>~. Así, la rama ~origin/rama1~ hará referencia a la rama ~rama1~ del repositorio remoto ~origin~. Si estamos posicionados en la rama ~master~ local podríamos incorporar los cambios de la rama remota ~origin/rama1~ de dos maneras:
+  - Ejecutando ~git merge origin/rama1~- Directamente estaremos incorporando los cambios de la rama remota ~origin/rama1~ en la rama local ~master~. En este caso, la rama local ~rama1~ *no recibiría los nuevos cambios que pudiera tener la rama remota* ~origin/rama1~
+  - Otra opción sería:
+    1. Cambiar a la rama *local* ~rama1~ - ~git checkout rama1~
+    2. Fusionar los cambios de su rama remota asociada - ~git pull~, o ~git pull origin rama1~ si no estuvieran asociadas. En este punto, la rama local ~rama1~ *recibiría los nuevos cambios que pudiera haber* en la rama remota ~origin/rama1~
+    3. Cambiar de nuevo a la rama local ~master~ - ~git checkout master~
+    4. Por último, fusionar los cambios de la rama local ~rama1~ - ~git merge rama1~
+  
+  No hay una manera mejor que otra: simplemente hay que tener claro qué acciones se están ejecutando y qué cambios es están produciendo.
+  
 **** Enviar cambios al remoto
   #+begin_src bash
     git push <NOMBRE_REMOTO> <NOMBRE_RAMA>

@@ -72,7 +72,7 @@ Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presen
 
 Por ejemplo, en esta imagen podría producirse un conflicto si queremos incorporar los cambios de la rama ~master~ en la rama ~rama1~ mediante ~git merge master~ (siempre que los cambios producidos en los commits afecten a las mismas líneas de los mismos ficheros).
 
-[[/home/pericon/codigo/curso-github/imagenes/conflicto.png]]
+[[./imagenes/conflicto.png]]
 
 Al producirse un conflicto, git no sabe qué cambios deben prevalecer: los de la rama A, los de la rama B, los dos, ninguno, algo totalmente distinto,... En este caso *es necesaria la intervención humana*. Git modificará los ficheros afectados incluyendo *delimitadores* para indicar los cambios que vienen de una rama y los que vienen de ~HEAD~, es decir, de la rama en la que nos encontremos.
 

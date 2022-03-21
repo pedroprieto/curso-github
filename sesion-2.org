@@ -67,6 +67,23 @@ Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presen
 
   Si por ejemplo queremos integrar en la rama principal (~master~) los cambios presentes en la rama ~feature1~, cambiaremos a la rama principal (si no estamos ya en ella) mediante ~git checkout master~ y a continuación ejecutaremos ~git merge feature1~.
  
+**** Conflictos
+*Al fusionar una rama* pueden producirse *conflictos*. Un conflicto se produce cuando *diferentes commits introducen cambios en las mismas líneas de los mismos archivos*. Si por ejemplo estamos en un commit referenciado por dos ramas y realizamos desde ese punto común un commit en cada una de las ramas de manera que afecten a la misma línea del mismo fichero, se producirá un conflicto *al fusionar una rama en la otra*.
+
+Por ejemplo, en esta imagen podría producirse un conflicto si queremos incorporar los cambios de la rama ~master~ en la rama ~rama1~ mediante ~git merge master~ (siempre que los cambios producidos en los commits afecten a las mismas líneas de los mismos ficheros).
+
+[[/home/pericon/codigo/curso-github/imagenes/conflicto.png]]
+
+Al producirse un conflicto, git no sabe qué cambios deben prevalecer: los de la rama A, los de la rama B, los dos, ninguno, algo totalmente distinto,... En este caso *es necesaria la intervención humana*. Git modificará los ficheros afectados incluyendo *delimitadores* para indicar los cambios que vienen de una rama y los que vienen de ~HEAD~, es decir, de la rama en la que nos encontremos.
+
+Es importante recalcar que *git no perderá información*: la incluirá toda, junto con los delimitadores para identificar la procedencia de los cambios.
+
+Si se produce un conflicto *git quedará en un estado intermedio*: añadirá al área de preparación (color verde) los archivos que no presenten conflictos e *indicará los archivos en conflicto*, en color rojo, para que el usuario los edite y resuelva los conflictos.
+
+Resolver los conflictos pasa por *editar el archivo*, localizar los *delimitadores* y *dejar el archivo como queremos que quede*. Normalmente esta última acción consistirá en decidir *qué cambios son los que queremos dejar y eliminar los delimitadores*. Al final, *el fichero debe quedar tal como queremos que quede*: en ocasiones una de las versiones será la correcta; en otras, la otra versión; en otras, ninguna; en obras, ambas; en otras, algo totalmente distinto.
+
+Una vez resuelto el conflicto en todos los archivos habrá que ejecutar los comandos ~git add~ y ~git commit~ para *crear un commit que resuelva el conflicto*.
+
 **** Eliminar una rama
   #+begin_src bash
   git branch -d <nombre_rama>

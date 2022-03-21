@@ -23,9 +23,9 @@
 ** Contenidos
 *** Ramas
 **** Definición de ramas
- - Una rama es un puntero que apunta a un determinado commit.
+ - Una rama es un *puntero* que apunta a un determinado commit.
  - Un repositorio debe tener una rama como mínimo.
- - El nombre de la rama que se crea por defecto es ~master~. Este nombre no es especial ni tiene una función o significado especial.
+ - El nombre de la rama que se crea por defecto es ~master~. Este nombre no es especial ni tiene una función o significado especial. En *GitHub* la rama que se crea por defecto si se inicializa un repositorio a través de su interfaz web (lo veremos en la sesión siguiente) se llama ~main~.
  - Existe un puntero especial llamado ~HEAD~ que apunta a la rama en la que estamos en ese momento.
  - Al cambiar de rama se modifica el contenido del directorio de trabajo: éste se muestra tal como estaba en la rama a la que hemos saltado.
  - La creación y el cambio de ramas se realizan de forma instantánea: no tienen apenas coste.
@@ -39,29 +39,44 @@
   git branch <nombre_rama>
   #+end_src
 
+  Este comando creará una rama nueva con el nombre seleccionado. Una alternativa es ejecutar ~git checkout -b <nombre_rama>~. Este comando creará una rama con el nombre indicado y cambiará a dicha rama.
+
 **** Ver ramas disponibles
   #+begin_src bash
   git branch
   #+end_src
+
+  Este comando mostrará las *ramas locales* existentes en el repositorio. Si se desea ver las ramas existentes en el remoto (ver sección siguiente) se puede ejecutar ~git branch --all~.
 
 **** Cambiar de rama
   #+begin_src bash
   git checkout <nombre_rama>
   #+end_src
 
-**** Fusionar una rama
- - Primero nos posicionamos en la rama sobre la que se va a realizar la fusión
- - Para realizar la fusión ejecutar:
+  Este comando cambiará a la rama indicada. Es posible que el comando falle *si hay cambios en el directorio de trabajo* que no estén integrados en ningún commit: si dichos pueden ser sobreescritos por los cambios de la rama a la que se desea cambiar, ~git~ abortará el cambio de rama y nos indicará el problema. En ese caso deberemos crear un commit con los cambios que estemos realizando (o bien guardarlos mediante ~git stash~) y a continuación volver a ejecutar el comando de cambio de rama.
 
+**** Fusionar una rama
+Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presentes en una rama a la rama en la que nos encontramos actualmente. Para realizar una fusión hay que realizar las siguientes acciones:
+
+ - Primero nos posicionamos en la rama sobre la que se va a realizar la fusión (la rama que va a recibir los cambios)
+ - Para realizar la fusión ejecutar:
 
   #+begin_src bash
   git merge <nombre_rama_a_fusionar>
   #+end_src
+
+  Si por ejemplo queremos integrar en la rama principal (~master~) los cambios presentes en la rama ~feature1~, cambiaremos a la rama principal (si no estamos ya en ella) mediante ~git checkout master~ y a continuación ejecutaremos ~git merge feature1~.
  
 **** Eliminar una rama
   #+begin_src bash
   git branch -d <nombre_rama>
   #+end_src
+
+  Este comando eliminará la rama local indicada. *IMPORTANTE*: la eliminación de una rama supone la eliminación del puntero que hace referencia a un determinado commit. Si al eliminar una rama se quedan commits sin referenciar, dichos commits se perderán: pueden recuperarse durante un tiempo solo si se conocen sus /hash/; ~git~ realiza también tareas de limpieza al realizar algunas acciones y procede a limpiar los commits "huérfanos", por lo que pasado un tiempo ni siquiera se podrán recuperar a través de sus /hash/.
+
+  En el ejemplo siguiente, si se elimina la rama ~test1~ se perderán los commits ~5aebbf7~, ~897742a~ y ~6ba47e7~, ya que no habrá ninguna rama que haga referencia a ellos.
+
+ [[/home/pericon/codigo/curso-github/imagenes/borrar_rama.png]] 
 
 *** Remotos
 **** Clonar un repositorio
@@ -69,10 +84,16 @@
   git clone <URL_REPOSITORIO>
   #+end_src
 
+  Este comando permite clonar un repositorio remoto a partir de su URL. También es posible indicar una ruta del sistema de ficheros. Por defecto se mostrará la *rama principal* del repositorio remoto. El resto de ramas no aparecen como ramas locales, aunque pueden obtenerse.
+
+  Al clonar un repositorio *se crea un remoto en el repositorio local* con el nombre ~origin~ que hace referencia a la URL indicada.
+
 **** Ver remotos
   #+begin_src bash
   git remote -v
   #+end_src
+
+  Este comando permite ver los remotos configurados. Otra alternativa es ejecutar ~git remote show <nombre_del_remoto~ para ver los detalles del repositorio remoto.
 
 **** Añadir, eliminar y renombrar remotos
   #+begin_src bash
@@ -81,6 +102,8 @@
   git remote rename <NOMBRE_ORIGINAL> <NOMBRE_NUEVO> # Renombrar remoto
   #+end_src
 
+  Estos comandos permiten añadir y editar repositorios remotos. Un repositorio local puede tener 0 o más remotos.
+
 **** Traer información del remoto
   #+begin_src bash
   # Este comando NO realiza la fusión en la rama local
@@ -88,20 +111,39 @@
   git fetch [NOMBRE_REMOTO] # El nombre del remoto por defecto es ORIGIN
   #+end_src
 
+  Este comando permite actualizar la información de los repositorios remotos. ~git~ se conecta al remoto y comprueba si hay nuevos cambios en las ramas remotas; si es así, actualiza los punteros de las ramas remotas del repositorio local para reflejar dichos cambios. *Pero no incorpora los cambios a las ramas locales*.
+
+  Cuando un repositorio tiene configurado un remoto, git crea *en el repositorio local* unos punteros que hacen referencia a las *ramas remotas*. Dichos punteros son similares a las ramas locales, con la peculiaridad de que *no se puede cambiar a una rama remota*. Es decir, las ramas remotas son de *solo lectura*: hacen referencia a la información que tiene git de la situación del repositorio remoto (dónde están las ramas en el repositorio remoto).
+
+  En este punto es necesario insistir en la idea de que git es un sistema *descentralizado*: *git no se está ejecutando continuamente* (no es un demonio o un servicio), por lo que no está en contacto continuo con el remoto; si se producen cambios en el remoto (porque otra persona ha realizado un commit en una rama, por ejemplo), *el repositorio local no se sincronizará automáticamente*, sino que para él la rama remota seguirá en el mismo lugar que estaba cuando realizó el último ~fetch~; si a continuación de dicho cambio se ejecuta un nuevo ~fetch~, entonces el repositorio local tomará conciencia del nuevo cambio en la rama remota y *actualizará el puntero de dicha rama remota* al nuevo commit.
+
+  En resumen: ~git fetch~ es la única manera de que el repositorio local tenga conciencia de que ha habido cambios en el repositorio remoto.
+
 **** Traer y fusionar cambios del remoto
   #+begin_src bash
   git pull [NOMBRE_REMOTO] [NOMBRE_RAMA] # Pull = fetch + merge
   #+end_src
+
+  Un ~pull~ equivale a dos acciones: un ~fetch~ y un ~merge~. Mediante ~fetch~, git comprueba los cambios que hay en las ramas remotas y los refleja en los punteros de las ramas remotas en el repositorio local; a continuación, la acción ~merge~ incorpora los cambios de la rama remota a la rama local correspondiente.
+
+  Esta operación es una de las más habituales a la hora de sincronizar los cambios con el repositorio remoto. En la mayoría de los casos, las ramas local y remota *están asociadas*: es decir, git ha sido informado de que dicha rama local tiene que sincronizarse con la rama remota correspondiente. Lo más habitual es que ambas ramas (local y remota) tengan *el mismo nombre*. En ese caso bastará con ejecutar ~git pull~ sin parámetros: git asumirá que si estamos en la rama ~rama1~, por ejemplo, tiene que sincronizarse con la rama ~rama1~ remota.
 
 **** Enviar cambios al remoto
   #+begin_src bash
   git push [NOMBRE_REMOTO] [NOMBRE_RAMA]
   #+end_src
 
-**** Enviar los cambios de una rama al remoto y crear una rama remota asociada
-  #+begin_src bash
-  git push -u NOMBRE_REMOTO NOMBRE_RAMA
-  #+end_src
+  Esta operación permite *enviar los commits locales de una rama* a la rama indicada del repositorio remoto. Sería el inverso de ~pull~: mientras que ~pull~ trae cambios del remoto, ~push~ los envía.
+
+  Tal como pasa con ~git pull~, la mayoría de las veces las ramas local y remota están *asociadas*, por lo que si ejecutamos ~git push~ sin parámetros se enviarán los cambios de la rama en que nos encontremos a la rama remota asociada (la mayoría de las veces tendrán el mismo nombre).
+
+**** Ramas asociadas
+Anteriormente hemos hecho referencia al concepto de *rama asociada*. Una rama asociada es *una rama local* configurada para *hacer referencia a una rama determinada del repositorio remoto*. Si una rama está asociada a una rama remota, al situarnos en dicha rama y ejecutar un ~git push~ o un ~git pull~ haremos referencia a la rama remota asociada correspondiente sin necesidad de tener que especificarla en dichos comandos.
+
+Podemos *asociar una rama* a una rama remota de *varias maneras*:
+- Al ejecutar un ~git clone~ automáticamente se crea una rama local principal (normalmente con el nombre ~master~ o ~main~) asociada a la rama remota principal (~master~ o ~main~, casi siempre).
+- Al realizar un *cambio de rama local a una rama existente en el repositorio remoto* mediante ~git checkout <rama_existente_en_remoto>~ se creará una rama local *con el mismo nombre que la rama remota* y *se realizará la asociación de dichas ramas*. Por ejemplo, si en el remoto existe una rama principal ~master~ y una segunda rama llamada ~rama1~, al realizar el clonado solamente tendremos disponible en local la rama ~master~; si a continuación ejecutamos ~git checkout rama1~ veremos que se crea la rama local ~rama1~, que apunta al mismo commit que la rama remota correspondiente y que ambas ramas quedan asociadas.
+- Si creamos una rama local nueva *que no exista en el repositorio remoto*, podemos posicionarnos en dicha rama y a continuación ejecutar el comando ~git push -u <nombre_remoṭo> <nombre_rama>~ para *crear una rama remota del mismo nombre*, *sincronizarla* con la rama local y *realizar la asociación* de dichas ramas. La opción clave es la opción ~-u~, equivalente a ~--set-upstream~.
 
 ** Tareas
    Realiza las tareas que se indican a continuación. Incluye las *capturas de pantalla* que se pidan en un documento tipo *LibreOffice* o *Word*.

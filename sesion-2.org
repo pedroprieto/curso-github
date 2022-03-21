@@ -108,7 +108,7 @@ Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presen
   #+begin_src bash
     # Este comando NO realiza la fusión en la rama local
     # Si se desean incorporar los cambios habría que realizar un git merge
-    git fetch [NOMBRE_REMOTO]
+    git fetch <NOMBRE_REMOTO>
     # El nombre del remoto por defecto es ORIGIN
   #+end_src
 
@@ -122,7 +122,7 @@ Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presen
 
 **** Traer y fusionar cambios del remoto
   #+begin_src bash
-      git pull [NOMBRE_REMOTO] [NOMBRE_RAMA]
+      git pull <NOMBRE_REMOTO> <NOMBRE_RAMA>
       # Pull = fetch + merge
   #+end_src
 
@@ -132,7 +132,7 @@ Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presen
 
 **** Enviar cambios al remoto
   #+begin_src bash
-  git push [NOMBRE_REMOTO] [NOMBRE_RAMA]
+    git push <NOMBRE_REMOTO> <NOMBRE_RAMA>
   #+end_src
 
   Esta operación permite *enviar los commits locales de una rama* a la rama indicada del repositorio remoto. Sería el inverso de ~pull~: mientras que ~pull~ trae cambios del remoto, ~push~ los envía.

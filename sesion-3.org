@@ -54,6 +54,11 @@ En ocasiones es interesante hacer [[https://docs.github.com/es/get-started/writi
 
     En este enlace tienes toda la [[https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token][información para crear un token]] en tu cuenta. Una vez creado, *solo se podrá visualizar una vez*, por lo que deberá copiarse para poder ser utilizado. Recuerda que el token puede utilizarse para *sustituir a la contraseña* en el acceso a GitHub desde *línea de comando* o mediante un *gestor gráfico*.
 
+*** Colaboración
+GitHub ofrece *dos* mecanismos básicos para la *colaboración* en un determinado repositorio:
+- *Forks y Pull Requests* - Mecanismo utilizado por defecto. Permite que personas que no tienen acceso de escritura al repositorio puedan hacer una copia del mismo en su propia cuenta y enviar los cambios para que la persona dueña del repositorio original decida si quiere o no integrarlos. Muy útil en proyectos de Código Abierto, donde las *personas colaboradoras no se conocen entre sí*.
+- *Permisos de colaboradores* - Se pueden agregar *colaboradores* a un repositorio para que puedan realizar cambios. Este método es útil si tenemos claro que determinadas personas van a colaborar en el repositorio. Este método de trabajo puede extenderse mediante el uso de *organizaciones*, que permiten crear equipos de personas y asignarles permisos para cada uno de los repositorios de la organización.
+
 ** Tareas
 *** 1 - Creación de cuenta en GitHub
  1) Crea una cuenta en GitHub

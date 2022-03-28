@@ -29,7 +29,7 @@
 - [[https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax][Escritura básica en GitHub]]
 - [[https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet][Enlaces a fragmentos de código]]
 - [[https://docs.github.com/es/issues][Issues en GitHub]]
-- [[https://docs.github.com/es/issues][Hitos (milestones) en GitHub]]
+- [[https://docs.github.com/es/issues/using-labels-and-milestones-to-track-work/about-milestones][Hitos (milestones) en GitHub]]
 
 ** Contenidos
 *** Presentación

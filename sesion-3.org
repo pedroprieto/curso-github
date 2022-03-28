@@ -49,6 +49,16 @@ GitHub permite añadir comentarios en varios sitios: por ejemplo, en Pull Reques
 *** Enlaces a fragmentos de código
 En ocasiones es interesante hacer [[https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet][referencia a un fragmento de código en un comentario]] para aclarar una duda o identificar un error.
 
+*** Issues y milestones
+Los Issues (propuestas) permiten crear *notas* para, por ejemplo:
+- Identificar fallos en el código y hacer su seguimiento
+- Proponer mejoras o nuevas características
+- Hacer un seguimiento de las tareas que hay que realizar en el repositorio
+
+En el texto de los Issues se pueden hacer [[https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams][menciones]] a otros usuarios de GitHub, hacer referencia a [[https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet][líneas de código]] o crear [[https://docs.github.com/es/issues/tracking-your-work-with-issues/about-task-lists][listas de tareas]] que pueden marcarse como completadas. También pueden [[https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks][adjuntarse fragmentos de código]].
+
+Los Issues pueden [[https://docs.github.com/es/issues/tracking-your-work-with-issues/quickstart#assigning-the-issue][asignarse a personas responsables]] u organizarse en [[https://docs.github.com/es/issues/tracking-your-work-with-issues/quickstart#adding-milestones][hitos]] (milestones) para agruparlos y hacer un seguimiento de los mismos.
+
 *** Autenticación mediante tokens
     GitHub ofrece la posibilidad de utilizar *tokens* en lugar de la contraseña de la cuenta para interactuar con su servicio a través de *línea de comandos*, *gestor gráfico* o *API*. Los tokens ofrecen una alternativa a la contraseña de la cuenta y proporcionan las siguientes ventajas:
     - Permiten *especificar permisos de acceso* en lugar de proporcionar acceso completo

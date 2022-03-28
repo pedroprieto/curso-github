@@ -26,17 +26,33 @@
 - [[https://education.github.com/discount_requests/new][Solicitud de descuentos para uso educativo]]
 - [[https://help.github.com/articles/closing-issues-using-keywords/][Cerrar issues a través de mensajes en el commit]]
 - [[https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token][Autenticación en GitHub mediante tokens]]
+- [[https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax][Escritura básica en GitHub]]
+- [[https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet][Enlaces a fragmentos de código]]
 
 ** Contenidos
 *** Presentación
  - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-3-presentacion.html][Presentación]]
+   
+*** Tareas basadas en repositorios para trabajo en clase
+GitHub ofrece funcionalidades muy interesantes para trabajar con prácticas relacionadas con código o archivos de texto. Comparado con la gestión tradicional de tareas (creación de un fichero comprimido y subida de dicho fichero a una plataforma de tipo Moodle o entrega por correo) tenemos las siguientes *ventajas*:
+- Posibilidad de ver el código en el explorador web sin necesidad de descargarlo
+- Podemos crear conversaciones para realizar comentarios sobre la tarea
+- Posibilidad de hacer comentarios directamente sobre el código, haciendo referencia a líneas concretas, otros comentarios, commits, archivos, etc.
+- Opción de realizar tests automáticos para corrección de tareas o autoevaluación del alumnado
+- Colaboración entre distintas personas para tareas en grupo. Visibilización de las aportaciones de cada persona al trabajo común.
+
+*** Escribir en GitHub
+GitHub permite añadir comentarios en varios sitios: por ejemplo, en Pull Requests, Issues y Commits. Los comentarios pueden [[https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#links][formatearse mediante una sintaxis basada en Markdown]].
+
+*** Enlaces a fragmentos de código
+En ocasiones es interesante hacer [[https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet][referencia a un fragmento de código en un comentario]] para aclarar una duda o identificar un error.
 
 *** Autenticación mediante tokens
-    GitHub ofrece la posibilidad de utilizar *tokens* en lugar de la contraseña de la cuenta para interactuar con su servicio a través de la *línea de comandos* o de la *API*. Los tokens ofrecen una alternativa a la contraseña de la cuenta y proporcionan las siguientes ventajas:
+    GitHub ofrece la posibilidad de utilizar *tokens* en lugar de la contraseña de la cuenta para interactuar con su servicio a través de *línea de comandos*, *gestor gráfico* o *API*. Los tokens ofrecen una alternativa a la contraseña de la cuenta y proporcionan las siguientes ventajas:
     - Permiten *especificar permisos de acceso* en lugar de proporcionar acceso completo
     - Pueden generarse tantos como se necesiten para proporcionar distintos perfiles de acceso
 
-    En este enlace tienes toda la [[https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token][información para crear un token]] en tu cuenta. Una vez creado, *solo se podrá visualizar una vez*, por lo que deberá copiarse para poder ser utilizado. Recuerda que el token puede utilizarse para *sustituir a la contraseña* en el acceso a GitHub desde *línea de comando*.
+    En este enlace tienes toda la [[https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token][información para crear un token]] en tu cuenta. Una vez creado, *solo se podrá visualizar una vez*, por lo que deberá copiarse para poder ser utilizado. Recuerda que el token puede utilizarse para *sustituir a la contraseña* en el acceso a GitHub desde *línea de comando* o mediante un *gestor gráfico*.
 
 ** Tareas
 *** 1 - Creación de cuenta en GitHub

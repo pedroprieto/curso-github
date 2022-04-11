@@ -4,11 +4,12 @@
 ** Videotutoriales y presentación
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-5-presentacion.html][Presentación]]
 - [[https://youtu.be/ZF7rt9d-ODE][Sesión 5.1]]
-- [[https://youtu.be/hg1rBL1TWOI][Sesión 5.2]]
+- [[https://youtu.be/hg1rBL1TWOI][Sesión 5.2]] (En este vídeo se utiliza una versión de Travis antigua, tal como se indica en la descripción. El procedimiento para activar Travis está descrito correctamente en estos apuntes).
 
 ** Índice
 - Fundamentos de la Integración Continua
 - Desarrollo guiado por tests
+- Introducción a GitHub Actions
 - Introducción a Travis CI
 - Aplicaciones en las clases
   - Corrección automática de prácticas
@@ -18,9 +19,11 @@
 
 ** Referencias
 - [[https://es.wikipedia.org/wiki/Integración_continua][Definición de Integración continua]]
-- [[https://aws.amazon.com/es/devops/continuous-integration/][Conceptos de Integración Continua (AWS)]] 
+- [[https://aws.amazon.com/es/devops/continuous-integration/][Conceptos de Integración Continua (AWS)]]
+- [[https://docs.github.com/es/actions/automating-builds-and-tests/about-continuous-integration][Conceptos básicos de Integración Continua (GitHub Actions)]]
 - [[https://docs.travis-ci.com/user/for-beginners][Conceptos básicos de Integración Continua (Travis)]]
 - [[https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas][Desarrollo Guiado por Pruebas - definición]] 
+- [[https://docs.github.com/es/actions/migrating-to-github-actions/migrating-from-travis-ci-to-github-actions][Migrar de Travis CI a GitHub Actions]]
 - [[https://docs.travis-ci.com/user/tutorial/][Primeros pasos con Travis]]
 - [[https://docs.travis-ci.com/user/for-beginners][Documentación de Travis]]
 - [[https://docs.travis-ci.com/user/languages/][Lista de lenguajes de programación soportados por Travis]]
@@ -59,20 +62,68 @@
 - Garantía de que el código a integrar es válido
 - Envío de notificaciones al resto de miembros de un equipo
 
-*** Integración continua con GitHub y Travis CI
-**** Flujo de trabajo general
-1. *Activación* de Travis como aplicación autorizada en la cuenta de GitHub. Solo es neceario hacerlo la primera vez.
-2. *Creación del fichero de configuración* de Travis CI, ~.travis.yml~. Solo es necesario hacerlo la primera vez.
+*** Proveedores de Integración Continua
+Podemos optar por varios servicios para realizar Integración Continua en GitHub. Nos centraremos en dos opciones: *GitHub Actions*, integrado en GitHub, y *Travis CI*, un servicio externo que es también muy popular.
+
+*GitHub Actions* es la opción *más sencilla*, ya que está integrado en GitHub y no es necesario darse de alta en ninguna otra plataforma. Este servicio se incorporó a GitHub después que Travis, aunque es muy popular a día de hoy.
+
+Este servicio dispone de unos [[https://docs.github.com/es/actions/learn-github-actions/usage-limits-billing-and-administration][límites de uso]] y realiza *tarificación por minutos de cómputo* en función del tipo de cuenta. Al tener *cuenta educativa* se dispone de *más minutos gratuitos*.
+
+*Travis CI* es un servicio más antiguo, aunque sigue siendo muy popular. Puede utilizarse dándose de alta mediante la *cuenta de GitHub*. Y también incluye [[https://education.travis-ci.com/][descuentos para uso educativo]].
+
+*** Flujo de trabajo general
+1. En caso de utilizar *Travis CI*, *activación* de Travis como aplicación autorizada en la cuenta de GitHub. Solo es neceario hacerlo la primera vez.
+2. *Creación del fichero de configuración*:
+   1. En caso de *Travis CI*, el archivo se denomina ~.travis.yml~ y debe almacenarse en la raíz del repositorio.
+   2. En caso de *GitHub Actions*, los archivos es guardan en la carpeta ~./github/workflows/~.
 3. *Creación o modificación de tests* según el lenguaje de programación utilizado.
-4. *Publicación de cambios*. Todos los cambios que lleguen a la *rama principal* del repositorio vía ~commit~ o vía ~pull request~ activan la ejecución de un trabajo de integración continua.
-5. *Ejecución de tests*. El servicio Travis CI detecta los nuevos cambios en el repositorio y lanza un trabajo de integración continua. Este trabajo comprende las siguientes etapas:
-   1. En los servidores de Travis CI se crea una máquina virtual con un sistema operativo Ubuntu (o Mac OS X si se está desarrollando para ese sistema operativo).
+4. *Publicación de cambios*. Todos los cambios que lleguen a la *rama seleccionada en el fichero de configuración* vía ~push~ o vía ~pull request~ (dependiendo de la configuración elegida) activan la ejecución de un trabajo de integración continua.
+5. *Ejecución de tests*. El servicio de integración continua detecta los nuevos cambios (cada vez que se haga un ~push~ o una ~pull request~) en el repositorio y lanza el trabajo. Este trabajo comprende las siguientes etapas:
+   1. En los servidores del proveedor elegido se crea una *máquina virtual* con un sistema operativo Ubuntu (o Mac OS X si se está desarrollando para ese sistema operativo).
    2. Se clona el repositorio en dicha máquina.
-   3. Se instalan las dependencias del proyecto: lenguajes de programación, librerías, etc.
+   3. Se instalan las dependencias del proyecto: lenguajes de programación, librerías, etc. Para ello se suele utilizar el gestor de paquetes de la tecnología elegida: ~composer~, ~npm~, ~nuGet~, ~maven~,...
    4. Se ejecutan los tests que se hayan indicado en el proyecto.
    5. Si se pasan los tests, se ejecutan una serie de acciones adicionales (como pueden ser envío de notificaciones, despliegue en servidores, creación de archivos ejecutables,...).
-6. *Notificación de resultados*. Se notifica el resultado de la ejecución de los tests en el repositorio de GitHub (normalmente aparece un mensaje indicando que las pruebas se han pasado). Esto es especialmente útil al trabajar con /Pull Requests/, ya que podemos esperar a que Travis nos informe sobre el resultado de los tests antes de fusionar los cambios en la rama principal del repositorio.
-     
+6. *Notificación de resultados*. Se notifica el resultado de la ejecución de los tests en el repositorio de GitHub (normalmente aparece un mensaje indicando que las pruebas se han pasado). Esto es especialmente útil al trabajar con /Pull Requests/, ya que podemos esperar a que se nos informe sobre el resultado de los tests antes de fusionar los cambios en la rama principal del repositorio.
+
+*** Integración continua con GitHub Actions
+GitHub incluye un servicio denominado ~GiHub Actions~ que permite crear una serie de flujos de trabajo para realizar tareas automatizadas conectadas con los repositorios de GitHub. Entre los usos de este servicio podemos destacar:
+- Integración continua (ejecución de tests)
+- Despliegue en servicios web
+- Envío de mensajes automatizados al subir código o superar tests (Slack, etc.)
+- Acceso a un [[https://github.com/marketplace][marketplace]] de acciones creadas por la comunidad
+
+En lo relativo a integración continua, podemos utilizar el servicio de ~GitHub Actions~ como alternativa a Travis-CI. En este enlace podemos consultar más información acerca de cómo realizar [[https://docs.github.com/es/actions/guides/about-continuous-integration][integración continua con GitHub Actions]]. Su funcionamiento es muy parecido: hay que *crear un fichero de configuración en el repositorio* y a continuación *crear una acción* para conectarlo al servicio de integración continua.
+
+Este servicio, al estar integrado directamente en GitHub, nos permite crear los ficheros necesarios para realizar tests a partir del menú ~Actions~ del repositorio de GitHub.
+[[file:imagenes/github_actions_1.png]]
+
+Una vez dentro podemos hacer click en ~New workflow~ para crear una acción nueva:
+[[file:imagenes/github_actions_2.png]]
+
+A continuación tendremos la posibilidad de elegir una plantilla para crear el fichero de configuración del workflow. Podemos crearla a mano o elegir una existente:
+[[file:imagenes/github_actions_3.png]]
+
+Por último, tendremos acceso al fichero de configuración generado, que podremos aceptar o editar a nuestro gusto.
+[[file:imagenes/github_actions_4.png]]
+
+El resultado de la ejecución del test podemos verlo en el icono del color correspondiente al lado del nombre del último commit:
+[[file:imagenes/github_actions_5.png]]
+
+Si el icono sale en color verde, el test se ha pasado; en amarillo, está en proceso; y en rojo, ha fallado.
+
+Al pulsar sobre el icono podemos ver el resultado del test:
+[[./imagenes/github_actions_6.png]]
+
+[[./imagenes/github_actions_7.png]]
+
+
+**** Repositorios de ejemplo
+A continuación se muestran enlaces a dos repositorios configurados para trabajar con GitHub Actions:
+- [[https://github.com/curso-github-cefire/tdd-node-sample-actions][Proyecto de ejemplo de Desarrollo Guiado por Test en NodeJS con GitHub Actions]]
+- [[https://github.com/curso-github-cefire/tdd-python-sample][Proyecto de ejemplo de Desarrollo Guiado por Test en Python con GitHub Actions]]
+
+*** Integración continua con GitHub y Travis CI
 **** Creación de cuenta de Travis CI e integración con GitHub
 - Acceder a [[https://travis-ci.com]]
 - Crear una cuenta a través de la opción *Sign in with GitHub*
@@ -107,44 +158,15 @@
 **** Repositorios de ejemplo
 A continuación se muestran enlaces a un [[https://github.com/curso-github-cefire/sesion5-1-travis][repositorio de ejemplo en PHP]] y un [[https://github.com/curso-github-cefire/tdd-node-sample][repositorio de ejemplo en NodeJS]] configurados para trabajar con Travis.
 
-*** Integración continua con GitHub Actions
-    GitHub ha incorporado un nuevo servicio, ~GiHub Actions~, que permite crear una serie de flujos de trabajo para realizar tareas automatizadas conectadas con los repositorios de GitHub. Entre los usos de este servicio podemos destacar:
-- Integración continua (ejecución de tests)
-- Despliegue en servicios web
-- Envío de mensajes automatizados al subir código o superar tests (Slack, etc.)
-- Acceso a un [[https://github.com/marketplace][marketplace]] de acciones creadas por la comunidad
-
-En lo relativo a integración continua, podemos utilizar el servicio de ~GitHub Actions~ como alternativa a Travis-CI. En este enlace podemos consultar más información acerca de cómo realizar [[https://docs.github.com/es/actions/guides/about-continuous-integration][integración continua con GitHub Actions]]. Su funcionamiento es muy parecido: hay que *crear un fichero de configuración en el repositorio* y a continuación *crear una acción* para conectarlo al servicio de integración continua.
-
-Este servicio, al estar integrado directamente en GitHub, nos permite crear los ficheros necesarios para realizar tests a partir del menú ~Actions~ del repositorio de GitHub.
-[[file:imagenes/github_actions_1.png]]
-
-Una vez dentro podemos hacer click en ~New workflow~ para crear una acción nueva:
-[[file:imagenes/github_actions_2.png]]
-
-A continuación tendremos la posibilidad de elegir una plantilla para crear el fichero de configuración del workflow. Podemos crearla a mano o elegir una existente:
-[[file:imagenes/github_actions_3.png]]
-
-Por último, tendremos acceso al fichero de configuración generado, que podremos aceptar o editar a nuestro gusto.
-[[file:imagenes/github_actions_4.png]]
-
-El resultado de la ejecución del test podemos verlo en el icono del color correspondiente al lado del nombre del último commit:
-[[file:imagenes/github_actions_5.png]]
-
-Si el icono sale en color verde, el test se ha pasado; en amarillo, está en proceso; y en rojo, ha fallado.
-
-Al pulsar sobre el icono podemos ver el resultado del test:
-[[./imagenes/github_actions_6.png]]
-
-[[./imagenes/github_actions_7.png]]
-
 ** Tareas
-Utilizando como base uno de los repositorios de ejemplo propuestos (en [[https://github.com/curso-github-cefire/sesion5-1-travis][PHP]], [[https://github.com/curso-github-cefire/tdd-node-sample][Node con Travis]], [[https://github.com/curso-github-cefire/tdd-node-sample-actions][Node con GitHub Actions]] o [[https://github.com/curso-github-cefire/tdd-python-sample][Python con GitHub Actions]]), crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion5-travis~. Dicho repositorio debe contener una función que compruebe si un número dado es par y un test que realice pruebas con varios números para comprobar que la función está correctamente diseñada. Puedes utilizar cualquier lenguaje de programación soportado por Travis. Deberás activar Travis en el repositorio y configurar adecuadamente el fichero ~.travis.yml~ para el lenguaje de programación utilizado.
+Utilizando como base uno de los repositorios de ejemplo propuestos (en [[https://github.com/curso-github-cefire/sesion5-1-travis][PHP con Travis]], [[https://github.com/curso-github-cefire/tdd-node-sample][Node con Travis]], [[https://github.com/curso-github-cefire/tdd-node-sample-actions][Node con GitHub Actions]] o [[https://github.com/curso-github-cefire/tdd-python-sample][Python con GitHub Actions]]), crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion5-integracion-continua~. Dicho repositorio debe contener una función que compruebe si un número dado es par y un test que realice pruebas con varios números para comprobar que la función está correctamente diseñada. Puedes utilizar cualquier lenguaje de programación soportado por Travis o GitHub Actions.
 
-Cuando hayas terminado, incluye un *icono de estado* de Travis-CI en el archivo ~README~ de tu repositorio. Para ello hay que copiar un código que proporciona Travis. Tienes información sobre cómo incluirlo [[https://docs.travis-ci.com/user/status-images/][aquí]]. Recuerda seleccionar la opción ~Markdown~ al generar el enlace.
+Si utilizas *GitHub Actions* deberás configurar el archivo en la carpeta ~./github/workflows/~ para el flujo que hayas decidido utilizar.
+
+Si utilizas *Travis CI* deberás activar Travis en tu cuenta y configurar adecuadamente el fichero ~.travis.yml~ para el lenguaje de programación utilizado. Cuando hayas terminado, incluye un *icono de estado* de Travis-CI en el archivo ~README~ de tu repositorio. Para ello hay que copiar un código que proporciona Travis. Tienes información sobre cómo incluirlo [[https://docs.travis-ci.com/user/status-images/][aquí]]. Recuerda seleccionar la opción ~Markdown~ al generar el enlace.
 
 *** Opcional
- Crea un repositorio con varios ejercicios de programación del módulo que estés impartiendo y añade tests unitarios para verificar su funcionamiento. Configura adecuadamente el repositorio para que funcione con Travis.
+ Crea un repositorio con varios ejercicios de programación del módulo que estés impartiendo y añade tests unitarios para verificar su funcionamiento. Configura adecuadamente el repositorio para que funcione con GitHub Actions o con Travis CI.
 
 ** Entrega de la tarea
-Una vez terminada la tarea envíame una notificación a mi usuario de GitHub a través del *equipo* de la organización creada en la sesión 3. Incluye un *enlace al repositorio* en la notificación. No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.
+Una vez terminada la tarea envíame una notificación a mi usuario de GitHub a través del *chat de equipo* de la organización creada en la sesión 3. Incluye un *enlace al repositorio* en la notificación. No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.

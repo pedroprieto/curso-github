@@ -90,11 +90,11 @@ Los dos últimos videotutoriales de este tema explican cómo utilizar GitHub Act
    #+END_SRC
  - Comprobar que el archivo ~.travis.yml~ tiene el siguiente aspecto:
    #+BEGIN_SRC yaml
-       deploy:
+     deploy:
        provider: heroku
-       app: NOMBRE-APP-HEROKU
-       api_key:
-         secure: "TOKEN HEROKU CIFRADO"
+     app: NOMBRE-APP-HEROKU
+     api_key:
+       secure: "TOKEN HEROKU CIFRADO"
    #+END_SRC
  - Por último, subir los cambios a GitHub y comprobar que se despliega la aplicación correctamente.
  

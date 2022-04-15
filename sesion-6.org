@@ -15,6 +15,10 @@
 - Preparación del servidor en un servicio Cloud: Heroku
 - Configuración de los repositorios
 
+** Objetivos
+- Permitir realizar el despliegue o lanzamiento de la aplicación de manera automática en un servidor de producción cada vez que se realice un ~commit~ o una ~Pull Request~ en la *rama principal* del repositorio en GitHub.
+- El despliegue sólo se realizará si la *fase de test* se completa *satisfactoriamente*.
+
 ** Referencias
 - [[https://docs.github.com/en/actions/deployment/about-deployments/about-continuous-deployment][Documentación de implementación continua con GitHub Actions]]
 - [[https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions][Despliegue de aplicaciones en GitHub Actions]]
@@ -24,10 +28,6 @@
 - [[https://devcenter.heroku.com/categories/reference][Documentación de Heroku]]
 
 ** Contenidos
-*** Objetivos
-- Permitir realizar el despliegue o lanzamiento de la aplicación de manera automática en un servidor de producción cada vez que se realice un ~commit~ o una ~Pull Request~ en la *rama principal* del repositorio en GitHub.
-- El despliegue sólo se realizará si la *fase de test* se completa *satisfactoriamente*.
-
 *** Aplicaciones en las clases
 - Introducción a metodologías de implementación continua tal como se hace en la industria
 - Despliegue de aplicaciones web en servidores reales (Heroku, AWS, Azure, OpenShift,...) accesibles desde Internet (no sólo en el equipo local)

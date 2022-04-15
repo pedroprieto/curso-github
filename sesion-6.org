@@ -92,9 +92,9 @@ Los dos últimos videotutoriales de este tema explican cómo utilizar GitHub Act
    #+BEGIN_SRC yaml
      deploy:
        provider: heroku
-     app: NOMBRE-APP-HEROKU
-     api_key:
-       secure: "TOKEN HEROKU CIFRADO"
+       app: NOMBRE-APP-HEROKU
+       api_key:
+         secure: "TOKEN HEROKU CIFRADO"
    #+END_SRC
  - Por último, subir los cambios a GitHub y comprobar que se despliega la aplicación correctamente.
  

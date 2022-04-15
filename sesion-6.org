@@ -16,6 +16,8 @@
 - Configuración de los repositorios
 
 ** Referencias
+- [[https://docs.github.com/en/actions/deployment/about-deployments/about-continuous-deployment][Documentación de implementación continua con GitHub Actions]]
+- [[https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions][Despliegue de aplicaciones en GitHub Actions]]
 - [[https://docs.travis-ci.com/user/deployment/][Documentación de implementación continua en Travis CI]]
 - [[https://aws.amazon.com/es/devops/continuous-delivery/][Conceptos de Implementación continua (AWS)]]
 - [[https://docs.travis-ci.com/user/deployment/heroku/][Implementación continua mediante Travis CI y Heroku]]
@@ -31,29 +33,33 @@
 - Despliegue de aplicaciones web en servidores reales (Heroku, AWS, Azure, OpenShift,...) accesibles desde Internet (no sólo en el equipo local)
 - Lanzamiento de versiones de programas ejecutables o resultado de la compilación del código fuente y publicación en la plataforma correspondiente (LaunchPad, NPM, GitHub Releases, AWS S3,...)
 
-*** Despliegue automático con GitHub y Travis CI
-**** Flujo de trabajo general
-1. *Preparación del servidor de despliegue*. Este paso sólo será necesario realizarlo la primera vez. Habrá que darse de alta en el servicio correspondiente (Heroku, AWS,...) y preparar una aplicación para que reciba nuestro código. Opcionalmente habrá que configurar los servicios adicionales que vaya a necesitar nuestra aplicación (base de datos, etc.).
+*** Flujo de trabajo general
+1. *Preparación del servidor de despliegue*. Este paso sólo será necesario realizarlo la primera vez. Habrá que darse de alta en el servicio correspondiente (Heroku, AWS, Azure,...) y preparar una aplicación para que reciba nuestro código. Opcionalmente habrá que configurar los servicios adicionales que vaya a necesitar nuestra aplicación (base de datos, etc.).
 2. *Configuración del repositorio*. Realizar todos los pasos de integración continua descritos en el flujo de trabajo de la [[file:sesion-5.org][sesión 5]].
-3. *Modificación del fichero de configuración* de Travis CI, ~.travis.yml~ para que incluya la configuración relacionada con el despliegue. Sólo es necesario hacerlo la primera vez. Es posible que este paso exija la instalación de alguna aplicación adicional para generar la configuración de manera sencilla.
+3. *Modificación del fichero de configuración* de GitHub Actions o Travis CI para que incluya la configuración relacionada con el despliegue. Sólo es necesario hacerlo la primera vez. Es posible que este paso exija la instalación de alguna aplicación adicional para generar la configuración de manera sencilla.
 4. *Publicación de cambios*. Todos los cambios que lleguen a la *rama principal* del repositorio vía ~commit~ o vía ~pull request~ activan la ejecución de un trabajo de integración continua.
-5. Una vez lanzada la tarea de integración continua en Travis CI, a continuación de la fase de testeo se ejecutarán las *tareas adicionales de despliegue* (/deploy/). La fase de despliegue sólo se ejecutará *si la fase de test se supera con éxito*.
-6. *Comprobación*. Se procederá a comprobar si ha habido algún error en el despliegue de la aplicación accediendo a la tarea de integración continua en Travis CI.
+5. Una vez lanzada la tarea de integración continua, a continuación de la fase de testeo se ejecutarán las *tareas adicionales de despliegue* (/deploy/). La fase de despliegue sólo se ejecutará *si la fase de test se supera con éxito*.
+6. *Comprobación*. Se procederá a comprobar si ha habido algún error en el despliegue de la aplicación accediendo a la tarea de integración continua en GitHub Actions o Travis CI.
 
-**** Creación de una cuenta en un servidor Cloud: Heroku
+*** Despliegue automático con GitHub Actions (recomendado)
+Los dos últimos videotutoriales de este tema explican cómo utilizar GitHub Actions como alternativa a Travis. En este enlace puedes acceder al [[https://github.com/curso-github-cefire/deploy_github_actions_sample][repositorio de ejemplo utilizado para desplegar aplicaciones en AWS y Azure con GitHub Actions]].
+
+*** Despliegue automático con Travis CI
+**** Despliegue en el proveedor cloud Heroku
+***** Creación de una cuenta en el servidor Cloud Heroku
 - Crear una cuenta en https://www.heroku.com/
-- Es necesario introducir una *tarjeta de crédito*
+- Es necesario introducir una *tarjeta de crédito*, aunque no se realizarán cargos
 - La capa gratuita incluye 1000 horas de funcionamiento 
 
-**** Creación de una aplicación en Heroku
+***** Creación de una aplicación en Heroku
 - New / Create App
 
-**** Configuración de servicios adicionales: base de datos
+***** Configuración de servicios adicionales: base de datos
 - Resources / Add-ons
 - Ejemplo: ClearDB MySQL
 - Conexión para crear base de datos
 
-**** Modificación del fichero de configuración de Travis
+***** Modificación del fichero de configuración de Travis
  - [[https://docs.travis-ci.com/user/deployment/heroku/][Documentación]]
  - Crear un token de acceso a Heroku:
    - Iniciar sesión en Heroku
@@ -63,43 +69,43 @@
    - Dejar fecha de caducidad en blanco si se desea
    - Copiar el /Authorization token/
  - Añadir la siguiente configuración al archivo ~.travis.yml~ (sustituyendo ~NOMBRE-APP-HEROKU~ por el nombre de la aplicación creada en Heroku):
-#+BEGIN_SRC yaml
+   #+BEGIN_SRC yaml
    deploy:
      provider: heroku
      app: NOMBRE-APP-HEROKU
- #+END_SRC
+   #+END_SRC
  - Instalar la aplicación travis (Ruby):
    - [[https://github.com/travis-ci/travis.rb#installation][Fuente]]
    - Ejecutar
- #+BEGIN_SRC bash
- gem install travis 
- #+END_SRC
- - Si se está utilizando el servicio travis-ci.com, iniciar sesión en la aplicación Travis mediante el usuario y el *token* de GitHub (debes haber creado el [[./sesion-3.org][token de acceso]] previamente). Para ello ejecutar:
- #+BEGIN_SRC bash
-travis login --pro -g TOKEN_DE_GITHUB
- #+END_SRC
+   #+BEGIN_SRC bash
+     gem install travis 
+   #+END_SRC
+ - Iniciar sesión en la aplicación Travis mediante el usuario y el *token* de GitHub (debes haber creado el [[./sesion-3.org][token de acceso]] previamente). Para ello ejecutar:
+   #+BEGIN_SRC bash
+     travis login --pro -g TOKEN_DE_GITHUB
+   #+END_SRC
  - Cifrar el token de Heroku mediante la herramienta Travis. Para ello ejecutar el siguiente comando sustituyendo ~TOKEN_HEROKU~ por el token previamente copiado (si se está utilizando la versión travis-ci.org, quitar el flag ~--pro~).
-#+BEGIN_SRC bash
-travis encrypt TOKEN_HEROKU --add deploy.api_key --pro
-#+END_SRC
-- Comprobar que el archivo ~.travis.yml~ tiene el siguiente aspecto:
-#+BEGIN_SRC yaml
-  deploy:
-    provider: heroku
-    app: NOMBRE-APP-HEROKU
-    api_key:
-      secure: "TOKEN HEROKU CIFRADO"
- #+END_SRC
+   #+BEGIN_SRC bash
+     travis encrypt TOKEN_HEROKU --add deploy.api_key --pro
+   #+END_SRC
+ - Comprobar que el archivo ~.travis.yml~ tiene el siguiente aspecto:
+   #+BEGIN_SRC yaml
+       deploy:
+       provider: heroku
+       app: NOMBRE-APP-HEROKU
+       api_key:
+         secure: "TOKEN HEROKU CIFRADO"
+   #+END_SRC
  - Por último, subir los cambios a GitHub y comprobar que se despliega la aplicación correctamente.
  
-**** Visualización del resultado de la ejecución
+***** Visualización del resultado de la ejecución
 - Comprobar el resultado de la fase de despliegue en [[https://travis-ci.com]]
 
-**** Repositorio de ejemplo
+***** Repositorio de ejemplo
 A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/travis-heroku-2][repositorio de ejemplo]] con un proyecto PHP configurado para realizar el despliegue de una aplicación completa con base de datos con Travis y Heroku.
 
 **** Alternativas a Heroku: AWS y Azure
-     En caso de utilizar otro proveedor para el despliegue habrá que configurar el fichero ~.travis.yml~ con los datos adecuados para dicho proveedor: usuario y contraseña (o token), nombre de la aplicación, etc.
+En caso de utilizar otro proveedor para el despliegue habrá que modificar el fichero de configuración con los datos adecuados para dicho proveedor: usuario y contraseña (o token), nombre de la aplicación, etc.
 
 A continuación se muestran los enlaces de la documentación para hacer el despliegue en AWS y Azure:
      - [[https://docs.travis-ci.com/user/deployment/elasticbeanstalk/][Despliegue en AWS Elastic BeanStalk desde Travis]]
@@ -108,9 +114,6 @@ A continuación se muestran los enlaces de la documentación para hacer el despl
 Los servicios AWS y Azure son bastante más complejos que Heroku, por lo que quedan fuera del ámbito de este curso. En caso de estar interesado en el despliegue de aplicaciones en estos servicios utilizando acceso a datos se pueden consultar los siguientes recursos:
 - [[https://github.com/pedroprieto/api-bank-app][Ejemplo de despligue de aplicaciones .NET en AWS BeanStalk]]
 - [[https://github.com/pedroprieto/image-resizer][Ejemplo de despliegue de una aplicación NodeJS en AWS Lambda]]
-
-*** Despliegue automático con GitHub Actions
-    Los dos últimos videotutoriales de este tema explican cómo utilizar GitHub Actions como alternativa a Travis. En este enlace puedes acceder al [[https://github.com/curso-github-cefire/deploy_github_actions_sample][repositorio de ejemplo utilizado para desplegar aplicaciones en AWS y Azure con GitHub Actions]].
 
 ** Tareas
 Crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion6-travis-heroku~. Dicho repositorio debe contener una aplicación web en un lenguaje de tu elección que utilice base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*. Si lo deseas puedes utilizar AWS o Azure en lugar de Heroku.

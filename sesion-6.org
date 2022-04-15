@@ -115,13 +115,13 @@ Los servicios AWS y Azure son bastante más complejos que Heroku, por lo que que
 - [[https://github.com/pedroprieto/image-resizer][Ejemplo de despliegue de una aplicación NodeJS en AWS Lambda]]
 
 ** Tareas
-Crea un repositorio en la cuenta de la organización creada en la sesión 3 denominado ~sesion6-travis-heroku~. Dicho repositorio debe contener una aplicación web en un lenguaje de tu elección que utilice base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*. Si lo deseas puedes utilizar AWS o Azure en lugar de Heroku.
+Crea un repositorio denominado ~sesion6-despliegue-continuo~ en la cuenta de la organización creada en la sesión 3. Dicho repositorio debe contener una aplicación web en un *lenguaje de tu elección*. Opcionalmente puede utilizar base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*, *Azure*, *AWS* o algún otro proveedor de tu elección.
 
-Puedes utilizar cualquier proyecto o práctica tanto personal como de clase que tuvieras preparada anteriormente. Si no tienes ninguna puedes utilizar como base el repositorio de ejemplo y añadir otro punto de entrada a la API (por ejemplo, series de televisión).
+Puedes utilizar cualquier proyecto o práctica tanto personal como de clase que tuvieras preparada anteriormente. Si no tienes ninguna puedes utilizar como base uno de los repositorios de ejemplo.
 
-Cuando hayas terminado, incluye un *enlace a la URL de la aplicación* desplegada en Heroku en el archivo ~README~ de tu repositorio.
+Cuando hayas terminado, incluye un *enlace a la URL de la aplicación desplegada* en el archivo ~README~ de tu repositorio.
 
 ** Entrega de la tarea
-Una vez terminada la tarea envíame una notificación a mi usuario de GitHub a través del *equipo* de la organización creada en la sesión 3. Incluye un *enlace al repositorio* y un *enlace a la URL de la aplicación desplegada en Heroku* en la notificación. 
+Una vez terminada la tarea envíame una notificación a mi usuario de GitHub a través del *equipo* de la organización creada en la sesión 3. Incluye un *enlace al repositorio* y un *enlace a la URL de la aplicación desplegada* en la notificación. 
 
 No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.

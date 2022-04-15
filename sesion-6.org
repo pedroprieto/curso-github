@@ -44,22 +44,21 @@
 *** Despliegue automático con GitHub Actions (recomendado)
 Los dos últimos videotutoriales de este tema explican cómo utilizar GitHub Actions como alternativa a Travis. En este enlace puedes acceder al [[https://github.com/curso-github-cefire/deploy_github_actions_sample][repositorio de ejemplo utilizado para desplegar aplicaciones en AWS y Azure con GitHub Actions]].
 
-*** Despliegue automático con Travis CI
-**** Despliegue en el proveedor cloud Heroku
-***** Creación de una cuenta en el servidor Cloud Heroku
+*** Despliegue automático con Travis CI y Heroku
+**** Creación de una cuenta en el servidor Cloud Heroku
 - Crear una cuenta en https://www.heroku.com/
 - Es necesario introducir una *tarjeta de crédito*, aunque no se realizarán cargos
 - La capa gratuita incluye 1000 horas de funcionamiento 
 
-***** Creación de una aplicación en Heroku
+**** Creación de una aplicación en Heroku
 - New / Create App
 
-***** Configuración de servicios adicionales: base de datos
+**** Configuración de servicios adicionales: base de datos
 - Resources / Add-ons
 - Ejemplo: ClearDB MySQL
 - Conexión para crear base de datos
 
-***** Modificación del fichero de configuración de Travis
+**** Modificación del fichero de configuración de Travis
  - [[https://docs.travis-ci.com/user/deployment/heroku/][Documentación]]
  - Crear un token de acceso a Heroku:
    - Iniciar sesión en Heroku
@@ -98,13 +97,13 @@ Los dos últimos videotutoriales de este tema explican cómo utilizar GitHub Act
    #+END_SRC
  - Por último, subir los cambios a GitHub y comprobar que se despliega la aplicación correctamente.
  
-***** Visualización del resultado de la ejecución
+**** Visualización del resultado de la ejecución
 - Comprobar el resultado de la fase de despliegue en [[https://travis-ci.com]]
 
-***** Repositorio de ejemplo
+**** Repositorio de ejemplo
 A continuación se incluye un enlace a un [[https://github.com/curso-github-cefire/travis-heroku-2][repositorio de ejemplo]] con un proyecto PHP configurado para realizar el despliegue de una aplicación completa con base de datos con Travis y Heroku.
 
-**** Alternativas a Heroku: AWS y Azure
+*** Alternativas a Heroku: AWS y Azure
 En caso de utilizar otro proveedor para el despliegue habrá que modificar el fichero de configuración con los datos adecuados para dicho proveedor: usuario y contraseña (o token), nombre de la aplicación, etc.
 
 A continuación se muestran los enlaces de la documentación para hacer el despliegue en AWS y Azure:

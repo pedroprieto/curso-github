@@ -24,7 +24,7 @@
 - Utilización con Scrum
 
 ** Referencias
-- [[https://education.github.com/][GitHub Education]]
+- [[https://education.github.com][GitHub Global Campus]]
 - [[https://classroom.github.com/][GitHub Classroom]]
 - [[https://github.blog/2020-03-12-github-teacher-toolbox-and-classroom-with-autograding/][GitHub Classroom autograding]]
 - [[https://education.github.com/pack][Student Developer Pack]]
@@ -44,8 +44,8 @@
 - Servidor web integrado en la propia infraestructura (GitHub Pages)
 - Posibilidad de realizar despliegues automáticos de aplicaciones para su exposición y prueba
 
-*** El programa GitHub Education
-- [[https://education.github.com/][GitHub Education]]
+*** El programa GitHub Education Global Campus
+- [[https://education.github.com/][GitHub Education Global Campus]]
 - Recursos para estudiantes:
   - Conjunto de herramientas gratuito: [[https://education.github.com/pack][Student Developer Pack]]
   - Posibilidad de obtener una certificación: [[https://education.github.com/students/experts][GitHub Campus Experts]]
@@ -53,6 +53,7 @@
   - Servicio de gestión de clases y prácticas: [[https://classroom.github.com/][GitHub Classroom]]
   - Comunidad de profesores: [[https://github.com/github-community/Global-Campus-Teachers/discussions][GitHub Teachers Discussions]] 
   - Posibilidad de obtener una certificación: [[https://education.github.com/teachers/advisors][GitHub Campus Advisors]]
+  - Acceso a [[https://github.com/features/codespaces][GiHub CodeSpaces]], un servicio de entornos de desarrollo en la nube que permite configurar Visual Studio Code junto con las dependencias (lenguajes de programación, librerías, etc.) necesarias para el proyecto. Este servicio se puede integrar en las prácticas creadas con GitHub Classroom.
 
 *** GitHub Classroom
 - Herramienta para gestionar la creación y distribución de tareas con los alumnos

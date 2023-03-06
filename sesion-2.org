@@ -36,10 +36,18 @@
 
 **** Crear ramas
   #+begin_src bash
-  git branch <nombre_rama>
+    git branch <nombre_rama>
   #+end_src
 
-  Este comando creará una rama nueva con el nombre seleccionado. Una alternativa es ejecutar ~git checkout -b <nombre_rama>~. Este comando creará una rama con el nombre indicado y cambiará a dicha rama.
+Este comando creará una rama nueva con el nombre seleccionado. Si no se indica ningún parámetro adicional, la rama creada apuntará ~HEAD~, es decir, el *último commit de la rama en la que nos encontremos*.
+
+Una alternativa es ejecutar ~git checkout -b <nombre_rama>~. Este comando creará una rama con el nombre indicado y cambiará a dicha rama.
+
+Es posible crear una rama que apunte a un commit o una rama determinada mediante el comando:
+  #+begin_src bash
+    git branch <nombre_rama> <COMMIT_HASH>
+    git branch <nombre_rama> <NOMBRE_RAMA_EXISTENTE>
+  #+end_src
 
 **** Ver ramas disponibles
   #+begin_src bash
@@ -50,20 +58,20 @@
 
 **** Cambiar de rama
   #+begin_src bash
-  git checkout <nombre_rama>
+    git checkout <nombre_rama>
+    git switch <nombre_rama>
   #+end_src
 
-  Este comando cambiará a la rama indicada. Es posible que el comando falle *si hay cambios en el directorio de trabajo* que no estén integrados en ningún commit: si dichos pueden ser sobreescritos por los cambios de la rama a la que se desea cambiar, ~git~ abortará el cambio de rama y nos indicará el problema. En ese caso deberemos crear un commit con los cambios que estemos realizando (o bien guardarlos mediante ~git stash~) y a continuación volver a ejecutar el comando de cambio de rama.
+  Cualquiera de los dos comandos anteriores cambiará a la rama indicada. Es posible que el comando falle *si hay cambios en el directorio de trabajo* que no estén integrados en ningún commit: si dichos pueden ser sobreescritos por los cambios de la rama a la que se desea cambiar, ~git~ abortará el cambio de rama y nos indicará el problema. En ese caso deberemos crear un commit con los cambios que estemos realizando (o bien guardarlos mediante ~git stash~) y a continuación volver a ejecutar el comando de cambio de rama.
 
 **** Fusionar una rama
 Fusionar una rama, en inglés /merge/, consiste en incorporar los cambios presentes en una rama a la rama en la que nos encontramos actualmente. Para realizar una fusión hay que realizar las siguientes acciones:
 
- - Primero nos posicionamos en la rama sobre la que se va a realizar la fusión (la rama que va a recibir los cambios)
- - Para realizar la fusión ejecutar:
-
-  #+begin_src bash
-  git merge <nombre_rama_a_fusionar>
-  #+end_src
+ 1. Primero nos posicionamos en la rama sobre la que se va a realizar la fusión (la rama que va a recibir los cambios)
+ 2. Para realizar la fusión ejecutar:
+    #+begin_src bash
+      git merge <nombre_rama_a_fusionar>
+    #+end_src
 
   
   Si por ejemplo queremos integrar en la rama principal (~master~) los cambios presentes en la rama ~feature1~, cambiaremos a la rama principal (si no estamos ya en ella) mediante ~git checkout master~ y a continuación ejecutaremos ~git merge feature1~.
@@ -97,6 +105,16 @@ Una vez resuelto el conflicto en todos los archivos habrá que ejecutar los coma
  [[./imagenes/borrar_rama.png]] 
 
 *** Remotos
+Los repositorios remotos son *versiones* del proyecto que están alojadas en un *servidor web* o en una *carpeta* accesible a través de la *red*. 
+
+Los repositorios remotos se almacenan en una forma especial denominada /bare/, que *no dispone de directorio de trabajo*.
+
+Los repositorios remotos pueden estar configurados como *solo lectura* o *lectura/escritura*.
+
+Los repositorios remotos suelen utilizarse como *punto de referencia* de alojamiento del código: es posible realizar *copias* de dicho repositorio remoto denominadas *clones*, que pueden evolucionar de manera *independiente*. Esto hace que git sea un sistema *descentralizado* de gestión de código, ya que *cada clon* es un repositorio *completo* e *independiente* del resto.
+
+Es posible *sincronizar* los cambios de un repositorio remoto a partir de los cambios de un repositorio local y viceversa.
+
 **** Clonar un repositorio
   #+begin_src bash
   git clone <URL_REPOSITORIO>
@@ -104,7 +122,7 @@ Una vez resuelto el conflicto en todos los archivos habrá que ejecutar los coma
 
   Este comando permite clonar un repositorio remoto a partir de su URL. También es posible indicar una ruta del sistema de ficheros. Por defecto se mostrará la *rama principal* del repositorio remoto. El resto de ramas no aparecen como ramas locales, aunque pueden obtenerse.
 
-  Al clonar un repositorio *se crea un remoto en el repositorio local* con el nombre ~origin~ que hace referencia a la URL indicada.
+  Al clonar un repositorio *se crea una referencia al remoto en el repositorio local* con el nombre ~origin~ que hace referencia a la URL indicada.
 
 **** Ver remotos
   #+begin_src bash
@@ -151,10 +169,10 @@ Una vez resuelto el conflicto en todos los archivos habrá que ejecutar los coma
   Dicho todo esto, es posible *fusionar el contenido de una rama remota en otra rama distinta* a la asociada. Las ramas remotas pueden ser referenciadas como ~<nombre_remoto>/<nombre_rama_remota>~. Así, la rama ~origin/rama1~ hará referencia a la rama ~rama1~ del repositorio remoto ~origin~. Si estamos posicionados en la rama ~master~ local podríamos incorporar los cambios de la rama remota ~origin/rama1~ de dos maneras:
   - Ejecutando ~git merge origin/rama1~ - Directamente estaremos incorporando los cambios de la rama remota ~origin/rama1~ en la rama local ~master~. En este caso, la rama local ~rama1~ *no recibiría los nuevos cambios que pudiera tener la rama remota* ~origin/rama1~
   - Otra opción sería:
-    1. Cambiar a la rama *local* ~rama1~ - ~git checkout rama1~
-    2. Fusionar los cambios de su rama remota asociada - ~git pull~, o ~git pull origin rama1~ si no estuvieran asociadas. En este punto, la rama local ~rama1~ *recibiría los nuevos cambios que pudiera haber* en la rama remota ~origin/rama1~
-    3. Cambiar de nuevo a la rama local ~master~ - ~git checkout master~
-    4. Por último, fusionar los cambios de la rama local ~rama1~ - ~git merge rama1~
+    1. Cambiar a la rama *local* ~rama1~: ~git checkout rama1~
+    2. Fusionar los cambios de su rama remota asociada: ~git pull~, o ~git pull origin rama1~ si no estuvieran asociadas. En este punto, la rama local ~rama1~ *recibiría los nuevos cambios que pudiera haber* en la rama remota ~origin/rama1~
+    3. Cambiar de nuevo a la rama local ~master~: ~git checkout master~
+    4. Por último, fusionar los cambios de la rama local ~rama1~: ~git merge rama1~
   
   No hay una manera mejor que otra: simplemente hay que tener claro qué acciones se están ejecutando y qué cambios es están produciendo.
   

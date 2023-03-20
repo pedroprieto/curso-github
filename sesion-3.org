@@ -68,7 +68,7 @@ En el texto de los Issues se pueden hacer [[https://docs.github.com/es/get-start
 
 Los Issues pueden [[https://docs.github.com/es/issues/tracking-your-work-with-issues/quickstart#assigning-the-issue][asignarse a personas responsables]] u organizarse en [[https://docs.github.com/es/issues/tracking-your-work-with-issues/quickstart#adding-milestones][hitos]] (milestones) para agruparlos y hacer un seguimiento de los mismos.
 
-Por último, es posible cerrar los issues a través de *palabras clave* en el texto de los *commits*. De esta manera [[https://docs.github.com/es/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue][se asociará el commit con el issue resuelto o cerrado]].
+Por último, es posible *cerrar los issues* a través de *palabras clave* en el texto de los *commits*. De esta manera [[https://docs.github.com/es/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue][se asociará el commit con el issue resuelto o cerrado]].
 
 *** Autenticación mediante tokens
     GitHub ofrece la posibilidad de utilizar *tokens* en lugar de la contraseña de la cuenta para interactuar con su servicio a través de *línea de comandos*, *gestor gráfico* o *API*. Los tokens ofrecen una alternativa a la contraseña de la cuenta y proporcionan las siguientes ventajas:

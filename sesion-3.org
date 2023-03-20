@@ -46,6 +46,15 @@ GitHub ofrece funcionalidades muy interesantes para trabajar con prácticas rela
 *** Escribir en GitHub
 GitHub permite añadir comentarios en varios sitios: por ejemplo, en Pull Requests, Issues y Commits. Los comentarios pueden [[https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax][formatearse mediante una sintaxis basada en Markdown]].
 
+Especialmente útil es la sintaxis para resaltar código. Si es una palabra concreta, puede resaltarse mediante el *acento grave*: ~`~. Así, es posible resaltar una palabra mediante ~`código`~.
+
+Para resaltar fragmentos de código se utilizan delimitadores de bloque que consisten en *tres acentos graves seguidos*. Opcionalmente es posible indicar el lenguaje del código a continuación. Por ejemplo, para resaltar código PHP se utilizaría la sintaxis siguiente:
+#+begin_src markdown
+```php
+# Código PHP
+```
+#+end_src
+
 *** Enlaces a fragmentos de código
 En ocasiones es interesante hacer [[https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet][referencia a un fragmento de código en un comentario]] para aclarar una duda o identificar un error.
 

@@ -5,6 +5,7 @@
 - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-5-presentacion.html][Presentación]]
 - [[https://youtu.be/ZF7rt9d-ODE][Sesión 5.1]]
 - [[https://youtu.be/hg1rBL1TWOI][Sesión 5.2]] (En este vídeo se utiliza una versión de Travis antigua, tal como se indica en la descripción. El procedimiento para activar Travis está descrito correctamente en estos apuntes).
+- [[https://youtu.be/TPYf6KK5atQ][Sesión 5.3]]
 
 ** Índice
 - Fundamentos de la Integración Continua

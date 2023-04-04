@@ -96,23 +96,29 @@ GitHub incluye un servicio denominado ~GiHub Actions~ que permite crear una seri
 En lo relativo a integración continua, podemos utilizar el servicio de ~GitHub Actions~ como alternativa a Travis-CI. En este enlace podemos consultar más información acerca de cómo realizar [[https://docs.github.com/es/actions/guides/about-continuous-integration][integración continua con GitHub Actions]]. Su funcionamiento es muy parecido: hay que *crear un fichero de configuración en el repositorio* y a continuación *crear una acción* para conectarlo al servicio de integración continua.
 
 Este servicio, al estar integrado directamente en GitHub, nos permite crear los ficheros necesarios para realizar tests a partir del menú ~Actions~ del repositorio de GitHub.
+
 [[file:imagenes/github_actions_1.png]]
 
 Una vez dentro podemos hacer click en ~New workflow~ para crear una acción nueva:
+
 [[file:imagenes/github_actions_2.png]]
 
 A continuación tendremos la posibilidad de elegir una plantilla para crear el fichero de configuración del workflow. Podemos crearla a mano o elegir una existente:
+
 [[file:imagenes/github_actions_3.png]]
 
 Por último, tendremos acceso al fichero de configuración generado, que podremos aceptar o editar a nuestro gusto.
+
 [[file:imagenes/github_actions_4.png]]
 
 El resultado de la ejecución del test podemos verlo en el icono del color correspondiente al lado del nombre del último commit:
+
 [[file:imagenes/github_actions_5.png]]
 
 Si el icono sale en color verde, el test se ha pasado; en amarillo, está en proceso; y en rojo, ha fallado.
 
 Al pulsar sobre el icono podemos ver el resultado del test:
+
 [[./imagenes/github_actions_6.png]]
 
 [[./imagenes/github_actions_7.png]]

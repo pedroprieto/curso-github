@@ -7,6 +7,8 @@
 - [[https://youtu.be/an0MtIxMHM4][Sesión 6.2]]
 - [[https://youtu.be/AtAwxn_yMeE][Sesión 6.3]]
 - [[https://youtu.be/gcWCoqO9PnQ][Sesión 6.4]]
+- [[https://youtu.be/JzLcsm_teUY][Sesión 6.5]]
+
 ** Índice
 - Servidores Cloud
 - Implementación continua (despliegue automático)
@@ -42,9 +44,9 @@
 6. *Comprobación*. Se procederá a comprobar si ha habido algún error en el despliegue de la aplicación accediendo a la tarea de integración continua en GitHub Actions o Travis CI.
 
 *** Despliegue automático con GitHub Actions (recomendado)
-Los dos últimos videotutoriales de este tema explican cómo utilizar GitHub Actions como alternativa a Travis. En este enlace puedes acceder al [[https://github.com/curso-github-cefire/deploy_github_actions_sample][repositorio de ejemplo utilizado para desplegar aplicaciones en AWS y Azure con GitHub Actions]].
+Los tres últimos videotutoriales de este tema explican cómo utilizar GitHub Actions como alternativa a Travis. En este enlace puedes acceder al [[https://github.com/curso-github-cefire/deploy_github_actions_sample][repositorio de ejemplo utilizado para desplegar aplicaciones en AWS y Azure con GitHub Actions]].
 
-*** Despliegue automático con Travis CI y Heroku
+*** Despliegue automático con Travis CI y Heroku (opcional)
 **** Creación de una cuenta en el servidor Cloud Heroku
 - Crear una cuenta en https://www.heroku.com/
 - Es necesario introducir una *tarjeta de crédito*, aunque no se realizarán cargos
@@ -115,7 +117,11 @@ Los servicios AWS y Azure son bastante más complejos que Heroku, por lo que que
 - [[https://github.com/pedroprieto/image-resizer][Ejemplo de despliegue de una aplicación NodeJS en AWS Lambda]]
 
 ** Tareas
-Crea un repositorio denominado ~sesion6-despliegue-continuo~ en la cuenta de la organización creada en la sesión 3. Dicho repositorio debe contener una aplicación web en un *lenguaje de tu elección*. Opcionalmente puede utilizar base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*, *Azure*, *AWS* o algún otro proveedor de tu elección.
+Deberás haber recibido en tu correo una *invitación* para participar en un *laboratorio AWS Learner Lab*. De esta manera podrás realizar la práctica sin necesidad de crear ninguna cuenta ni usar tarjeta de crédito en ningún proveedor cloud.
+
+La tarea consiste en realizar los pasos indicados en el [[https://youtu.be/JzLcsm_teUY][videotutorial 6.5]]: desplegar la aplicación de ejemplo propuesta en AWS.
+
+De manera completamente *opcional*, puedes realizar algún despliegue adicional. Para ello, crea un repositorio denominado ~sesion6-despliegue-continuo~ en la cuenta de la organización creada en la sesión 3. Dicho repositorio debe contener una aplicación web en un *lenguaje de tu elección*. Opcionalmente puede utilizar base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*, *Azure*, *AWS* o algún otro proveedor de tu elección. Te recomiendo utilizar el *proveedor AWS* mediante el *laboratorio* en el que te he dado de alta para evitar problemas con pagos o creación de cuentas.
 
 Puedes utilizar cualquier proyecto o práctica tanto personal como de clase que tuvieras preparada anteriormente. Si no tienes ninguna puedes utilizar como base uno de los repositorios de ejemplo.
 

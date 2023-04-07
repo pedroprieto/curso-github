@@ -142,13 +142,16 @@ A continuación se muestran enlaces a dos repositorios configurados para trabaja
 [[file:imagenes/addrepo-travis.png]]
 
 **** Opcional: autorización de organizaciones
-     La aplicación Travis se instala para la cuenta del usuario de GitHub. Si se desea que Travis tenga acceso a los repositorios de una organización bajo nuestro control habrá que realizar los siguientes pasos adicionales:
-- Acceder al menú ~Settings~ de nuestro usuario
-- Acceder a la opción ~Applications/Authorized OAuth Apps~
-[[file:imagenes/addorganization-travis-1.png]]
-- Seleccionar la aplicación Travis CI
-- En el apartado /Organization access/, activar las organizaciones que se deseen
-[[file:imagenes/addorganization-travis-2.png]]
+La aplicación Travis se instala para la cuenta del usuario de GitHub. Si se desea que Travis tenga acceso a los repositorios de una organización bajo nuestro control habrá que realizar los siguientes pasos adicionales:
+- Iniciar sesión en Travis-CI
+- Acceder al menú ~Settings~
+[[file:imagenes/addorganization-travis-3.png]]
+- Acceder a la opción ~Review and add your authorized organizations~:
+[[file:imagenes/addorganization-travis-4.png]]
+- Elegir la organización que se quiere activar:
+[[file:imagenes/addorganization-travis-5.png]]
+- Por último, seleccionar los repositorios de la organización a los que se quiera dar acceso:
+[[file:imagenes/addorganization-travis-6.png]]
 
 **** El fichero de configuración de Travis CI
 - Para que Travis se ejecute debe existir un fichero ~.travis.yml~ en el repositorio

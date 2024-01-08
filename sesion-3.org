@@ -26,6 +26,7 @@
 - [[https://education.github.com/discount_requests/new][Solicitud de descuentos para uso educativo]]
 - [[https://help.github.com/articles/closing-issues-using-keywords/][Cerrar issues a través de mensajes en el commit]]
 - [[https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token][Autenticación en GitHub mediante tokens]]
+- [[https://docs.github.com/es/get-started/getting-started-with-git/caching-your-github-credentials-in-git][Gestión de credenciales de GitHub]]
 - [[https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax][Escritura básica en GitHub]]
 - [[https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet][Enlaces a fragmentos de código]]
 - [[https://docs.github.com/es/issues][Issues en GitHub]]

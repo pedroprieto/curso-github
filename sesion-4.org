@@ -109,7 +109,10 @@ bundle exec jekyll serve
 
 *¡Muy importante!* Para que funcione correctamente, la carpeta que contiene el proyecto Jekyll debe estar en una ruta *sin espacios en blanco*.
 
-*¡Muy importante!* En caso de error al ejecutar el comando, añadir la línea ~gem "json"~ al final del fichero ~Gemfile~.
+*¡Muy importante!* En caso de error al ejecutar el comando, añadir la línea siguiente al final del fichero ~Gemfile~.
+#+begin_src
+  gem "json"
+#+end_src
 
 **** Agregar contenido
 ***** Front matter

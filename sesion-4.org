@@ -55,11 +55,13 @@ Se puede crear un sitio asociado a cualquier repositorio. Algunos ejemplos de us
 
 Procedimiento:
 1. Crear un repositorio (~nombrerepositorio~) dentro de la cuenta de usuario u organización correspondiente (~MINOMBREDEUSUARIO~).
-2. Habilitar el servicio de GitHub Pages en el repositorio mediante una de las siguientes *tres opciones*:
-   1. En los ajustes del repositorio (/Settings/), en la sección /GitHub Pages/, seleccionar la opción ~master branch~. Todo lo que se almacen en la rama ~master~ se publicará.
-   2. En los ajustes del repositorio (/Settings/), en la sección /GitHub Pages/, seleccionar la opción ~master branch /docs folder~. Sólo se publicará lo que se almacene dentro de la la carpeta ~docs~ de la rama ~master~.
-   3. Crear una rama denominada ~gh-pages~. El servicio de publicación de GitHub Pages se activará automáticamente y sólo se publicará el contenido de dicha rama.
-3. Los archivos que se creen estarán disponibles en la dirección: https://MINOMBREDEUSUARIO.github.io/nombrerepositorio.
+2. Habilitar el servicio de GitHub Pages en el repositorio. Para ello, en los ajustes del repositorio (/Settings/), en la sección /Pages/, se debe marcar la opción /Deploy from a branch/. (También está la opción de publicar a través de GitHub Actions, servicio que veremos en el siguiente tema).
+3. A continuación, se debe *elegir una rama* del repositorio. El contenido de dicha rama es el que se publicará. Se puede elegir cualquiera de las ramas disponibles en el repositorio. En este punto, una posibilidad es dedicar una rama a alojar el sitio web y el resto al código fuente del proyecto. No obstante, si se va a utilizar el repositorio exclusivamente como servidor web, se puede utilizar únicamente una rama.
+   [[./imagenes/pages.png]] 
+5. Opcionalmente, se puede seleccionar la opción de *dedicar una carpeta* de la rama para la publicación. Así:
+   - Si se elige la opción /root/, se publicará todo el contenido del repositorio.
+   - Si se elige la opción /docs/, se publicará únicamente el contenido de dicha carpeta.
+6. Los archivos que se creen estarán disponibles en la dirección: https://MINOMBREDEUSUARIO.github.io/nombrerepositorio.
 
 *** Ajustes de GitHub Pages
 - Pestaña ~Settings~ / Sección ~Pages~

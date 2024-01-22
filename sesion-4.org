@@ -107,7 +107,13 @@ bundle exec jekyll serve
 # BASEURL viene configurada en el archivo _config.yml
 #+end_src
 
+#+begin_quote
 *¡Muy importante!* Para que funcione correctamente, la carpeta que contiene el proyecto Jekyll debe estar en una ruta *sin espacios en blanco*.
+#+end_quote
+
+#+begin_quote
+*¡Muy importante!* En caso de error al ejecutar el comando, añadir la línea ~gem "json"~ al final del fichero ~Gemfile~.
+#+end_quote
 
 **** Agregar contenido
 ***** Front matter

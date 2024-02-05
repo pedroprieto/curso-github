@@ -14,7 +14,7 @@
 - Implementación continua (despliegue automático)
 - Aplicaciones en las clases
   - Despliegue de aplicaciones en un servidor real
-- Preparación del servidor en un servicio Cloud: Heroku
+- Preparación del servidor en un servicio Cloud: AWS
 - Configuración de los repositorios
 
 ** Objetivos
@@ -46,7 +46,7 @@
 *** Despliegue automático con GitHub Actions (recomendado)
 Los tres últimos videotutoriales de este tema explican cómo utilizar GitHub Actions como alternativa a Travis. En este enlace puedes acceder al [[https://github.com/curso-github-cefire/deploy_github_actions_sample][repositorio de ejemplo utilizado para desplegar aplicaciones en AWS y Azure con GitHub Actions]].
 
-*** Despliegue automático con Travis CI y Heroku (opcional)
+*** Despliegue automático con Travis CI y Heroku (OPCIONAL)
 **** Creación de una cuenta en el servidor Cloud Heroku
 - Crear una cuenta en https://www.heroku.com/
 - Es necesario introducir una *tarjeta de crédito*, aunque no se realizarán cargos
@@ -119,7 +119,7 @@ Los servicios AWS y Azure son bastante más complejos que Heroku, por lo que que
 ** Tareas
 Deberás haber recibido en tu correo una *invitación* para participar en un *laboratorio AWS Learner Lab*. De esta manera podrás realizar la práctica sin necesidad de crear ninguna cuenta ni usar tarjeta de crédito en ningún proveedor cloud.
 
-La tarea consiste en realizar los pasos indicados en el [[https://youtu.be/JzLcsm_teUY][videotutorial 6.5]]: desplegar la aplicación de ejemplo propuesta en AWS.
+La tarea consiste en realizar los pasos indicados en el [[https://youtu.be/JzLcsm_teUY][videotutorial 6.5]]: desplegar la [[https://github.com/curso-github-cefire/deploy_github_actions_sample][aplicación de ejemplo]] propuesta en AWS.
 
 De manera completamente *opcional*, puedes realizar algún despliegue adicional. Para ello, crea un repositorio denominado ~sesion6-despliegue-continuo~ en la cuenta de la organización creada en la sesión 3. Dicho repositorio debe contener una aplicación web en un *lenguaje de tu elección*. Opcionalmente puede utilizar base de datos. Debe incluir al menos *un test* y estar configurada para *desplegarse* en una aplicación que hayas preparado en *Heroku*, *Azure*, *AWS* o algún otro proveedor de tu elección. Te recomiendo utilizar el *proveedor AWS* mediante el *laboratorio* en el que te he dado de alta para evitar problemas con pagos o creación de cuentas.
 

@@ -83,7 +83,10 @@
 - El enlace de invitación se distribuye a los alumnos
 - Cada vez que un alumno acceda a la invitación podrá *aceptar la tarea*
 - En caso de haber definido lista de alumnos, el alumno podrá seleccionar sus datos para quedar identificado
-- Al aceptar una tarea se crea *un repositorio* para cada alumno en el caso de las tareas individuales. *IMPORTANTE*: hasta ahora, los repositorios creados para cada alumn@ que aceptara la tarea eran una *copia* del repositorio base, creado como *plantilla* por el profesor/a. A partir de Junio de 2024, los repositorios creados para cada alumn@ que acepte la tarea serán *forks* del repositorio base creado por el profesor/a. [[https://github.blog/changelog/2024-01-22-migrating-github-classroom-assignment-repository-creation-from-create-from-template-to-forks-public-beta/][Más información aquí]].
+- Al aceptar una tarea se crea *un repositorio* para cada alumno en el caso de las tareas individuales.
+  #+begin_quote
+  *IMPORTANTE*: hasta ahora, los repositorios creados para cada alumn@ que aceptara la tarea eran una *copia* del repositorio base, creado como *plantilla* por el profesor/a. A partir de Junio de 2024, los repositorios creados para cada alumn@ que acepte la tarea serán *forks* del repositorio base creado por el profesor/a. [[https://github.blog/changelog/2024-01-22-migrating-github-classroom-assignment-repository-creation-from-create-from-template-to-forks-public-beta/][Más información aquí]].
+  #+end_quote
 - En el caso de tareas de grupo, se creará un repositorio *por grupo*
 - Dentro de cada tarea se puede acceder a la lista de los repositorios creados junto con los datos identificativos de cada alumno
 - Dentro de cada tarea se puede trabajar de manera programática con la línea de comandos mediante [[https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/using-github-classroom-with-github-cli][GitHub CLI]].

@@ -59,7 +59,7 @@
 - Herramienta para gestionar la creación y distribución de tareas con los alumnos
 - Integrada con GitHub
 - Automatiza la creación de repositorios privados para tareas individuales o de grupo
-- Permite tomar un repositorio existente como base para la tarea
+- Permite tomar un repositorio existente como base para la tarea (*plantilla*)
 - Crea un listado de alumnos y lo enlaza automáticamente con los usuarios de GitHub
 - Hace el seguimiento de los repositorios de cada tarea y muestra los enlaces a cada uno de ellos
 - Descarga con un solo click todas las tareas de los alumnos

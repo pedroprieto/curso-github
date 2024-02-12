@@ -29,7 +29,7 @@
 - [[https://github.blog/2020-03-12-github-teacher-toolbox-and-classroom-with-autograding/][GitHub Classroom autograding]]
 - [[https://education.github.com/pack][Student Developer Pack]]
 - [[https://github.com/github-community/Global-Campus-Teachers/discussions][GitHub Teachers Discussions]]
-- Aplicación [[https://github.com/education/classroom-assistant][classroom assistant]]
+- [[https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/using-github-classroom-with-github-cli][Gestión de GitHub Classroom con GitHub CLI]]
 - [[https://pedroprieto.github.io/curso_scrum/][Materiales del curso de Scrum]]
 - [[https://pedroprieto.github.io/presentacion_git_scrum/][GitHub y Scrum (Seminario Universidad Alicante)]]
 
@@ -83,10 +83,10 @@
 - El enlace de invitación se distribuye a los alumnos
 - Cada vez que un alumno acceda a la invitación podrá *aceptar la tarea*
 - En caso de haber definido lista de alumnos, el alumno podrá seleccionar sus datos para quedar identificado
-- Al aceptar una tarea se crea *un repositorio* para cada alumno en el caso de las tareas individuales
+- Al aceptar una tarea se crea *un repositorio* para cada alumno en el caso de las tareas individuales. *IMPORTANTE*: hasta ahora, los repositorios creados para cada alumn@ que aceptara la tarea eran una *copia* del repositorio base, creado como *plantilla* por el profesor/a. A partir de Junio de 2024, los repositorios creados para cada alumn@ que acepte la tarea serán *forks* del repositorio base creado por el profesor/a. [[https://github.blog/changelog/2024-01-22-migrating-github-classroom-assignment-repository-creation-from-create-from-template-to-forks-public-beta/][Más información aquí]].
 - En el caso de tareas de grupo, se creará un repositorio *por grupo*
 - Dentro de cada tarea se puede acceder a la lista de los repositorios creados junto con los datos identificativos de cada alumno
-- Dentro de cada tarea se pueden *descargar todos los repositorios* mediante la aplicación [[https://classroom.github.com/assistant][classroom assistant]].
+- Dentro de cada tarea se puede trabajar de manera programática con la línea de comandos mediante [[https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/using-github-classroom-with-github-cli][GitHub CLI]].
 - Para cada tarea se pueden crear un *conjunto de tests* y asignarles una *calificación numérica* mediante [[https://docs.github.com/en/education/manage-coursework-with-github-classroom/use-autograding][GitHub Actions]]. En caso de utilizar tareas privadas es conveniente pedir un [[https://education.github.com/][descuento educativo para la organización]] que estemos utilizando en GitHub Classroom, ya que el servicio de GitHub Actions es [[https://github.com/pricing][gratuito]] para repositorios públicos pero *limitado* para repositorios privados. Al tener un descuento educativo tendremos acceso a un mayor número de minutos de Actions.
 - También se puede asignar un *editor online* para la tarea, como [[https://replit.com/][repl.it]] o [[https://www.microsoft.com/es-ES/makecode][Microsoft MakeCode]]. En este enlace se indica cómo [[./imagenes/onlineeditor.gif][configurar el editor online]].
 
@@ -152,7 +152,7 @@ Existen dos posibilidades: utilizando exclusivamente GitHub mediante organizacio
 2. Invitación de los alumnos para que formen parte de cada equipo
 3. Creación de un repositorio para cada equipo con el código base de la tarea
 4. Archivo ~README~ con enunciado o descripción de la tarea
-5. Opcionalmente, configuración de los repositorios para su uso con Travis
+5. Opcionalmente, configuración de los repositorios para su uso con GitHub Actions o Travis
 6. Asignación de los repositorios a los equipos correspondientes (recomendable permisos de *escritura*, /write/)
 7. Cada equipo puede escribir en su repositorio asignado exclusivamente
 8. Cada miembro del equipo crea una *rama personal* para su trabajo
@@ -181,7 +181,7 @@ Existen dos posibilidades: utilizando exclusivamente GitHub mediante organizacio
 8. Se proporciona a los alumnos el enlace con la invitación
 9. Cada alumno accede al enlace de invitación y crea un equipo nuevo o elige uno existente
 10. Se crea automáticamente un repositorio para cada equipo en la organización
-5. Opcionalmente, configuración de los repositorios creados para su uso con Travis
+5. Opcionalmente, configuración de los repositorios creados para su uso con GitHub Actions o Travis
 12. Cada equipo puede escribir en su repositorio asignado exclusivamente
 13. Cada miembro del equipo crea una *rama personal* para su trabajo
 14. Se sigue el flujo de trabajo definido para *prácticas en grupo* (ver apartado siguiente)

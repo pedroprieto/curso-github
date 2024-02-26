@@ -179,4 +179,6 @@ Si utilizas *Travis CI* deberás activar Travis en tu cuenta y configurar adecua
  Crea un repositorio con varios ejercicios de programación del módulo que estés impartiendo y añade tests unitarios para verificar su funcionamiento. Configura adecuadamente el repositorio para que funcione con GitHub Actions o con Travis CI.
 
 ** Entrega de la tarea
-Una vez terminada la tarea envíame una notificación a mi usuario de GitHub a través del *chat de equipo* de la organización creada en la sesión 3. Incluye un *enlace al repositorio* en la notificación. No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.
+Una vez terminada la tarea, crea una [[https://docs.github.com/es/organizations/managing-organization-settings/enabling-or-disabling-github-discussions-for-an-organization][discusión]] en la organización creada en la sesión 3 y nómbrame mediante ~@pedroprieto~. Incluye un *enlace al repositorio* en el cuerpo del mensaje. 
+
+No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.

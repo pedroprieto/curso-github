@@ -382,6 +382,6 @@ A continuación se indican algunas estrategias que podéis utilizar para combina
     - Captura de la vista de la tarea en GitHub Classroom donde aparezca el enlace al repositorio de mi equipo
 
 ** Entrega de la tarea
-Una vez terminadas las tareas envíame una notificación a mi usuario de GitHub a través del *equipo* de la organización creada en la sesión 3. Incluye las *4 capturas* de pantalla pedidas en la notificación.
+Una vez terminada la tarea, crea una [[https://docs.github.com/es/organizations/managing-organization-settings/enabling-or-disabling-github-discussions-for-an-organization][discusión]] en la organización creada en la sesión 3 y nómbrame mediante ~@pedroprieto~. Incluye las *4 capturas* de pantalla pedidas en el cuerpo del mensaje.
 
 No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.

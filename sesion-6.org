@@ -128,6 +128,6 @@ Puedes utilizar cualquier proyecto o práctica tanto personal como de clase que 
 Cuando hayas terminado, incluye un *enlace a la URL de la aplicación desplegada* en el archivo ~README~ de tu repositorio.
 
 ** Entrega de la tarea
-Una vez terminada la tarea envíame una notificación a mi usuario de GitHub a través del *equipo* de la organización creada en la sesión 3. Incluye un *enlace al repositorio* y un *enlace a la URL de la aplicación desplegada* en la notificación. 
+Una vez terminada la tarea, crea una [[https://docs.github.com/es/organizations/managing-organization-settings/enabling-or-disabling-github-discussions-for-an-organization][discusión]] en la organización creada en la sesión 3 y nómbrame mediante ~@pedroprieto~. Incluye un *enlace al repositorio* y un *enlace a la URL de la aplicación desplegada* en el cuerpo del mensaje.
 
 No hay que subir ningún archivo en la tarea de la plataforma Moodle del Cefire.
